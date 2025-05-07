@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-colors;
+  }
+  .retro-box {
+    @apply bg-blue-50 border-4 border-blue-300 rounded-2xl shadow-lg p-6 mb-6;
+    box-shadow: 4px 4px 0 0 #b4aaff, 8px 8px 0 0 #e0e7ff;
+  }
+  .retro-title {
+    @apply font-bold underline font-retro text-purple-900;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .bg-cozy-light {
+    @apply bg-gradient-to-br from-purple-100 via-purple-200 to-blue-100;
+  }
+  .text-cozy-dark {
+    @apply text-purple-900;
+  }
+  .text-cozy-accent {
+    @apply text-blue-600;
+  }
+  .font-retro {
+    font-family: 'Display', 'Body', 'sans-serif';
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Display';
+  src: url('/fonts/display.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Body';
+  src: url('/fonts/body.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 
