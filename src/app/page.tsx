@@ -65,7 +65,7 @@ export default function Home() {
           <h1 className="retro-title text-4xl mb-4">
             Welcome to OCF at UVA
           </h1>
-          <p className="text-lg text-cozy-dark mb-6 font-sans">
+          <p className="text-lg text-cozy-dark mb-6 font-sans text-center">
             We are a group of students at the University of Virginia who represent a timeless Christian faith, the Orthodox Christian Church. We open our doors to anyone who is interested in the preserved truths of the Apostolic Church.
           </p>
           <Link href="/about" className="px-6 py-3 rounded-lg font-bold text-white shadow-md border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 transition-all duration-200" style={{ textShadow: '1px 1px 0 #6b46c1' }}>

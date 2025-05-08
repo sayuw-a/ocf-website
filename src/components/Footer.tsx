@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Orthodox Christian Fellowship</h3>
             <p className="text-gray-300">
-              A fellowship organization and independent CIO at the University of Virginia
+            Although this organization has members who are University of Virginia students and may have University employees associated or engaged in its activities and affairs, the organization is not a part of or an agency of the University. It is a separate and independent organization, which is responsible for and manages its own activities and affairs. 
             </p>
           </div>
           <div>
