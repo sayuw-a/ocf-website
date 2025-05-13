@@ -46,12 +46,20 @@ export default function Home() {
   const displayedImages = showAll ? galleryImages : galleryImages.slice(0, 8);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white font-sans">
+    <div
+      className="min-h-screen flex flex-col font-sans"
+      style={{
+        backgroundImage: 'url(/images/background.jpg)',
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'auto',
+        backgroundPosition: 'center',
+      }}
+    >
       <Navigation />
       <main className="flex-grow py-8 px-2">
         {/* Hero Section */}
         <section className="retro-box flex flex-col items-center relative max-w-2xl mx-auto mb-10">
-          <div className="mb-4">
+          <div className="mb-2">
             <Image
               src="/images/logo.png"
               alt="OCF Logo"
@@ -62,8 +70,30 @@ export default function Home() {
               style={{ imageRendering: 'pixelated' }}
             />
           </div>
-          <h1 className="retro-title text-4xl mb-4">
+          <h1
+            className="retro-title text-4xl mb-4 flex items-center gap-2 justify-center"
+            style={{
+              textDecoration: 'none',
+              backgroundImage: 'linear-gradient(to right, #44337a 100%, #44337a 100%)',
+              backgroundPosition: '0 100%',
+              backgroundRepeat: 'repeat-x',
+              backgroundSize: '100% 3px',
+              paddingBottom: '2px',
+              display: 'inline-flex',
+              alignItems: 'center',
+            }}
+          >
             Welcome to OCF at UVA
+            <img
+              src="/images/torocat1.gif"
+              alt="cat gif"
+              style={{
+                display: 'inline',
+                height: '1rem',
+                verticalAlign: 'middle',
+                marginLeft: '0.5rem',
+              }}
+            />
           </h1>
           <p className="text-lg text-cozy-dark mb-6 font-sans text-center">
             We are a group of students at the University of Virginia who represent a timeless Christian faith, the Orthodox Christian Church. We open our doors to anyone who is interested in the preserved truths of the Apostolic Church.

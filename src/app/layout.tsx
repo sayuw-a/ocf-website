@@ -8,6 +8,9 @@ const vt323 = VT323({ weight: '400', subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'OCF at UVA',
   description: 'Orthodox Christian Fellowship at the University of Virginia',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({
