@@ -160,7 +160,7 @@ export default function Home() {
           <h2 className="retro-title text-2xl text-center mb-4">Contact Information</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:ocf@virginia.edu"
+              href="mailto:ann4mb@virginia.edu"
               className="px-6 py-3 rounded-lg font-bold text-white shadow-md border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 transition-all duration-200 text-center"
               style={{ textShadow: '1px 1px 0 #6b46c1' }}
             >

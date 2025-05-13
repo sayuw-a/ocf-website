@@ -29,11 +29,6 @@ export default function Footer() {
                   Resources
                 </Link>
               </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
           <div>
