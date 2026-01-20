@@ -3,7 +3,15 @@ import Footer from '../../components/Footer';
 
 export default function Resources() {
   return (
-    <div className="min-h-screen flex flex-col bg-cozy-light font-sans">
+    <div
+      className="min-h-screen flex flex-col font-sans"
+      style={{
+        backgroundImage: 'url(/images/background.jpg)',
+        backgroundRepeat: 'repeat',
+        backgroundSize: 'auto',
+        backgroundPosition: 'center',
+      }}
+    >
       <Navigation />
       <main className="flex-grow">
         <div className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
