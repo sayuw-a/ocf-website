@@ -3,57 +3,125 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-sans: 'Avenir Next', 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --font-retro: 'Courier New', 'Andale Mono', monospace;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-sky-50 text-gray-900;
+    background-image: url('/images/background.jpg');
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-sky-400 to-purple-500 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:from-blue-500 hover:to-purple-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
+    text-shadow: 1px 1px 0 #6b46c1;
   }
-  
+
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-purple-600 rounded-lg hover:bg-purple-50 transition-colors;
+    @apply inline-flex items-center justify-center rounded-full border-2 border-blue-200 bg-white/90 px-6 py-3 text-sm font-semibold text-purple-900 shadow-sm transition-colors duration-200 hover:border-blue-300 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600;
   }
+
   .retro-box {
-    @apply bg-blue-50 border-4 border-blue-300 rounded-2xl shadow-lg p-6 mb-6;
+    @apply mb-6 rounded-[28px] border-4 border-blue-300 bg-blue-50/95 p-6 shadow-lg backdrop-blur-sm;
     box-shadow: 4px 4px 0 0 #b4aaff, 8px 8px 0 0 #e0e7ff;
   }
+
   .retro-title {
-    @apply font-bold underline font-retro text-purple-900;
+    @apply font-bold text-purple-900;
+    font-family: var(--font-retro);
     font-smooth: never;
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: grayscale;
   }
+
   .bg-cozy-light {
     @apply bg-gradient-to-br from-purple-100 via-purple-200 to-blue-100;
   }
+
   .text-cozy-dark {
     @apply text-purple-900;
   }
+
   .text-cozy-accent {
     @apply text-blue-600;
   }
+
   .font-retro {
-    font-family: 'Display', 'Body', 'sans-serif';
+    font-family: var(--font-retro);
     letter-spacing: 0.5px;
   }
-}
 
-/* Custom Fonts */
-@font-face {
-  font-family: 'Display';
-  src: url('/fonts/display.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+  .page-shell {
+    @apply min-h-screen flex flex-col;
+  }
 
-@font-face {
-  font-family: 'Body';
-  src: url('/fonts/body.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} 
+  .site-shell {
+    @apply min-h-screen flex flex-col;
+  }
+
+  .site-main {
+    @apply flex-1;
+  }
+
+  .page-main {
+    @apply flex-1 px-3 py-8 sm:px-4 lg:px-6;
+  }
+
+  .content-shell {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .page-section {
+    @apply mb-10;
+  }
+
+  .page-intro {
+    @apply mx-auto max-w-3xl text-center;
+  }
+
+  .page-title {
+    @apply retro-title mb-4 text-center text-4xl sm:text-5xl lg:text-6xl;
+  }
+
+  .page-copy {
+    @apply text-base leading-7 text-cozy-dark sm:text-lg;
+  }
+
+  .section-heading {
+    @apply retro-title text-3xl sm:text-4xl;
+  }
+
+  .external-link {
+    @apply text-cozy-accent underline decoration-2 underline-offset-4 transition-colors hover:text-blue-800;
+  }
+
+  .site-link {
+    @apply text-cozy-accent underline decoration-2 underline-offset-4 transition-colors hover:text-blue-800;
+  }
+
+  .card-grid {
+    @apply grid gap-6 md:grid-cols-3;
+  }
+
+  .card-panel {
+    @apply rounded-[24px] border-4 border-purple-300 bg-white p-4 shadow-lg;
+    box-shadow: 2px 2px 0 0 #b4aaff;
+  }
+
+  .flower-divider {
+    background-image: url('/images/flowers2.png');
+    background-repeat: repeat-x;
+    background-position: top center;
+    background-size: auto 100%;
+  }
+}
