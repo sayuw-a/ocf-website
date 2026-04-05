@@ -30,6 +30,17 @@ const securityHeaders = [
 const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
+  eslint: {
+    // Keep linting as an explicit source-only step instead of letting builds
+    // re-run a broader project scan.
+    ignoreDuringBuilds: true,
+    dirs: ['src/app', 'src/components'],
+  },
+  experimental: {
+    // Run webpack in-process. This avoids a separate build worker that appears
+    // to linger indefinitely in this project environment.
+    webpackBuildWorker: false,
+  },
   async headers() {
     return [
       {

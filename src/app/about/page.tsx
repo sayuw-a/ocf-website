@@ -46,7 +46,9 @@ export default function About() {
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {officers.map((officer) => (
             <article key={officer.role} className="retro-box text-center">
-              <h3 className="font-retro mb-3 text-2xl text-cozy-dark">{officer.role}</h3>
+              <h3 className="font-display mb-3 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
+                {officer.role}
+              </h3>
               <p className="text-cozy-dark">
                 {officer.name}
                 <br />

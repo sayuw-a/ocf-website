@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 const primaryLinks = [
   { href: '/', label: 'Home' },
+  { href: '/start-here', label: 'Start Here' },
   { href: '/about', label: 'About' },
   { href: '/events', label: 'Events' },
 ];
@@ -32,20 +33,20 @@ export default function Navigation() {
   const linkClass = (href: string) =>
     `rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
       isActive(href)
-        ? 'bg-white/15 text-white'
-        : 'text-white/85 hover:bg-white/10 hover:text-white'
+        ? 'bg-amber-100/20 text-amber-50'
+        : 'text-stone-200 hover:bg-white/10 hover:text-amber-50'
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 border-b-4 border-blue-300 bg-purple-950/95 text-white shadow-md backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 border-b-4 border-amber-200 bg-stone-900/95 text-white shadow-md backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-retro text-3xl font-bold tracking-wider text-white">
+        <Link href="/" className="font-display text-[2rem] font-semibold tracking-[0.01em] text-stone-50">
           OCF at UVA
         </Link>
 
         <button
           type="button"
-          className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white sm:hidden"
+          className="rounded-full border border-amber-50/20 px-4 py-2 text-sm font-semibold text-stone-50 sm:hidden"
           aria-expanded={mobileOpen}
           aria-controls="mobile-site-nav"
           onClick={() => setMobileOpen((open) => !open)}
@@ -80,13 +81,13 @@ export default function Navigation() {
             {resourcesOpen ? (
               <div
                 id="desktop-resources-menu"
-                className="absolute right-0 top-[calc(100%+0.5rem)] w-60 rounded-2xl border border-indigo-100 bg-white p-2 text-sm text-slate-900 shadow-2xl"
+                className="absolute right-0 top-[calc(100%+0.5rem)] w-60 rounded-2xl border border-stone-200 bg-stone-50 p-2 text-sm text-stone-900 shadow-2xl"
               >
                 {resourceLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block rounded-xl px-4 py-3 font-medium hover:bg-indigo-50"
+                    className="block rounded-xl px-4 py-3 font-medium hover:bg-amber-50"
                   >
                     {link.label}
                   </Link>
@@ -98,7 +99,7 @@ export default function Navigation() {
       </div>
 
       {mobileOpen ? (
-        <div id="mobile-site-nav" className="border-t border-white/10 bg-purple-950/95 px-4 py-4 sm:hidden">
+        <div id="mobile-site-nav" className="border-t border-white/10 bg-stone-900/95 px-4 py-4 sm:hidden">
           <div className="flex flex-col gap-2">
             {primaryLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(link.href)}>
@@ -106,7 +107,7 @@ export default function Navigation() {
               </Link>
             ))}
             <details className="rounded-3xl bg-white/5 px-2 py-2">
-              <summary className="cursor-pointer list-none rounded-full px-4 py-2 text-sm font-semibold text-white">
+              <summary className="cursor-pointer list-none rounded-full px-4 py-2 text-sm font-semibold text-stone-50">
                 Resources
               </summary>
               <div className="mt-2 flex flex-col gap-2 px-2 pb-2">
@@ -114,7 +115,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-2xl px-4 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
+                    className="rounded-2xl px-4 py-2 text-sm text-stone-200 hover:bg-white/10 hover:text-amber-50"
                   >
                     {link.label}
                   </Link>

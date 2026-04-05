@@ -81,7 +81,9 @@ export default function Resources() {
             <div className="grid gap-6 md:grid-cols-2">
               {section.items.map((item) => (
                 <article key={item.title} className="retro-box">
-                  <h3 className="font-retro mb-2 text-2xl text-cozy-dark">{item.title}</h3>
+                  <h3 className="font-display mb-2 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
+                    {item.title}
+                  </h3>
                   <p className="mb-4 text-cozy-dark">{item.description}</p>
                   <a
                     href={item.href}

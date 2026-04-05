@@ -3,3 +3,9 @@ node_modules
 out
 .env
 .DS_Store
+.agents
+*.log
+*.tsbuildinfo
+build-sample.txt
+build-worker-sample.txt
+lint-sample.txt
