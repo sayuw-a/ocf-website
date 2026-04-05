@@ -41,7 +41,9 @@ export default function Events() {
                 height={500}
                 className="mb-5 h-64 w-full rounded-2xl object-cover"
               />
-              <h3 className="font-retro mb-2 text-2xl text-cozy-dark">{event.title}</h3>
+              <h3 className="font-display mb-2 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
+                {event.title}
+              </h3>
               <p className="mb-2 whitespace-pre-line font-semibold text-cozy-dark">{event.time}</p>
               <p className="page-copy text-base">{event.description}</p>
             </article>

@@ -1,148 +1,217 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const recentEvents = [
+const firstVisitSteps = [
   {
-    image: 'cookout-2025.jpg',
-    title: '2025 Spring Cookout',
-    description: 'Saying goodbye to our graduating fourth years Josh and Megnot.',
+    label: 'Reach out if you want a name to look for',
+    description:
+      'Join the GroupMe or send an email before you come. We are happy to tell you what is happening that week and help you know where to go.',
   },
   {
-    image: 'liturgy-2025.jpg',
-    title: 'Last Divine Liturgy of the Year',
-    description: 'A joyful final liturgy of the semester with Fr. Robert at St. Nicholas.',
+    label: 'Start with the kind of event that feels easiest',
+    description:
+      'Some students begin with Bible study or fellowship. Others come first to Vespers or Divine Liturgy. There is no single correct first step.',
   },
   {
-    image: 'pascha-2025.jpg',
-    title: 'Pascha 2025',
-    description: 'Christ is Risen. We are grateful to St. Nicholas for welcoming us in celebration.',
+    label: 'Show up without having to perform',
+    description:
+      'You do not need to already know the prayers, understand everything, or know anyone in the room. You can simply come and be received.',
   },
 ];
 
-const galleryImages = [
-  { image: 'community-1.png', alt: 'OCF members gathered for fellowship outdoors' },
-  { image: 'community-2.png', alt: 'Students spending time together after an OCF event' },
-  { image: 'community-3.png', alt: 'OCF community photo during the semester' },
-  { image: 'community-4.png', alt: 'Students gathered in conversation and community' },
-  { image: 'community-5.png', alt: 'OCF members together at a campus event' },
-  { image: 'community-6.png', alt: 'Students smiling together at an OCF gathering' },
-  { image: 'community-7.png', alt: 'OCF community spending time together outside' },
-  { image: 'community-8.png', alt: 'Students at an OCF event celebrating together' },
-  { image: 'group-2023.jpg', alt: 'Group photo from a previous OCF year' },
-  { image: 'cookout-2025.jpg', alt: 'Students at the 2025 spring cookout' },
-  { image: 'liturgy-2025.jpg', alt: 'OCF students at divine liturgy in 2025' },
-  { image: 'pascha-2025.jpg', alt: 'Pascha celebration with the OCF community in 2025' },
-  { image: 'volleyball.jpg', alt: 'OCF members playing volleyball together' },
-  { image: 'jmu-hangout.jpg', alt: 'Students gathering for a regional hangout' },
-  { image: 'pascha.jpg', alt: 'A past Pascha celebration with the OCF community' },
+const visitMoments = [
+  {
+    title: 'Prayer and worship',
+    description:
+      'Some weeks are centered on church services, feast days, or prayer together at the parish.',
+  },
+  {
+    title: 'Meals, study, and ordinary friendship',
+    description:
+      'A lot of OCF life looks like dinner, late conversations, Bible study, and students making room for one another.',
+  },
+  {
+    title: 'A place to ask honest questions',
+    description:
+      'If you are Orthodox-curious, you do not need polished language or background knowledge. Questions are part of the doorway in.',
+  },
+];
+
+const quickAnswers = [
+  {
+    question: 'Who can come?',
+    answer: 'Orthodox students, Orthodox-curious students, and anyone wanting to learn are welcome.',
+  },
+  {
+    question: 'Where do events happen?',
+    answer: 'On or near Grounds during the week, and at St. Nicholas Orthodox Church for services.',
+  },
+  {
+    question: 'What should I do first?',
+    answer: 'Start with the newcomer page, message us, or check the next event and come.',
+  },
 ];
 
 export default function Home() {
   return (
-    <div className="content-shell">
-      <section className="page-section">
-        <div className="retro-box mx-auto max-w-3xl text-center">
-          <Image
-            src="/images/logo.png"
-            alt="Orthodox Christian Fellowship at UVA logo"
-            width={88}
-            height={88}
-            className="mx-auto mb-4"
-            priority
-          />
-          <h1 className="page-title">Welcome to OCF at UVA</h1>
-          <p className="page-copy mx-auto max-w-2xl">
-            We are a community of students at the University of Virginia seeking to live the timeless
-            Christian faith of the Orthodox Church through prayer, fellowship, worship, and service.
-            Everyone is welcome, whether you grew up Orthodox or are simply curious to learn more.
+    <div className="content-shell home-shell">
+      <section className="home-hero">
+        <div className="home-hero-copy">
+          <p className="home-eyebrow">Orthodox Christian Fellowship at UVA</p>
+          <h1 className="home-title">A real invitation into Orthodox life at UVA.</h1>
+          <p className="home-lede">
+            OCF is a student community for Orthodox Christians and Orthodox-curious students who want
+            prayer, friendship, and a place to stay connected to Christ during college. If you are
+            wondering whether you belong here, you do.
           </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <Link href="/about" className="btn-primary">
-              Learn More
+
+          <div className="home-actions">
+            <Link href="/start-here" className="btn-primary">
+              Read the Newcomer Guide
             </Link>
             <Link href="/events" className="btn-secondary">
-              See Events
+              See This Week&apos;s Events
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="retro-box">
-          <div className="page-intro mb-8">
-            <h2 className="section-heading">Recent Events</h2>
-            <p className="page-copy">
-              Prayer, fellowship, and life together shape our semester. Here are a few recent moments
-              from the community.
-            </p>
+            <a href="mailto:ann4mb@virginia.edu" className="home-inline-link">
+              Prefer to ask first? Email a student leader
+            </a>
           </div>
 
-          <div className="card-grid">
-            {recentEvents.map((event) => (
-              <article key={event.image} className="card-panel">
-                <div className="relative mb-4 h-56 overflow-hidden rounded-2xl">
-                  <Image
-                    src={`/images/${event.image}`}
-                    alt={event.title}
-                    fill
-                    className="object-cover transition-transform duration-200 hover:scale-105"
-                  />
-                </div>
-                <h3 className="font-retro mb-2 text-2xl text-cozy-dark">{event.title}</h3>
-                <p className="text-sm leading-6 text-cozy-dark">{event.description}</p>
-              </article>
+          <div className="home-answer-row" aria-label="Quick answers for first-time visitors">
+            {quickAnswers.map((item) => (
+              <div key={item.question} className="home-answer-item">
+                <dt>{item.question}</dt>
+                <dd>{item.answer}</dd>
+              </div>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="page-section">
-        <div className="retro-box">
-          <details className="group">
-            <summary className="list-none cursor-pointer">
-              <div className="page-intro mb-0">
-                <h2 className="section-heading">Our Community Gallery</h2>
-                <p className="page-copy">
-                  Open the gallery for more snapshots from worship, study, service, and time together.
-                </p>
-                <span className="btn-secondary mt-6">
-                  <span className="group-open:hidden">Show More Photos</span>
-                  <span className="hidden group-open:inline">Show Fewer Photos</span>
-                </span>
-              </div>
-            </summary>
-
-            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-              {galleryImages.map((item, index) => (
-                <div
-                  key={item.image}
-                  className={`relative aspect-square overflow-hidden rounded-2xl border-2 border-blue-200 bg-white shadow ${
-                    index >= 8 ? 'hidden group-open:block' : ''
-                  }`}
-                >
-                  <Image
-                    src={`/images/${item.image}`}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition-transform duration-200 hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </details>
+        <div className="home-hero-visual" aria-label="Recent OCF life">
+          <div className="home-hero-photo home-hero-photo-large">
+            <Image
+              src="/images/group-2023.jpg"
+              alt="Group photo of OCF students together"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="home-hero-photo home-hero-photo-small">
+            <Image
+              src="/images/cookout-2025.jpg"
+              alt="Students sharing a meal at an OCF cookout"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="home-hero-note">
+            <p className="home-card-kicker">What happens if you come?</p>
+            <p>
+              Expect introductions, a low-pressure welcome, and someone willing to help you figure out
+              where you are and what is going on.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="page-section">
-        <div className="retro-box mx-auto max-w-3xl text-center">
-          <h2 className="section-heading">Contact Information</h2>
-          <p className="page-copy mx-auto max-w-xl">
-            We would love to meet you. Reach out by email or join our GroupMe to hear about upcoming
-            events and gatherings.
-          </p>
-          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <div className="home-invite-band">
+          <div>
+            <p className="home-eyebrow">New here?</p>
+            <h2 className="home-section-title">Start with the practical questions, not the guesswork.</h2>
+            <p className="page-copy">
+              We put the most common newcomer questions in one place: what Orthodoxy is in plain
+              language, who can come, where events happen, what a first visit feels like, and how to
+              get connected before you show up.
+            </p>
+          </div>
+          <Link href="/start-here" className="btn-primary">
+            Read the newcomer guide
+          </Link>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="home-guidance">
+          <div className="home-guidance-intro">
+            <p className="home-eyebrow">Your first step</p>
+            <h2 className="home-section-title">You do not need to decode the community before entering it.</h2>
+            <p className="page-copy">
+              The landing page should feel like someone opening the door, not handing you a stack of
+              information. Here is the simplest way in.
+            </p>
+          </div>
+
+          <ol className="home-step-list">
+            {firstVisitSteps.map((item, index) => (
+              <li key={item.label} className="home-step-row">
+                <div className="home-step-badge">{index + 1}</div>
+                <div>
+                  <h3>{item.label}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="home-story-layout">
+          <div className="home-story-copy">
+            <p className="home-eyebrow">What OCF feels like</p>
+            <h2 className="home-section-title">Not only events, but a rhythm of prayer, friendship, and being known.</h2>
+            <p className="page-copy">
+              OCF is at its best when students find both spiritual steadiness and actual people to
+              reach out to. The point is not to impress you with activity. The point is to help you
+              belong somewhere faithful and human.
+            </p>
+
+            <div className="home-moment-list">
+              {visitMoments.map((item) => (
+                <article key={item.title} className="home-moment-item">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="home-story-photos">
+            <div className="home-story-photo-tall">
+              <Image
+                src="/images/liturgy-2025.jpg"
+                alt="OCF students gathered for Divine Liturgy"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="home-story-photo-wide">
+              <Image
+                src="/images/pascha-2025.jpg"
+                alt="Pascha celebration with OCF students"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="home-contact">
+          <div>
+            <p className="home-eyebrow">Ready to come?</p>
+            <h2 className="home-section-title">Let us make the first visit easier.</h2>
+            <p className="page-copy">
+              If you want a person to message, the address for this week, or help deciding which event
+              to start with, reach out. You do not have to arrive alone.
+            </p>
+          </div>
+          <div className="home-contact-actions">
             <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
-              Email Us
+              Email a student leader
             </a>
             <a
               href="https://groupme.com/join_group/52539301/WUDGNm6m"
@@ -152,6 +221,9 @@ export default function Home() {
             >
               Join Our GroupMe
             </a>
+            <Link href="/about" className="home-inline-link">
+              Learn more about OCF
+            </Link>
           </div>
         </div>
       </section>
