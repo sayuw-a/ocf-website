@@ -1,39 +1,46 @@
-import Link from 'next/link';
-import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
+import Image from 'next/image';
+
+const prayers = [
+  {
+    title: 'Akathist to the Theotokos',
+    href: '/pdfs/theotokosakathist.pdf',
+    description: 'A prayer service in honor of the Theotokos.',
+  },
+  {
+    title: 'Ninth Hour',
+    href: '/pdfs/9thHour.pdf',
+    description: 'The Ninth Hour prayer service.',
+  },
+];
 
 export default function PrayerResources() {
   return (
-    <div
-      className="min-h-screen flex flex-col font-sans"
-      style={{
-        backgroundImage: 'url(/images/background.jpg)',
-        backgroundRepeat: 'repeat',
-        backgroundSize: 'auto',
-        backgroundPosition: 'center',
-      }}
-    >
-      <Navigation />
-      <main className="flex-grow">
-        <div className="max-w-2xl mx-auto py-12 px-4">
-          <div className="retro-box">
-            <h1 className="retro-title text-4xl text-purple-900 mb-4">Prayer Resources</h1>
-            <p className="mb-1 text-lg">Find Orthodox Christian prayer books, guides, and resources to enrich your daily spiritual life.</p>
-            <div className="flex justify-center my-4">
-              <img src="/images/angeldivider.png" alt="Angel Divider" className="h-8" />
-            </div>
-            <ul className="space-y-4">
-              <li>
-                <Link href="/pdfs/theotokosakathist.pdf" className="text-purple-900 underline font-bold hover:text-purple-700" target="_blank">Akathist to the Theotokos</Link> - A prayer to the Theotokos
-              </li>
-              <li>
-                <Link href="/pdfs/9thHour.pdf" className="text-purple-900 underline font-bold hover:text-purple-700" target="_blank">Ninth Hour</Link> - Ninth Hour Prayer
-              </li>
-            </ul>
-          </div>
+    <div className="mx-auto max-w-3xl py-10 sm:py-16">
+      <section className="retro-box">
+        <h1 className="page-title text-center">Prayer Resources</h1>
+        <p className="page-copy text-center">
+          Find Orthodox Christian prayer books, guides, and resources to enrich your daily spiritual
+          life.
+        </p>
+        <div className="my-6 flex justify-center">
+          <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
         </div>
-      </main>
-      <Footer />
+        <ul className="space-y-5">
+          {prayers.map((prayer) => (
+            <li key={prayer.title}>
+              <a
+                href={prayer.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-link font-semibold"
+              >
+                {prayer.title}
+              </a>
+              <p className="mt-1 text-sm text-cozy-dark">{prayer.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
-} 
+}

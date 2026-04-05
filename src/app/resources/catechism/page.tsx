@@ -1,61 +1,56 @@
-import Link from 'next/link';
-import Navigation from '../../../components/Navigation';
-import Footer from '../../../components/Footer';
+import Image from 'next/image';
+
+const resources = [
+  {
+    title: 'How Can I Know God?; Fr. Thomas Hopko',
+    href: '/pdfs/How-Can-I-Know-God.pdf',
+    description: 'What does it take to know God?',
+  },
+  {
+    title: 'The Orthodox Church; Fr. Kallistos Ware',
+    href: 'https://a.co/d/hhMSyzH',
+    description: 'A primer on the Orthodox Church that has been beneficial to many converts.',
+  },
+  {
+    title: 'The Faith We Hold; Archbishop Paul of Finland',
+    href: 'https://a.co/d/cR29ViY',
+    description: 'A short synoptic introduction to the faith.',
+  },
+  {
+    title: 'The Orthodox Faith; Fr. Thomas Hopko',
+    href: 'https://www.oca.org/orthodoxy/the-orthodox-faith',
+    description: 'A deeper dive into Orthodox belief, worship, and sacramental life.',
+  },
+];
 
 export default function CatechismResources() {
   return (
-    <div
-      className="min-h-screen flex flex-col font-sans"
-      style={{
-        backgroundImage: 'url(/images/background.jpg)',
-        backgroundRepeat: 'repeat',
-        backgroundSize: 'auto',
-        backgroundPosition: 'center',
-      }}
-    >
-      <Navigation />
-      <main className="flex-grow">
-        <div className="max-w-2xl mx-auto py-12 px-4">
-          <div className="retro-box">
-            <h1 className="retro-title text-4xl text-purple-900 mb-4">Catechism Resources</h1>
-            <p className="text-cozy-dark font-sans text-base mt-2">Explore foundational texts and guides to Orthodox Christian catechism, perfect for inquirers and those deepening their faith.</p>
-            <div className="flex justify-center my-6">
-              <img src="/images/angeldivider.png" alt="Angel Divider" className="h-8" />
-            </div>
-            <ul className="space-y-5 mt-6">
-  <li>
-    <Link href="/pdfs/How-Can-I-Know-God.pdf" target="_blank" className="text-purple-900 underline font-bold hover:text-purple-700">
-      How Can I Know God?; Fr. Thomas Hopko
-    </Link>
-    <span className="text-gray-900 font-sans text-sm"> – What does it take to know God?</span>
-  </li>
-  <li>
-    <Link href="https://a.co/d/hhMSyzH" target="_blank" className="text-purple-900 underline font-bold hover:text-purple-700">
-      The Orthodox Church; Fr. Kallistos Ware
-    </Link>
-    <span className="text-gray-900 font-sans text-sm"> – A primer on the Orthodox Church that has been beneficial to many converts</span>
-  </li>
-  <li>
-    <Link href="https://a.co/d/cR29ViY" target="_blank" className="text-purple-900 underline font-bold hover:text-purple-700">
-      The Faith We Hold; Archbishop Paul of Finland
-    </Link>
-    <span className="text-gray-900 font-sans text-sm"> – A short synoptic book</span>
-  </li>
-  <li>
-    <Link href="https://www.oca.org/orthodoxy/the-orthodox-faith" target="_blank" className="text-purple-900 underline font-bold hover:text-purple-700">
-      The Orthodox Faith; Fr. Kallistos Ware
-    </Link>
-    <span className="text-gray-900 font-sans text-sm"> – A deeper dive on the sacraments of the Church</span>
-  </li>
-</ul>
-          </div>
+    <div className="mx-auto max-w-3xl py-10 sm:py-16">
+      <section className="retro-box">
+        <h1 className="page-title text-center">Catechism Resources</h1>
+        <p className="page-copy text-center">
+          Explore foundational texts and guides for inquirers and for anyone looking to deepen their
+          understanding of the Orthodox faith.
+        </p>
+        <div className="my-6 flex justify-center">
+          <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
         </div>
-
-      </main>
-      <div className="relative">
-        <Footer />
-        <div className="absolute left-0 right-0 -top-10 z-10 h-20 w-full" style={{backgroundImage: 'url(/images/flowers2.png)', backgroundRepeat: 'repeat-x', backgroundPosition: 'top center', backgroundSize: 'auto 100%'}} />
-      </div>
+        <ul className="space-y-5">
+          {resources.map((resource) => (
+            <li key={resource.title}>
+              <a
+                href={resource.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-link font-semibold"
+              >
+                {resource.title}
+              </a>
+              <p className="mt-1 text-sm text-cozy-dark">{resource.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
-} 
+}

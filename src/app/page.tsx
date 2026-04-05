@@ -1,184 +1,160 @@
-"use client";
-import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const recentEvents = [
   {
     image: 'cookout-2025.jpg',
     title: '2025 Spring Cookout',
-    description: 'Saying goodbye to our graduating 4th years Josh and Megnot'
+    description: 'Saying goodbye to our graduating fourth years Josh and Megnot.',
   },
   {
     image: 'liturgy-2025.jpg',
     title: 'Last Divine Liturgy of the Year',
-    description: 'Taken with Fr. Robert at St. Nicks'
+    description: 'A joyful final liturgy of the semester with Fr. Robert at St. Nicholas.',
   },
   {
     image: 'pascha-2025.jpg',
     title: 'Pascha 2025',
-    description: 'Christ is Risen! Thank you to all at St. Nicks for hosting us'
+    description: 'Christ is Risen. We are grateful to St. Nicholas for welcoming us in celebration.',
   },
 ];
 
 const galleryImages = [
-  'community-1.png',
-  'community-2.png',
-  'community-3.png',
-  'community-4.png',
-  'community-5.png',
-  'community-6.png',
-  'community-7.png',
-  'community-8.png',
-  'group-2023.jpg',
-  'cookout-2025.jpg',
-  'liturgy-2025.jpg',
-  'pascha-2025.jpg',
-  'volleyball.jpg',
-  'jmu-hangout.jpg',
-  'pascha.jpg',
+  { image: 'community-1.png', alt: 'OCF members gathered for fellowship outdoors' },
+  { image: 'community-2.png', alt: 'Students spending time together after an OCF event' },
+  { image: 'community-3.png', alt: 'OCF community photo during the semester' },
+  { image: 'community-4.png', alt: 'Students gathered in conversation and community' },
+  { image: 'community-5.png', alt: 'OCF members together at a campus event' },
+  { image: 'community-6.png', alt: 'Students smiling together at an OCF gathering' },
+  { image: 'community-7.png', alt: 'OCF community spending time together outside' },
+  { image: 'community-8.png', alt: 'Students at an OCF event celebrating together' },
+  { image: 'group-2023.jpg', alt: 'Group photo from a previous OCF year' },
+  { image: 'cookout-2025.jpg', alt: 'Students at the 2025 spring cookout' },
+  { image: 'liturgy-2025.jpg', alt: 'OCF students at divine liturgy in 2025' },
+  { image: 'pascha-2025.jpg', alt: 'Pascha celebration with the OCF community in 2025' },
+  { image: 'volleyball.jpg', alt: 'OCF members playing volleyball together' },
+  { image: 'jmu-hangout.jpg', alt: 'Students gathering for a regional hangout' },
+  { image: 'pascha.jpg', alt: 'A past Pascha celebration with the OCF community' },
 ];
 
 export default function Home() {
-  const [showAll, setShowAll] = useState(false);
-  const displayedImages = showAll ? galleryImages : galleryImages.slice(0, 8);
-
   return (
-    <div
-      className="min-h-screen flex flex-col font-sans"
-      style={{
-        backgroundImage: 'url(/images/background.jpg)',
-        backgroundRepeat: 'repeat',
-        backgroundSize: 'auto',
-        backgroundPosition: 'center',
-      }}
-    >
-      <Navigation />
-      <main className="flex-grow py-8 px-2">
-        {/* Hero Section */}
-        <section className="retro-box flex flex-col items-center relative max-w-2xl mx-auto mb-10">
-          <div className="mb-2">
-            <Image
-              src="/images/logo.png"
-              alt="OCF Logo"
-              width={80}
-              height={80}
-              className="mx-auto"
-              priority
-              style={{ imageRendering: 'pixelated' }}
-            />
-          </div>
-          <h1
-            className="retro-title text-4xl mb-4 flex items-center gap-2 justify-center"
-            style={{
-              textDecoration: 'none',
-              backgroundImage: 'linear-gradient(to right, #44337a 100%, #44337a 100%)',
-              backgroundPosition: '0 100%',
-              backgroundRepeat: 'repeat-x',
-              backgroundSize: '100% 3px',
-              paddingBottom: '2px',
-              display: 'inline-flex',
-              alignItems: 'center',
-            }}
-          >
-            Welcome to OCF at UVA
-            <img
-              src="/images/torocat1.gif"
-              alt="cat gif"
-              style={{
-                display: 'inline',
-                height: '1rem',
-                verticalAlign: 'middle',
-                marginLeft: '0.5rem',
-              }}
-            />
-          </h1>
-          <p className="text-lg text-cozy-dark mb-6 font-sans text-center">
-            We are a group of students at the University of Virginia who represent a timeless Christian faith, the Orthodox Christian Church. We open our doors to anyone who is interested in the preserved truths of the Apostolic Church.
+    <div className="content-shell">
+      <section className="page-section">
+        <div className="retro-box mx-auto max-w-3xl text-center">
+          <Image
+            src="/images/logo.png"
+            alt="Orthodox Christian Fellowship at UVA logo"
+            width={88}
+            height={88}
+            className="mx-auto mb-4"
+            priority
+          />
+          <h1 className="page-title">Welcome to OCF at UVA</h1>
+          <p className="page-copy mx-auto max-w-2xl">
+            We are a community of students at the University of Virginia seeking to live the timeless
+            Christian faith of the Orthodox Church through prayer, fellowship, worship, and service.
+            Everyone is welcome, whether you grew up Orthodox or are simply curious to learn more.
           </p>
-          <Link href="/about" className="px-6 py-3 rounded-lg font-bold text-white shadow-md border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 transition-all duration-200" style={{ textShadow: '1px 1px 0 #6b46c1' }}>
-            Learn More
-          </Link>
-        </section>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href="/about" className="btn-primary">
+              Learn More
+            </Link>
+            <Link href="/events" className="btn-secondary">
+              See Events
+            </Link>
+          </div>
+        </div>
+      </section>
 
-        {/* Recent Events Section */}
-        <section className="retro-box max-w-5xl mx-auto mb-10">
-          <h2 className="retro-title text-2xl text-center mb-8">
-            Recent Events
-          </h2>
-          <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
-            {recentEvents.map((event, idx) => (
-              <div key={event.image} className="bg-white rounded-xl border-4 border-purple-300 shadow-lg p-2 w-full max-w-xs flex flex-col items-center" style={{boxShadow: '2px 2px 0 0 #b4aaff'}}>
-                <div className="w-full h-56 mb-2 overflow-hidden rounded-md">
+      <section className="page-section">
+        <div className="retro-box">
+          <div className="page-intro mb-8">
+            <h2 className="section-heading">Recent Events</h2>
+            <p className="page-copy">
+              Prayer, fellowship, and life together shape our semester. Here are a few recent moments
+              from the community.
+            </p>
+          </div>
+
+          <div className="card-grid">
+            {recentEvents.map((event) => (
+              <article key={event.image} className="card-panel">
+                <div className="relative mb-4 h-56 overflow-hidden rounded-2xl">
                   <Image
                     src={`/images/${event.image}`}
                     alt={event.title}
-                    width={400}
-                    height={300}
-                    className="object-cover w-full h-full transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-2xl rounded-md"
-                    style={{ imageRendering: 'pixelated' }}
+                    fill
+                    className="object-cover transition-transform duration-200 hover:scale-105"
                   />
                 </div>
-                <h3 className="retro-title text-lg mt-2 mb-1">{event.title}</h3>
-                <p className="text-cozy-dark text-sm mb-2 text-center">{event.description}</p>
-              </div>
+                <h3 className="font-retro mb-2 text-2xl text-cozy-dark">{event.title}</h3>
+                <p className="text-sm leading-6 text-cozy-dark">{event.description}</p>
+              </article>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Gallery Section */}
-        <section className="retro-box max-w-5xl mx-auto">
-          <h2
-            className="retro-title text-2xl text-center mb-8 cursor-pointer select-none"
-            onClick={() => setShowAll((v) => !v)}
-            title="Click to expand/collapse gallery"
-          >
-            Our Community Gallery {showAll ? '▲' : '▼'}
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {displayedImages.map((img, i) => (
-              <div key={img} className="aspect-square relative flex items-center justify-center bg-white border-2 border-blue-200 rounded-lg shadow overflow-hidden">
-                <Image
-                  src={`/images/${img}`}
-                  alt={`Gallery image ${i+1}`}
-                  fill
-                  className="object-cover rounded-lg transition-transform duration-200 ease-in-out hover:scale-105 hover:shadow-2xl"
-                  style={{ imageRendering: 'pixelated' }}
-                />
+      <section className="page-section">
+        <div className="retro-box">
+          <details className="group">
+            <summary className="list-none cursor-pointer">
+              <div className="page-intro mb-0">
+                <h2 className="section-heading">Our Community Gallery</h2>
+                <p className="page-copy">
+                  Open the gallery for more snapshots from worship, study, service, and time together.
+                </p>
+                <span className="btn-secondary mt-6">
+                  <span className="group-open:hidden">Show More Photos</span>
+                  <span className="hidden group-open:inline">Show Fewer Photos</span>
+                </span>
               </div>
-            ))}
-          </div>
-          <div className="text-center mt-4 text-sm text-cozy-dark">
-            Click the header to {showAll ? 'collapse' : 'expand'} the gallery.
-          </div>
-        </section>
+            </summary>
 
-        {/* Contact Information Section */}
-        <section className="retro-box max-w-2xl mx-auto mt-10">
-          <h2 className="retro-title text-2xl text-center mb-4">Contact Information</h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:ann4mb@virginia.edu"
-              className="px-6 py-3 rounded-lg font-bold text-white shadow-md border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 transition-all duration-200 text-center"
-              style={{ textShadow: '1px 1px 0 #6b46c1' }}
-            >
+            <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+              {galleryImages.map((item, index) => (
+                <div
+                  key={item.image}
+                  className={`relative aspect-square overflow-hidden rounded-2xl border-2 border-blue-200 bg-white shadow ${
+                    index >= 8 ? 'hidden group-open:block' : ''
+                  }`}
+                >
+                  <Image
+                    src={`/images/${item.image}`}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition-transform duration-200 hover:scale-105"
+                  />
+                </div>
+              ))}
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section className="page-section">
+        <div className="retro-box mx-auto max-w-3xl text-center">
+          <h2 className="section-heading">Contact Information</h2>
+          <p className="page-copy mx-auto max-w-xl">
+            We would love to meet you. Reach out by email or join our GroupMe to hear about upcoming
+            events and gatherings.
+          </p>
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
               Email Us
             </a>
             <a
               href="https://groupme.com/join_group/52539301/WUDGNm6m"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg font-bold text-white shadow-md border-2 border-blue-500 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 hover:from-blue-500 hover:to-purple-700 transition-all duration-200 text-center"
-              style={{ textShadow: '1px 1px 0 #6b46c1' }}
+              className="btn-secondary"
             >
               Join Our GroupMe
             </a>
           </div>
-        </section>
-      </main>
-      <Footer />
+        </div>
+      </section>
     </div>
   );
-} 
+}

@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, VT323 } from 'next/font/google';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 import './globals.css';
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
-const vt323 = VT323({ weight: '400', subsets: ['latin'] });
-
 export const metadata: Metadata = {
-  title: 'OCF at UVA',
+  title: {
+    default: 'OCF at UVA',
+    template: '%s | OCF at UVA',
+  },
   description: 'Orthodox Christian Fellowship at the University of Virginia',
+  openGraph: {
+    title: 'OCF at UVA',
+    description: 'Orthodox Christian Fellowship at the University of Virginia',
+    siteName: 'OCF at UVA',
+    type: 'website',
+  },
   icons: {
     icon: '/favicon.ico',
   },
@@ -20,7 +27,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${jakarta.className} ${vt323.className}`}>{children}</body>
+      <body className="font-sans antialiased">
+        <div className="site-shell">
+          <Navigation />
+          <div className="site-main">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
-} 
+}
