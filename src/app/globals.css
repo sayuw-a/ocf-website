@@ -302,7 +302,7 @@
   }
 
   .start-hero {
-    @apply mx-auto max-w-5xl;
+    @apply mx-auto max-w-5xl pb-4 sm:pb-6;
   }
 
   .start-grid {
