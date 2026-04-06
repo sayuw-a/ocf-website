@@ -11,9 +11,8 @@ export default function About() {
       <section className="page-intro">
         <h1 className="page-title">About OCF at UVA</h1>
         <p className="page-copy">
-          OCF at UVA is a group of students trying to live Orthodox Christian life together while we
-          are in college. We pray, study, spend time together, go to church, ask real questions, and
-          try to make room for anyone who is looking for that kind of community.
+          OCF at UVA is the fellowship organization for Orthodox Christians on Grounds. We try to make an environment where all are welcome to explore and grow in faith. The goal is
+          to grow deeper as a Christian and through fellowship, become one that is "always being prepared to make a defense to anyone who asks you for a reason for the hope that is in you" 1st Peter 3:15
         </p>
       </section>
 
@@ -21,9 +20,8 @@ export default function About() {
         <div className="page-panel">
           <h2 className="section-heading mb-4 text-2xl">Our Mission</h2>
           <p className="page-copy text-base">
-            Our hope is simple: to help students stay close to Christ and not try to do Orthodox life
-            alone during college. That means prayer, fellowship, church life, study, service, and the
-            ordinary work of caring for one another.
+            Our hope is simple: "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching."
+            Hebrews 10:24-25
           </p>
         </div>
         <div className="page-panel">
@@ -38,10 +36,9 @@ export default function About() {
 
       <section className="page-section">
         <div className="page-intro mb-8">
-          <h2 className="section-heading">Our Team</h2>
+          <h2 className="section-heading">Officers</h2>
           <p className="page-copy">
-            These are some of the students helping keep things moving this year. If you reach out, you
-            are talking to another student, not a front desk.
+            These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">

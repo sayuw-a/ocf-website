@@ -13,7 +13,7 @@ const recurringEvents = [
     alt: 'Students and parishioners at divine liturgy',
     title: 'Great Vespers & Divine Liturgy',
     time: 'Vespers: Saturdays at 5:00 PM\nLiturgy: Sundays at 9:30 AM',
-    description: 'Join us for worship at St. Nicholas Orthodox Church.',
+    description: 'Join us for worship at St. Nicholas Orthodox Church about 20 minutes from Grounds.',
   },
 ];
 
@@ -24,7 +24,7 @@ export default function Events() {
         <h1 className="page-title">Events</h1>
         <p className="page-copy">
           Most weeks include some mix of prayer, church services, Bible study, food, and time to just
-          be together. Here is the basic rhythm.
+          be together. 
         </p>
       </section>
 
@@ -56,8 +56,7 @@ export default function Events() {
         <div className="page-panel text-center">
           <h2 className="section-heading mb-4">Special & Upcoming Events</h2>
           <p className="page-copy mx-auto mb-8 max-w-2xl">
-            Check the calendar for feast days, service opportunities, meals, trips, and whatever else
-            the semester brings.
+            Check the calendar for feast days, service opportunities, meals, trips, and other events throughout the semester.
           </p>
           <iframe
             src="https://calendar.google.com/calendar/embed?src=fc12eba4c5f22cf289e5751d898b3d1caf248f74a1a351eaae11f1b6bc4f579d%40group.calendar.google.com&ctz=America%2FNew_York"

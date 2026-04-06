@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 const quickAnswers = [
   {
-    question: 'Who can come?',
+    question: 'Who is welcome?',
     answer:
-      'Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. You do not need to already know someone in OCF to come.',
+      'Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. We aim to provide an environment open to anyone curious about the Christian faith.',
   },
   {
-    question: 'What is Orthodoxy in plain language?',
+    question: 'What is Orthodoxy',
     answer:
-      'Orthodoxy is the historic Christian life of the Church, centered on Jesus Christ, worship, prayer, Scripture, repentance, and communion with God. If that sounds unfamiliar, it is completely normal to begin with questions.',
+      '"Right faith and good works; for whoever holds these two, the same is a good Christian, and has certain hope of eternal salvation, as the Scripture says (James 2.24): “You see then how that by good works a man is justified, and not by faith only”; and a little after (v. 6), “For as the body without the Spirit is dead; so faith without works is dead also.” Saint Paul affirms the same (1 Tim. 1.19): “Holding faith and a good conscience, which some having put away concerning faith, have made shipwreck.” And again (1 Tim. 3.9): “Holding the mystery of the faith in a pure conscience.”" The Orthodox Confession of St Peter Mogila',
   },
   {
     question: 'What should I do first?',
@@ -20,19 +20,19 @@ const quickAnswers = [
 
 const newcomerSteps = [
   {
-    title: '1. Reach out first if that helps',
+    title: '1. Reach out',
     body:
-      'Email us or join the GroupMe if you want a name to look for, a quick answer about the week&apos;s plans, or help getting to your first event.',
+      'Email us or join the GroupMe if you want a name to look for, a quick answer about the week&apos;s plans',
   },
   {
     title: '2. Start with something simple',
     body:
-      'A lot of students start with Bible study, fellowship, or a meal because it gives them time to meet people naturally. You can also start with services if that is what you are looking for.',
+      'A lot of students join us for Bible study or the evening Vesperal service on Saturday.',
   },
   {
     title: '3. Ask what you are actually wondering',
     body:
-      'Questions about Orthodoxy, church background, or what happens at services are welcome. You do not need to make them sound polished first.',
+      'Questions about Orthodoxy, church background, or what happens at services are welcome.',
   },
 ];
 
@@ -45,17 +45,17 @@ const faqItems = [
   {
     question: 'What are events usually like?',
     answer:
-      'It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights. In general, expect people to say hi, explain what is going on, and make room for you.',
+      'It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights.',
   },
   {
     question: 'Where do events happen?',
     answer:
-      'Weekly fellowship events are usually on or near Grounds. Church services happen at St. Nicholas Orthodox Church in Charlottesville. Check the events page or GroupMe for the exact location each week.',
+      'Weekly fellowship events are usually on or near Grounds like at the Center for Christian Study on the Corner. Church services happen at St. Nicholas Orthodox Church in Charlottesville. Check the events page or GroupMe for the exact location each week.',
   },
   {
     question: 'What should I wear?',
     answer:
-      'For fellowship events, normal campus clothes are fine. For church services, people usually dress a little more neatly, but you do not need to own anything special to come.',
+      'For fellowship events, casual clothing is fine. For church services, people usually dress a little more neatly (like a button-up and pants), but you do not need to own anything special to come.',
   },
   {
     question: 'Will I be the only new person there?',
@@ -65,24 +65,24 @@ const faqItems = [
   {
     question: 'What if I know almost nothing about Orthodoxy?',
     answer:
-      'That is okay. You do not need background knowledge to come. If you want a gentle place to start, the catechism resources page is a good next stop.',
+      'That is okay. You do not need background knowledge to come. If you want a gentle place to start, the catechism resources page is a good next stop. As John 1:39 says: "“Come,” he replied, “and you will see.”"',
   },
 ];
 
 const helpfulLinks = [
   {
     title: 'Events',
-    description: 'See weekly gatherings, service times, and what is coming up next.',
+    description: 'Weekly gatherings, service times, and other events.',
     href: '/events',
   },
   {
     title: 'Catechism Resources',
-    description: 'Start with a gentle introduction to Orthodoxy in plain language.',
+    description: 'Both introductory materials and deeper theological answers.',
     href: '/resources/catechism',
   },
   {
     title: 'About OCF',
-    description: 'Meet the chapter, its purpose, and the students helping lead it this year.',
+    description: 'Meet the chapter, its purpose, and the students leading it this year.',
     href: '/about',
   },
 ];

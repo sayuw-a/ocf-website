@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 border-t border-white/10 pt-8 text-center text-[0.96rem] text-stone-300">
-          <p>&copy; {new Date().getFullYear()} Orthodox Christian Fellowship at UVA. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Orthodox Christian Fellowship at UVA.</p>
         </div>
       </div>
     </footer>
