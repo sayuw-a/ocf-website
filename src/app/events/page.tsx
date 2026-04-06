@@ -23,7 +23,8 @@ export default function Events() {
       <section className="page-intro">
         <h1 className="page-title">Events</h1>
         <p className="page-copy">
-          Join us for worship, fellowship, study, and special events throughout the year.
+          Most weeks include some mix of prayer, church services, Bible study, food, and time to just
+          be together. Here is the basic rhythm.
         </p>
       </section>
 
@@ -31,9 +32,9 @@ export default function Events() {
         <div className="page-intro mb-8">
           <h2 className="section-heading">Recurring Events</h2>
         </div>
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="page-grid-wide">
           {recurringEvents.map((event) => (
-            <article key={event.title} className="retro-box">
+            <article key={event.title} className="page-panel">
               <Image
                 src={event.image}
                 alt={event.alt}
@@ -52,11 +53,11 @@ export default function Events() {
       </section>
 
       <section className="page-section">
-        <div className="retro-box text-center">
+        <div className="page-panel text-center">
           <h2 className="section-heading mb-4">Special & Upcoming Events</h2>
           <p className="page-copy mx-auto mb-8 max-w-2xl">
-            Keep an eye on the calendar for feast days, service opportunities, meals, and trips
-            throughout the semester.
+            Check the calendar for feast days, service opportunities, meals, trips, and whatever else
+            the semester brings.
           </p>
           <iframe
             src="https://calendar.google.com/calendar/embed?src=fc12eba4c5f22cf289e5751d898b3d1caf248f74a1a351eaae11f1b6bc4f579d%40group.calendar.google.com&ctz=America%2FNew_York"

@@ -4,35 +4,35 @@ const quickAnswers = [
   {
     question: 'Who can come?',
     answer:
-      'Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. You do not need to already know someone in OCF.',
+      'Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. You do not need to already know someone in OCF to come.',
   },
   {
     question: 'What is Orthodoxy in plain language?',
     answer:
-      'Orthodoxy is the ancient Christian faith of the Church, centered on Jesus Christ, worship, prayer, Scripture, and life in communion with God. If that is new to you, it is completely fine to start with questions.',
+      'Orthodoxy is the historic Christian life of the Church, centered on Jesus Christ, worship, prayer, Scripture, repentance, and communion with God. If that sounds unfamiliar, it is completely normal to begin with questions.',
   },
   {
     question: 'What should I do first?',
     answer:
-      'The easiest first step is to join the GroupMe, send an email, or come to the next gathering. If you want, you can reach out ahead of time and someone can help you know where to go.',
+      'The easiest first step is to join the GroupMe, send an email, or come to the next gathering. If you want, someone can help you know where to go and who to look for.',
   },
 ];
 
 const newcomerSteps = [
   {
-    title: '1. Reach out if you want a personal contact',
+    title: '1. Reach out first if that helps',
     body:
-      'Email us or join the GroupMe if you would like a name to look for, a quick answer about the week’s plans, or help getting to your first event.',
+      'Email us or join the GroupMe if you want a name to look for, a quick answer about the week&apos;s plans, or help getting to your first event.',
   },
   {
-    title: '2. Come to something simple first',
+    title: '2. Start with something simple',
     body:
-      'Many students begin with Bible study, fellowship, or a meal because it gives them time to meet people naturally. You can also come to services if that is what you are looking for.',
+      'A lot of students start with Bible study, fellowship, or a meal because it gives them time to meet people naturally. You can also start with services if that is what you are looking for.',
   },
   {
-    title: '3. Ask whatever you are actually wondering',
+    title: '3. Ask what you are actually wondering',
     body:
-      'Questions about Orthodoxy, church background, or what happens at services are welcome. You do not need to filter them first.',
+      'Questions about Orthodoxy, church background, or what happens at services are welcome. You do not need to make them sound polished first.',
   },
 ];
 
@@ -45,7 +45,7 @@ const faqItems = [
   {
     question: 'What are events usually like?',
     answer:
-      'It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights. In general, expect a warm welcome and people happy to explain what is happening.',
+      'It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights. In general, expect people to say hi, explain what is going on, and make room for you.',
   },
   {
     question: 'Where do events happen?',
@@ -55,7 +55,7 @@ const faqItems = [
   {
     question: 'What should I wear?',
     answer:
-      'For fellowship events, normal campus clothes are fine. For church services, students usually dress a little more neatly, but you do not need to own anything special to come.',
+      'For fellowship events, normal campus clothes are fine. For church services, people usually dress a little more neatly, but you do not need to own anything special to come.',
   },
   {
     question: 'Will I be the only new person there?',
@@ -72,7 +72,7 @@ const faqItems = [
 const helpfulLinks = [
   {
     title: 'Events',
-    description: 'See weekly gatherings, service times, and the calendar.',
+    description: 'See weekly gatherings, service times, and what is coming up next.',
     href: '/events',
   },
   {
@@ -82,7 +82,7 @@ const helpfulLinks = [
   },
   {
     title: 'About OCF',
-    description: 'Learn more about the chapter, its purpose, and its student leaders.',
+    description: 'Meet the chapter, its purpose, and the students helping lead it this year.',
     href: '/about',
   },
 ];
@@ -92,15 +92,15 @@ export default function StartHerePage() {
     <div className="content-shell start-here-shell py-10 sm:py-16">
       <section className="start-hero">
         <p className="home-eyebrow">Start Here</p>
-        <h1 className="home-title">Everything a newcomer usually wants to know before showing up.</h1>
+        <h1 className="home-title">What most people want to know before they come for the first time.</h1>
         <p className="home-lede">
-          This page is for first visits, honest questions, and practical details. If you are trying to
-          figure out whether OCF is for you, what Orthodoxy is, where people meet, and how to get
-          connected, start here.
+          This page is for first visits, practical questions, and the things people usually want to
+          ask before showing up. If you are trying to figure out whether OCF is for you, what
+          Orthodoxy is, where people meet, or how to get connected, start here.
         </p>
         <div className="home-actions">
           <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
-            Email a Student Leader
+            Email a student leader
           </a>
           <a
             href="https://groupme.com/join_group/52539301/WUDGNm6m"
@@ -111,7 +111,7 @@ export default function StartHerePage() {
             Join the GroupMe
           </a>
           <Link href="/events" className="home-inline-link">
-            See this week&apos;s events
+            See what&apos;s happening this week
           </Link>
         </div>
       </section>
@@ -154,8 +154,8 @@ export default function StartHerePage() {
               Divine Liturgy happen at St. Nicholas Orthodox Church in Charlottesville.
             </p>
             <p className="page-copy mt-4">
-              If you are not sure where to go, check the events page or message in GroupMe first. We
-              would much rather help you arrive than have you guess.
+              If you are not sure where to go, check the events page or send a message first. We would
+              much rather help you arrive than have you guess.
             </p>
             <Link href="/events" className="home-inline-link">
               Open the events page
@@ -164,10 +164,10 @@ export default function StartHerePage() {
 
           <article className="start-panel">
             <p className="home-eyebrow">Plain-language Orthodoxy</p>
-            <h2 className="home-section-title">Orthodoxy is a way of Christian life, not only a topic to study.</h2>
+            <h2 className="home-section-title">Orthodoxy is a way of Christian life, not only something to read about.</h2>
             <p className="page-copy">
               In OCF, that usually means prayer, worship, Scripture, friendship, repentance, and
-              learning to live close to Christ in the life of the Church.
+              learning to stay close to Christ in the life of the Church.
             </p>
             <p className="page-copy mt-4">
               If that sounds unfamiliar, you do not need to master the vocabulary before coming. You
@@ -222,12 +222,12 @@ export default function StartHerePage() {
             <h2 className="home-section-title">You can ask a real person before you come.</h2>
             <p className="page-copy">
               If you want help with location, rides, what kind of event to start with, or whether OCF
-              is the right fit, reach out. That is a normal way to begin.
+              feels like the right fit, reach out. A lot of people begin that way.
             </p>
           </div>
           <div className="home-contact-actions">
             <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
-              Email a Student Leader
+              Email a student leader
             </a>
             <a
               href="https://groupme.com/join_group/52539301/WUDGNm6m"

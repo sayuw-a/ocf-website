@@ -15,8 +15,8 @@ const prayers = [
 
 export default function PrayerResources() {
   return (
-    <div className="mx-auto max-w-3xl py-10 sm:py-16">
-      <section className="retro-box">
+    <div className="content-shell max-w-3xl py-10 sm:py-16">
+      <section className="page-panel">
         <h1 className="page-title text-center">Prayer Resources</h1>
         <p className="page-copy text-center">
           Find Orthodox Christian prayer books, guides, and resources to enrich your daily spiritual
@@ -25,7 +25,7 @@ export default function PrayerResources() {
         <div className="my-6 flex justify-center">
           <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
         </div>
-        <ul className="space-y-5">
+        <ul className="resource-list">
           {prayers.map((prayer) => (
             <li key={prayer.title}>
               <a

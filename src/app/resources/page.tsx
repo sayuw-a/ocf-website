@@ -60,27 +60,27 @@ export default function Resources() {
       <section className="page-intro">
         <h1 className="page-title">Resources</h1>
         <p className="page-copy">
-          Explore Orthodox Christian faith, find local parishes, and discover helpful links for your
-          spiritual journey.
+          These are the pages and links we usually send when someone wants to learn more, find a
+          parish, or get a gentle start with Orthodoxy.
         </p>
       </section>
 
       <section className="page-section">
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
+        <div className="page-chip-row">
           <Link href="/resources/catechism" className="btn-secondary">
-            Catechism Resources
+            Start with catechism
           </Link>
           <Link href="/resources/prayer" className="btn-secondary">
-            Prayer Resources
+            Prayer resources
           </Link>
         </div>
 
         {resourceSections.map((section) => (
           <div key={section.title} className="mb-12 last:mb-0">
             <h2 className="section-heading mb-6 text-2xl">{section.title}</h2>
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="page-grid-wide">
               {section.items.map((item) => (
-                <article key={item.title} className="retro-box">
+                <article key={item.title} className="page-panel">
                   <h3 className="font-display mb-2 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
                     {item.title}
                   </h3>

@@ -25,8 +25,8 @@ const resources = [
 
 export default function CatechismResources() {
   return (
-    <div className="mx-auto max-w-3xl py-10 sm:py-16">
-      <section className="retro-box">
+    <div className="content-shell max-w-3xl py-10 sm:py-16">
+      <section className="page-panel">
         <h1 className="page-title text-center">Catechism Resources</h1>
         <p className="page-copy text-center">
           Explore foundational texts and guides for inquirers and for anyone looking to deepen their
@@ -35,7 +35,7 @@ export default function CatechismResources() {
         <div className="my-6 flex justify-center">
           <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
         </div>
-        <ul className="space-y-5">
+        <ul className="resource-list">
           {resources.map((resource) => (
             <li key={resource.title}>
               <a

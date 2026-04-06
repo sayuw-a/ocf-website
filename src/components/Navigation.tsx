@@ -31,22 +31,22 @@ export default function Navigation() {
     pathname === href || (href !== '/' && pathname?.startsWith(href));
 
   const linkClass = (href: string) =>
-    `rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+    `rounded-full px-4 py-2 text-[0.98rem] font-medium tracking-[0.01em] transition-colors ${
       isActive(href)
-        ? 'bg-amber-100/20 text-amber-50'
-        : 'text-stone-200 hover:bg-white/10 hover:text-amber-50'
+        ? 'bg-amber-50/12 text-amber-50'
+        : 'text-stone-200 hover:bg-white/7 hover:text-amber-50'
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 border-b-4 border-amber-200 bg-stone-900/95 text-white shadow-md backdrop-blur-sm">
+    <nav className="sticky top-0 z-50 border-b border-amber-200/35 bg-[#183b67]/94 text-white backdrop-blur-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-display text-[2rem] font-semibold tracking-[0.01em] text-stone-50">
+        <Link href="/" className="font-display text-[2rem] font-semibold tracking-[0.005em] text-stone-50">
           OCF at UVA
         </Link>
 
         <button
           type="button"
-          className="rounded-full border border-amber-50/20 px-4 py-2 text-sm font-semibold text-stone-50 sm:hidden"
+          className="rounded-full border border-amber-50/20 px-4 py-2 text-[0.98rem] font-medium tracking-[0.01em] text-stone-50 sm:hidden"
           aria-expanded={mobileOpen}
           aria-controls="mobile-site-nav"
           onClick={() => setMobileOpen((open) => !open)}
@@ -81,13 +81,13 @@ export default function Navigation() {
             {resourcesOpen ? (
               <div
                 id="desktop-resources-menu"
-                className="absolute right-0 top-[calc(100%+0.5rem)] w-60 rounded-2xl border border-stone-200 bg-stone-50 p-2 text-sm text-stone-900 shadow-2xl"
+                className="absolute right-0 top-[calc(100%+0.5rem)] w-60 rounded-2xl border border-stone-200 bg-stone-50 p-2 text-sm text-stone-900 shadow-[0_14px_28px_rgba(32,24,14,0.12)]"
               >
                 {resourceLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="block rounded-xl px-4 py-3 font-medium hover:bg-amber-50"
+                    className="block rounded-xl px-4 py-3 text-[0.98rem] font-medium hover:bg-amber-50"
                   >
                     {link.label}
                   </Link>
@@ -99,7 +99,7 @@ export default function Navigation() {
       </div>
 
       {mobileOpen ? (
-        <div id="mobile-site-nav" className="border-t border-white/10 bg-stone-900/95 px-4 py-4 sm:hidden">
+        <div id="mobile-site-nav" className="border-t border-white/10 bg-[#183b67]/94 px-4 py-4 sm:hidden">
           <div className="flex flex-col gap-2">
             {primaryLinks.map((link) => (
               <Link key={link.href} href={link.href} className={linkClass(link.href)}>
@@ -107,7 +107,7 @@ export default function Navigation() {
               </Link>
             ))}
             <details className="rounded-3xl bg-white/5 px-2 py-2">
-              <summary className="cursor-pointer list-none rounded-full px-4 py-2 text-sm font-semibold text-stone-50">
+              <summary className="cursor-pointer list-none rounded-full px-4 py-2 text-[0.98rem] font-medium tracking-[0.01em] text-stone-50">
                 Resources
               </summary>
               <div className="mt-2 flex flex-col gap-2 px-2 pb-2">
@@ -115,7 +115,7 @@ export default function Navigation() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="rounded-2xl px-4 py-2 text-sm text-stone-200 hover:bg-white/10 hover:text-amber-50"
+                    className="rounded-2xl px-4 py-2 text-[0.98rem] text-stone-200 hover:bg-white/10 hover:text-amber-50"
                   >
                     {link.label}
                   </Link>
