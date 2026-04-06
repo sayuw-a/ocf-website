@@ -135,11 +135,11 @@
   }
 
   .page-panel {
-    @apply rounded-[28px] border border-stone-200/90 bg-white/82 p-6 sm:p-8;
+    @apply rounded-[28px] border border-stone-200/90 bg-white/80 p-6 sm:p-8;
   }
 
   .page-panel-soft {
-    @apply rounded-[26px] border border-stone-200/80 bg-white/68 p-5 sm:p-6;
+    @apply rounded-[26px] border border-stone-200/80 bg-white/70 p-5 sm:p-6;
   }
 
   .page-grid-wide {
@@ -170,7 +170,7 @@
   }
 
   .home-eyebrow {
-    @apply mb-4 text-[0.8rem] font-medium uppercase tracking-[0.16em] text-emerald-900/78;
+    @apply mb-4 text-[0.8rem] font-medium uppercase tracking-[0.16em] text-emerald-900/80;
   }
 
   .home-title {
@@ -202,7 +202,7 @@
   }
 
   .home-answer-item dt {
-    @apply mb-2 text-[0.76rem] font-medium uppercase tracking-[0.14em] text-emerald-900/72;
+    @apply mb-2 text-[0.76rem] font-medium uppercase tracking-[0.14em] text-emerald-900/70;
   }
 
   .home-answer-item dd {
@@ -227,7 +227,7 @@
   }
 
   .home-hero-note {
-    @apply absolute bottom-[18%] left-[10%] max-w-[18rem] rounded-[18px] border border-stone-200/80 bg-white/92 px-4 py-4 text-sm leading-7 text-stone-700 shadow-[0_10px_20px_rgba(90,68,38,0.08)];
+    @apply absolute bottom-[18%] left-[10%] max-w-[18rem] rounded-[18px] border border-stone-200/80 bg-white/90 px-4 py-4 text-sm leading-7 text-stone-700 shadow-[0_10px_20px_rgba(90,68,38,0.08)];
   }
 
   .home-card-kicker {
@@ -391,7 +391,7 @@
   .start-card,
   .start-panel,
   .start-faq-item {
-    @apply rounded-[24px] border border-stone-200/90 bg-white/84 p-5 sm:p-6;
+    @apply rounded-[24px] border border-stone-200/90 bg-white/80 p-5 sm:p-6;
   }
 
   .start-section {
@@ -460,7 +460,7 @@
   }
 
   .start-link-card {
-    @apply flex h-full flex-col rounded-[22px] border border-stone-200/90 bg-white/76 p-6 transition-colors hover:border-amber-300 hover:bg-amber-50/40;
+    @apply flex h-full flex-col rounded-[22px] border border-stone-200/90 bg-white/75 p-6 transition-colors hover:border-amber-300 hover:bg-amber-50/40;
   }
 
   .start-link-card .home-inline-link {
