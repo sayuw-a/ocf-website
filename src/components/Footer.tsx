@@ -13,7 +13,9 @@ export default function Footer() {
               its activities and affairs, the organization is not a part of or an
               agency of the University. It is a separate and independent
               organization, which is responsible for and manages its own
-              activities and affairs.
+              activities and affairs. The University does not direct, supervise or
+              control the organization and is not responsible for the organization's
+              contracts, acts or omissions.
             </p>
           </div>
           <div>
