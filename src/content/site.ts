@@ -48,46 +48,46 @@ export const site = {
   home: {
     hero: {
       eyebrow: "Orthodox Christian Fellowship at UVA",
-      title: "Prayer, friendship, and a place to belong at UVA.",
-      lede: "OCF is a group of students trying to stay close to Christ together during college. Some of us grew up Orthodox. Some showed up with questions. Most people first come because they want real friendship, honest conversation, and a place that feels grounded.",
+      title: "The righteous shall live by faith.",
+      lede: "OCF is the Orthodox Christian student ministry at the University of Virginia. We gather for worship, Scripture, and fellowship in the life of the Church. Some of us grew up Orthodox. Others came as inquirers. We strive to live out our faith in love, service, and humility.",
       ctaPrimary: "Start Here if You\u2019re New",
       ctaSecondary: "See This Week\u2019s Events",
-      ctaEmail: "Want to ask first? Email a student leader",
+      ctaEmail: "Email a student leader",
       visualAriaLabel: "Recent OCF life",
       qaAriaLabel: "Quick answers for first-time visitors",
       photoLargeAlt: "Group photo of OCF students together",
       photoSmallAlt: "Students sharing a meal at an OCF cookout",
-      cardKicker: "A first visit usually means",
+      cardKicker: "A first visit",
       cardDescription:
-        "Usually: someone says hi, someone makes room for you, and by the end of the night you know a few names and what is happening next week.",
+        "You will encounter the Faith as it is lived — through worship, study, and the ordinary company of other Orthodox Christians.",
     },
     quickAnswers: [
       {
         question: "Who can come?",
-        answer: "Orthodox students, curious students, and anyone who wants to learn are welcome.",
+        answer: "Orthodox students, inquirers from other backgrounds, and anyone with a sincere interest in the Faith are welcome.",
       },
       {
         question: "Where do events happen?",
-        answer: "Usually on or near Grounds during the week, and at St. Nicholas Orthodox Church for services.",
+        answer: "Fellowship gatherings are held on or near Grounds. Services take place at St. Nicholas Orthodox Church in Charlottesville.",
       },
       {
         question: "What should I do first?",
-        answer: "Read the newcomer guide, message us, or just come to the next event.",
+        answer: "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect.",
       },
     ],
     whatWeDo: {
       eyebrow: "Here\u2019s what we actually do",
       title:
-        "A normal OCF week usually looks like some mix of prayer, study, meals, and seeing the same people again.",
+        "A typical OCF week includes worship, Scripture study, and the fellowship of the Church.",
       description:
-        "If you are trying to picture what it would actually feel like to come, start here. OCF is not only a list of events. It is a real student community with a church home, group chats, rides, dinners, and people who remember your name.",
+        "OCF is a student chapter, not a campus club. The rhythm of the week follows the life of the Church: Vespers on Saturday, Divine Liturgy on Sunday, Bible study during the week, and the meals and conversation that accompany them.",
     },
     galleryMoments: [
       {
         image: "cookout-2025.jpg",
         alt: "Students gathered around food at the spring cookout",
         title: "Meals that turn into long conversations",
-        description: "Cookouts, dinners, and after-church meals are where a lot of friendships begin.",
+        description: "We often host cookouts, dinners, and after-church meals.",
       },
       {
         image: "liturgy-2025.jpg",
@@ -106,57 +106,57 @@ export const site = {
     ],
     firstStep: {
       eyebrow: "Your first step",
-      title: "You do not have to decode the whole group before coming.",
+      title: "Coming for the first time requires no preparation.",
       description:
-        "A first visit should feel like someone opening the door, not like you have to figure out everything by yourself first. Here is the easiest path in.",
+        "The Church has always received inquirers. You do not need familiarity with the services, background in Orthodox theology, or any particular preparation. Come and see.",
     },
     firstVisitSteps: [
       {
-        label: "Text or email first if that would make coming easier",
+        label: "Reach out beforehand if you have questions",
         description:
-          "If you want a name to look for, the location for that week, or just a little reassurance, send a message first. That is normal, and we are happy to help.",
+          "If you want to know where to go, who to look for, or what the week holds, contact us first. Many people begin that way.",
       },
       {
-        label: "Start with the kind of night that feels most natural to you",
+        label: "Start with whichever gathering suits you",
         description:
-          "Some people come first to Bible study or dinner because it feels easy to talk and meet people. Others want to start with Vespers or Divine Liturgy. Either way is fine.",
+          "Most students begin with Bible study or Saturday Vespers. Either is a reasonable entry point into the life of OCF.",
       },
       {
-        label: "Come as you are, even if you feel out of place at first",
+        label: "No prior knowledge is expected",
         description:
-          "You do not need to know the prayers, understand every part of the service, or arrive with church words ready. You can just come and let the night unfold.",
+          "You do not need to know the prayers or understand every part of the service. Come, observe, and ask questions as they arise.",
       },
     ],
     newHere: {
       eyebrow: "New here?",
-      title: "Start with the practical questions, not the awkward guesswork.",
+      title: "Answers to the questions most visitors ask before coming.",
       description:
-        "We put the common first-visit questions in one place: what Orthodoxy is in plain language, who usually comes, where things happen, what a first night feels like, and how to get connected before you show up.",
+        "The Start Here page addresses what Orthodoxy is, what to expect at a gathering or service, where events take place, and how to get in contact before you arrive.",
       ctaPrimary: "Open the newcomer guide",
       ctaInline: "Meet the people behind OCF",
     },
     whatItFeelsLike: {
-      eyebrow: "What OCF feels like",
+      eyebrow: "What to expect",
       title:
-        "Not polished, not performative, just a steady rhythm of prayer, friendship, and being known.",
+        "A community oriented toward prayer, worship, and the common life of the Church.",
       description:
-        "Some weeks are quiet. Some are full. Some nights are mostly conversation around a table. Some feel more prayerful and liturgical. What matters is that students keep returning to the same life together.",
+        "The character of OCF is shaped by the liturgical calendar and the ordinary life of a Christian community. Some weeks center on feast days or particular services. Others are simpler: study, conversation, shared meals. The continuity is the same people and the same Faith, week after week.",
     },
     visitMoments: [
       {
-        title: "Prayer and worship",
+        title: "Worship at St. Nicholas",
         description:
-          "Some weeks are centered on Vespers, Divine Liturgy, feast days, or prayer together at St. Nicholas.",
+          "Great Vespers on Saturday and Divine Liturgy on Sunday at St. Nicholas Orthodox Church are the center of OCF\u2019s worship life.",
       },
       {
-        title: "Meals, study, and ordinary college friendship",
+        title: "Scripture study and fellowship",
         description:
-          "A lot of OCF life is simpler than people expect: dinner after church, Bible study, long conversations, rides across town, and students making room for each other.",
+          "Weekly Bible study and shared meals fill the rest of the week. These are not peripheral activities but part of the same common life.",
       },
       {
-        title: "A place where questions are welcome",
+        title: "A community open to inquirers",
         description:
-          "If you are Orthodox-curious, you do not need polished language or background knowledge. Questions are part of how many people begin.",
+          "Orthodoxy has a long tradition of welcoming those who seek. Questions about the Faith, the services, or church history are a normal part of OCF life.",
       },
     ],
     storyPhotos: {
@@ -165,9 +165,9 @@ export const site = {
     },
     readyToCome: {
       eyebrow: "Ready to come?",
-      title: "If you want, we can make the first visit less awkward.",
+      title: "Reach out before your first visit if you have questions.",
       description:
-        "If you want the address, a ride, a name to look for, or help figuring out which event to start with, reach out. You do not have to show up cold.",
+        "If you want to know where to go, what to expect, or who to look for, contact us beforehand. You are also welcome to simply come.",
       ctaEmail: "Email a student leader",
       ctaGroupMe: "Join the GroupMe",
       ctaInline: "Meet the group",
@@ -355,7 +355,7 @@ export const site = {
     hero: {
       eyebrow: "Start Here",
       title: "What most people want to know before they come for the first time.",
-      lede: "This page is for first visits, practical questions, and the things people usually want to ask before showing up. If you are trying to figure out whether OCF is for you, what Orthodoxy is, where people meet, or how to get connected, start here.",
+      lede: "This page answers the questions visitors most commonly ask: what Orthodoxy is, what OCF does, where gatherings take place, and how to get in contact. If you are considering coming for the first time, begin here.",
       ctaEmail: "Email a student leader",
       ctaGroupMe: "Join the GroupMe",
       ctaInline: "See what\u2019s happening this week",
@@ -364,7 +364,7 @@ export const site = {
       {
         question: "Who is welcome?",
         answer:
-          "Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. We aim to provide an environment open to anyone curious about the Christian faith.",
+          "Orthodox Christians, inquirers from other backgrounds, and those with a genuine interest in the Faith are welcome. No prior knowledge of Orthodoxy is required.",
       },
       {
         question: "What is Orthodoxy",
@@ -374,7 +374,7 @@ export const site = {
       {
         question: "What should I do first?",
         answer:
-          "The easiest first step is to join the GroupMe, send an email, or come to the next gathering. If you want, someone can help you know where to go and who to look for.",
+          "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect or where to go.",
       },
     ],
     newcomerSteps: {
@@ -383,34 +383,34 @@ export const site = {
       steps: [
         {
           title: "1. Reach out",
-          body: "Email us or join the GroupMe if you want a name to look for, a quick answer about the week&apos;s plans",
+          body: "Contact us beforehand if you want to know where to go, who to look for, or what the week holds.",
         },
         {
           title: "2. Start with something simple",
-          body: "A lot of students join us for Bible study or the evening Vesperal service on Saturday.",
+          body: "Most students begin with Bible study or Saturday Vespers. Either is a reasonable entry point.",
         },
         {
           title: "3. Ask what you are actually wondering",
-          body: "Questions about Orthodoxy, church background, or what happens at services are welcome.",
+          body: "Questions about the Faith, the services, or Orthodox practice are welcome and expected.",
         },
       ],
     },
     whereThingsHappen: {
       eyebrow: "Where things happen",
-      title: "Most weeks include both campus life and church life.",
+      title: "Gatherings take place both on Grounds and at the parish.",
       description1:
-        "Fellowship gatherings usually happen on or near Grounds. Services like Great Vespers and Divine Liturgy happen at St. Nicholas Orthodox Church in Charlottesville.",
+        "Weekly fellowship events are held on or near Grounds. Services — Vespers and Divine Liturgy — take place at St. Nicholas Orthodox Church in Charlottesville, approximately 20 minutes from the University.",
       description2:
-        "If you are not sure where to go, check the events page or send a message first. We would much rather help you arrive than have you guess.",
+        "If you are unsure where to go, check the events page or contact us. We would rather you arrive than guess.",
       ctaInline: "Open the events page",
     },
     plainLanguage: {
-      eyebrow: "Plain-language Orthodoxy",
-      title: "Orthodoxy is a way of Christian life, not only something to read about.",
+      eyebrow: "What Orthodoxy is",
+      title: "Orthodoxy is the fullness of the Christian Faith, not merely a tradition or ethnic identity.",
       description1:
-        "In OCF, that usually means prayer, worship, Scripture, friendship, repentance, and learning to stay close to Christ in the life of the Church.",
+        "The Orthodox Church holds the Apostolic Faith as received from Christ and His Apostles, transmitted through Holy Scripture, Holy Tradition, the Ecumenical Councils, and the lives of the saints.",
       description2:
-        "If that sounds unfamiliar, you do not need to master the vocabulary before coming. You can begin by showing up, listening, and asking questions as they come.",
+        "Prior knowledge is not expected of visitors. Come, observe, and ask questions. The resources page has introductory texts if you wish to read before coming.",
       ctaInline: "Start with catechism resources",
     },
     faq: {
@@ -420,32 +420,32 @@ export const site = {
         {
           question: "Do I need to be Orthodox to come?",
           answer:
-            "No. OCF is rooted in Orthodox Christianity, but students who are learning, visiting, or exploring are welcome to come and see.",
+            "No. OCF is rooted in Orthodox Christianity. Visitors who are inquiring or from other Christian backgrounds are welcome to attend.",
         },
         {
           question: "What are events usually like?",
           answer:
-            "It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights.",
+            "Most gatherings include worship, Scripture study, or fellowship \u2014 often more than one. Vespers and Divine Liturgy are the center of OCF\u2019s worship life; Bible study and shared meals fill the rest of the week.",
         },
         {
           question: "Where do events happen?",
           answer:
-            "Weekly fellowship events are usually on or near Grounds like at the Center for Christian Study on the Corner. Church services happen at St. Nicholas Orthodox Church in Charlottesville. Check the events page or GroupMe for the exact location each week.",
+            "Fellowship events are held on or near Grounds, including at the Center for Christian Study. Services take place at St. Nicholas Orthodox Church in Charlottesville. Check the events page for the exact location each week.",
         },
         {
           question: "What should I wear?",
           answer:
-            "For fellowship events, casual clothing is fine. For church services, people usually dress a little more neatly (like a button-up and pants), but you do not need to own anything special to come.",
+            "For fellowship events, ordinary dress is appropriate. For church services, neat and modest clothing is customary \u2014 comparable to what you would wear to any formal occasion. Women traditionally cover their heads during Orthodox services; visitors are not required to do so.",
         },
         {
           question: "Will I be the only new person there?",
           answer:
-            "Usually no. Even when most people already know each other, new students come throughout the year, and OCF expects first-time visitors.",
+            "Likely not. New students come throughout the year, and OCF regularly receives visitors.",
         },
         {
           question: "What if I know almost nothing about Orthodoxy?",
           answer:
-            "That is okay. You do not need background knowledge to come. If you want a gentle place to start, the catechism resources page is a good next stop. As John 1:39 says: \u201c\u201cCome,\u201d he replied, \u201cand you will see.\u201d\u201d",
+            "That is the normal condition of an inquirer. No preparation is required. The resources page has a short list of introductory texts if you wish to read before coming. As Christ said: \u201cCome and see.\u201d (John 1:39)",
         },
       ],
     },
@@ -473,9 +473,9 @@ export const site = {
     },
     cta: {
       eyebrow: "Still not sure?",
-      title: "You can ask a real person before you come.",
+      title: "You are welcome to reach out before coming.",
       description:
-        "If you want help with location, rides, what kind of event to start with, or whether OCF feels like the right fit, reach out. A lot of people begin that way.",
+        "If you have questions about location, what to expect, or Orthodox practice, contact us. Many people begin by asking.",
       ctaEmail: "Email a student leader",
       ctaGroupMe: "Join Our GroupMe",
     },
