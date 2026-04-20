@@ -23,7 +23,7 @@ export const site = {
     ],
     resourceLinks: [
       { href: "/resources", label: "All Resources" },
-      { href: "/resources/catechism", label: "Catechism" },
+      { href: "/resources/catechism", label: "Theological Library" },
       { href: "/resources/prayer", label: "Prayer" },
     ],
   },
@@ -243,8 +243,8 @@ export const site = {
         "These are the pages and links we usually send when someone wants to learn more, find a parish, or get a gentle start with Orthodoxy.",
     },
     chips: {
-      catechism: "Start with catechism",
-      prayer: "Prayer resources",
+      catechism: "Theological Library",
+      prayer: "Prayer",
     },
     sections: [
       {
