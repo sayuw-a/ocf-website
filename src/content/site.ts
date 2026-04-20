@@ -14,17 +14,12 @@ export const site = {
   nav: {
     logo: "OCF at UVA",
     menuButton: "Menu",
-    resourcesDropdown: "Resources",
     primaryLinks: [
       { href: "/", label: "Home" },
       { href: "/start-here", label: "Start Here" },
       { href: "/about", label: "About" },
       { href: "/events", label: "Events" },
-    ],
-    resourceLinks: [
-      { href: "/resources", label: "All Resources" },
-      { href: "/resources/catechism", label: "Catechism Resources" },
-      { href: "/resources/prayer", label: "Prayer" },
+      { href: "/resources", label: "Resources" },
     ],
   },
 
@@ -240,7 +235,7 @@ export const site = {
     intro: {
       title: "Resources",
       description:
-        "These are the pages and links we usually send when someone wants to learn more, find a parish, or get a gentle start with Orthodoxy.",
+        "A searchable library of Orthodox texts, prayer guides, theological sources, and local parish links. Filter by category or search for a topic.",
     },
     chips: {
       catechism: "Catechism Resources",
