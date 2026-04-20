@@ -31,7 +31,16 @@ export default function StartHerePage() {
           {site.startHere.quickAnswers.map((item) => (
             <article key={item.question} className="start-card">
               <h2>{item.question}</h2>
-              <p>{item.answer}</p>
+              {'attribution' in item ? (
+                <blockquote className="mt-3 border-l-2 border-amber-700/40 pl-4">
+                  <p className="text-[1.02rem] leading-[1.75] text-stone-700 italic">{item.answer}</p>
+                  <cite className="mt-3 block text-[0.82rem] font-medium not-italic uppercase tracking-[0.1em] text-stone-500">
+                    {item.attribution}
+                  </cite>
+                </blockquote>
+              ) : (
+                <p>{item.answer}</p>
+              )}
             </article>
           ))}
         </div>

@@ -369,7 +369,8 @@ export const site = {
       {
         question: "What is Orthodoxy",
         answer:
-          "\u201cRight faith and good works; for whoever holds these two, the same is a good Christian, and has certain hope of eternal salvation, as the Scripture says (James 2.24): \u201cYou see then how that by good works a man is justified, and not by faith only\u201d; and a little after (v. 6), \u201cFor as the body without the Spirit is dead; so faith without works is dead also.\u201d Saint Paul affirms the same (1 Tim. 1.19): \u201cHolding faith and a good conscience, which some having put away concerning faith, have made shipwreck.\u201d And again (1 Tim. 3.9): \u201cHolding the mystery of the faith in a pure conscience.\u201d\u201d The Orthodox Confession of St Peter Mogila",
+          "\u201cRight faith and good works; for whoever holds these two, the same is a good Christian, and has certain hope of eternal salvation, as the Scripture says (James 2.24): \u201cYou see then how that by good works a man is justified, and not by faith only\u201d; and a little after (v. 6), \u201cFor as the body without the Spirit is dead; so faith without works is dead also.\u201d Saint Paul affirms the same (1 Tim. 1.19): \u201cHolding faith and a good conscience, which some having put away concerning faith, have made shipwreck.\u201d And again (1 Tim. 3.9): \u201cHolding the mystery of the faith in a pure conscience.\u201d\u201d",
+        attribution: "The Orthodox Confession of St. Peter Mogila",
       },
       {
         question: "What should I do first?",
