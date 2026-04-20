@@ -23,7 +23,7 @@ export const site = {
     ],
     resourceLinks: [
       { href: "/resources", label: "All Resources" },
-      { href: "/resources/catechism", label: "Theological Library" },
+      { href: "/resources/catechism", label: "Catechism Resources" },
       { href: "/resources/prayer", label: "Prayer" },
     ],
   },
@@ -243,7 +243,7 @@ export const site = {
         "These are the pages and links we usually send when someone wants to learn more, find a parish, or get a gentle start with Orthodoxy.",
     },
     chips: {
-      catechism: "Theological Library",
+      catechism: "Catechism Resources",
       prayer: "Prayer",
     },
     sections: [
@@ -305,18 +305,233 @@ export const site = {
     intro: {
       title: "Prayer Resources",
       description:
-        "Find Orthodox Christian prayer books, guides, and resources to enrich your daily spiritual life.",
+        "Texts, guides, and practical wisdom on Orthodox prayer — from the Jesus Prayer and hesychasm to prayer books, rules, and the life of prayer in the home.",
     },
-    items: [
+    sections: [
       {
-        title: "Akathist to the Theotokos",
-        href: "/pdfs/theotokosakathist.pdf",
-        description: "A prayer service in honor of the Theotokos.",
+        title: "Jesus Prayer & Hesychasm",
+        items: [
+          {
+            label: "Comboschini (The Prayer Rope): Meditations of a Monk of the Holy Mountain Athos",
+            href: "http://orthodoxinfo.com/praxis/comboschini.aspx",
+            description: "Introduction to the practice of the Jesus Prayer",
+          },
+          {
+            label: "Introduction to the Jesus Prayer",
+            href: "http://www.tkinter.smig.net/PrincessIleana/JesusPrayer/index.htm",
+            description: "By Princess Ileana of Romania (later Mother Alexandra, Abbess of the Orthodox Monastery of the Transfiguration)",
+          },
+          {
+            label: "Prayer of the Heart for the Faithful Living in the World",
+            href: "http://orthodoxinfo.com/praxis/elderjoseph_prayerintheworld.aspx",
+            description: "By Elder Joseph of Vatopaidi, spiritual child of Elder Joseph the Hesychast",
+          },
+          {
+            label: "Father Paisios the Athonite: Guidance about the Jesus Prayer",
+            href: "http://orthodoxinfo.com/praxis/blessed-father-paisios-guidance-about-the-jesus-prayer.aspx",
+            description: "Excerpt from With Elder Porphyrios by Constantine Yiannitsiotis",
+          },
+          {
+            label: "Interpretation of the Prayer \u2014 Lord, have Mercy!",
+            href: "http://orthodoxinfo.com/praxis/interpretation-of-the-prayer-lord-have-mercy.aspx",
+            description: "Excerpt from the unpublished fifth volume of the Philokalia",
+          },
+          {
+            label: "Elder Joseph the Hesychast and the Teaching of Mental Prayer",
+            href: "http://orthodoxinfo.com/praxis/elderjosephandprayer.aspx",
+            description: "Homily by Abbot Ephraim of Vatopaidi Monastery",
+          },
+          {
+            label: "Concerning the Jesus Prayer",
+            href: "http://orthodoxinfo.com/praxis/jesusprayer.aspx",
+            description: "From the Jordanville Prayer Book (1996 ed.)",
+          },
+          {
+            label: "On Practicing the Jesus Prayer",
+            href: "http://orthodoxinfo.com/praxis/ignaty_jesus.aspx",
+            description: "By St. Ignaty (Brianchaninov)",
+          },
+          {
+            label: "On Prayer of the Heart",
+            href: "http://orthodoxinfo.com/praxis/frroman2.aspx",
+            description: "Excerpts from Exploring the Inner Universe by Fr. Roman Braga",
+          },
+          {
+            label: "The Power of the Jesus Prayer",
+            href: "http://www.orthodoxheritage.org/MOM%2007%202003.htm",
+            description: "Based on the testimony of Nun Tatiana (1912)",
+          },
+          {
+            label: "Humble-Mindedness: The Doorway to Pure Prayer",
+            href: "http://orthodoxinfo.com/praxis/humblemindedness.aspx",
+            description: "Interview with Elder Dionysius (Ignat) of Mount Athos, from The Orthodox Word (Jan\u2013Feb 2005)",
+          },
+          {
+            label: "Selections from The Arena, On Prayer",
+            href: "http://orthodoxinfo.com/praxis/arena_prayer.aspx",
+            description: "By St. Ignaty (Brianchaninov)",
+          },
+        ],
       },
       {
-        title: "Ninth Hour",
-        href: "/pdfs/9thHour.pdf",
-        description: "The Ninth Hour prayer service.",
+        title: "Prayer Books & Rules",
+        items: [
+          {
+            label: "An Orthodox Prayerbook",
+            href: "http://www.transchurch.org/sguide/praybk.htm",
+            description: "Compilation of Orthodox prayers from the Greek Orthodox Church of the Transfiguration, Lowell MA",
+          },
+          {
+            label: "Prayerbook of Holy Trinity Monastery",
+            href: "http://www.myriobiblos.gr/texts/english/prayerbook/main.htm",
+            description: "Full text of the Holy Trinity Monastery prayerbook",
+          },
+          {
+            label: "An Aid to Prayer",
+            href: "http://www.roca.org/OA/107/107g.htm",
+            description: "Thoughts on the use of a prayer book, from Orthodox America",
+          },
+          {
+            label: "Order of Prayer and Worship for Orthodox Faithful",
+            href: "http://orthodoxinfo.com/praxis/order_prayer.aspx",
+            description: "Talk by Fr. John Townsend at the 1998 Southern Orthodox Conference",
+          },
+          {
+            label: "A Prayer Rule",
+            href: "http://orthodoxinfo.com/praxis/prayrule.aspx",
+            description: "Excerpt from The Spiritual Life and How to Be Attuned to It by St. Theophan the Recluse",
+          },
+          {
+            label: "Inner Peace",
+            href: "http://orthodoxinfo.com/praxis/peace.aspx",
+            description: "Also by St. Theophan the Recluse",
+          },
+          {
+            label: "The Cell Rule of Five Hundred of the Optina Monastery",
+            href: "http://orthodoxinfo.com/praxis/cellrule.aspx",
+            description: "A prayer rule integrating fixed prayers and Jesus Prayers",
+          },
+          {
+            label: "A Listing of Suggested Prayer Books",
+            href: "http://orthodoxinfo.com/praxis/prayerbks.aspx",
+            description: "Annotated list of recommended Orthodox prayer books",
+          },
+          {
+            label: "Orthodox Prayers",
+            href: "http://www.ocf.org/OrthodoxPage/prayers/prayers.html",
+            description: "Including nearly the entire Lenten Triodion, from OCF",
+          },
+        ],
+      },
+      {
+        title: "The Lord\u2019s Prayer & Specific Topics",
+        items: [
+          {
+            label: "Explanation of the Lord\u2019s Prayer",
+            href: "http://orthodoxinfo.com/praxis/cfc_lordsprayer.aspx",
+            description: "Excerpt from Concerning Frequent Communion by St. Nikodemos the Hagiorite",
+          },
+          {
+            label: "The Lord\u2019s Prayer: A Homily",
+            href: "http://orthodoxinfo.com/praxis/the-lords-prayer.aspx",
+            description: "By Archimandrite George, Abbot of St. Gregoriou Monastery, Mount Athos (available in four languages)",
+          },
+          {
+            label: "On Prayer",
+            href: "http://orthodoxinfo.com/praxis/theoph_prayer.aspx",
+            description: "Excerpts from the Letters of St. Theophan the Recluse",
+          },
+          {
+            label: "On the Necessity of Constant Prayer",
+            href: "http://orthodoxinfo.com/praxis/continualprayer.aspx",
+            description: "By St. Nikodemos of the Holy Mountain",
+          },
+          {
+            label: "On Watchfulness, Prayer and Confession",
+            href: "http://orthodoxinfo.com/praxis/elderephraimhomily1.aspx",
+            description: "Homily by Elder Ephraim of Philotheou, translated by Fr. Seraphim Bell",
+          },
+          {
+            label: "Prayer: Our Nativity Centerpiece",
+            href: "http://orthodoxinfo.com/praxis/nativityprayer.aspx",
+            description: "Brief seasonal reflection on prayer",
+          },
+          {
+            label: "The Psalms of David",
+            href: "http://orthodoxinfo.com/praxis/typicon_psalms.aspx",
+            description: "Chapter Two from \u201cThe Typicon of the Orthodox Church\u2019s Divine Services\u201d",
+          },
+          {
+            label: "Little Book of St. Hesychios",
+            href: "http://orthodoxinfo.com/praxis/hesychios.aspx",
+            description: "Referenced in the context of noetic prayer and the Philokalia tradition",
+          },
+        ],
+      },
+      {
+        title: "Prayer in the Home & Community",
+        items: [
+          {
+            label: "Prayer: Corporate and Private",
+            href: "http://orthodoxinfo.com/praxis/xc_home.aspx#prayer",
+            description: "From the book Marriage and the Christian Home",
+          },
+          {
+            label: "The Icon Corner",
+            href: "http://orthodoxinfo.com/praxis/xc_home.aspx#corner",
+            description: "From the book Marriage and the Christian Home",
+          },
+          {
+            label: "How to Set Up a Personal Commemoration Book",
+            href: "http://orthodoxinfo.com/praxis/commemoration.aspx",
+            description: "For personal use at home, by Fr. John Whiteford",
+          },
+          {
+            label: "Prayer With the Non-Orthodox",
+            href: "http://orthodoxinfo.com/praxis/praynonorth.aspx",
+            description: "Q&A from Orthodox Tradition on praying with heterodox Christians",
+          },
+          {
+            label: "May We Orthodox Christians Pray for the Heterodox, and If So, How?",
+            href: "http://www.struggler.org/PrayingForTheHeterodox.html",
+            description: "Adapted from The Elder Joseph of Optina",
+          },
+          {
+            label: "Praying for the Non-Orthodox",
+            href: "http://orthodoxinfo.com/praxis/prayer_nonorth.aspx",
+            description: "From Orthodox Life",
+          },
+          {
+            label: "Prayer Life in an Orthodox Home",
+            href: "http://orthodoxinfo.com/praxis/prayer_home.aspx",
+            description: "By Archpriest Roman Lukianov",
+          },
+          {
+            label: "Prayer, Feasts, and Fasts",
+            href: "http://orthodoxinfo.com/praxis/prayer_feasts_fasts.aspx",
+            description: "By Metropolitan Philaret of New York",
+          },
+          {
+            label: "\u201cAll I Can Do Is Pray\u201d",
+            href: "http://orthodoxinfo.com/praxis/theveil_allicandoispray.aspx",
+            description: "From The Veil, Vol. 13, No. 1",
+          },
+        ],
+      },
+      {
+        title: "Recommended Books",
+        items: [
+          {
+            label: "The Way of the Pilgrim",
+            href: "http://www.amazon.com/exec/obidos/tg/detail/-/0060630175",
+            description: "The classic Russian Orthodox work on the Jesus Prayer; widely considered the top introductory text",
+          },
+          {
+            label: "Monastic Wisdom: The Letters of Elder Joseph the Hesychast",
+            href: "http://www.amazon.com/exec/obidos/tg/detail/-/0966700015",
+            description: "Letters of the 20th-century Athonite hesychast",
+          },
+        ],
       },
     ],
   },
