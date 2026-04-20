@@ -323,30 +323,188 @@ export const site = {
 
   catechism: {
     intro: {
-      title: "Catechism Resources",
+      title: "Orthodox Theological Library",
       description:
-        "Explore foundational texts and guides for inquirers and for anyone looking to deepen their understanding of the Orthodox faith.",
+        "Primary sources from the Church Fathers, Ecumenical Councils, and Orthodox confessional documents, organized by topic.",
     },
-    items: [
+    sections: [
       {
-        title: "How Can I Know God?; Fr. Thomas Hopko",
-        href: "/pdfs/How-Can-I-Know-God.pdf",
-        description: "What does it take to know God?",
+        title: "1. Divine Revelation: Scripture and Holy Tradition",
+        subsections: [
+          {
+            title: "",
+            items: [
+              { author: "St. Vincent of Lerins", links: [{ label: "Commonitory", href: "https://www.newadvent.org/fathers/1010.htm" }] },
+              { author: "St. Basil the Great", links: [{ label: "Hexaemeron", href: "https://www.newadvent.org/fathers/3201.htm" }] },
+              { author: "St. Ignatius of Antioch", links: [{ label: "Epistle to St. Polycarp", href: "https://www.newadvent.org/fathers/0104.htm" }, { label: "Epistle to the Ephesians", href: "https://www.newadvent.org/fathers/0110.htm" }] },
+              { author: "Tertullian", links: [{ label: "The Prescription Against Heretics", href: "https://www.newadvent.org/fathers/0311.htm" }] },
+              { author: "St. Irenaeus", links: [{ label: "The Proof of the Apostolic Preaching", href: "https://www.tertullian.org/fathers/irenaeus_02_proof.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+              { author: "Photius", links: [{ label: "Bibliotheca", href: "https://www.tertullian.org/fathers/photius_03bibliotheca.htm" }] },
+            ],
+          },
+        ],
       },
       {
-        title: "The Orthodox Church; Fr. Kallistos Ware",
-        href: "https://a.co/d/hhMSyzH",
-        description: "A primer on the Orthodox Church that has been beneficial to many converts.",
+        title: "2. Faith and Dogma (The Nicene Creed)",
+        subsections: [
+          {
+            title: "The Holy Trinity and Filioque",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "Against Eunomius", href: "https://www.newadvent.org/fathers/290112.htm" }, { label: "On the Making of Man", href: "https://www.newadvent.org/fathers/2914.htm" }, { label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { author: "St. Gregory of Nazianzus", links: [{ label: "Theological Orations", href: "https://www.newadvent.org/fathers/3102.htm" }] },
+              { author: "St. Basil the Great", links: [{ label: "Hexaemeron", href: "https://www.newadvent.org/fathers/3201.htm" }] },
+              { author: "St. Gregory Palamas", links: [{ label: "The One Hundred and Fifty Chapters", href: "https://azbyka.ru/otechnik/Grigorij_Palama/the-one-hundred-and-fifty-chapters/" }] },
+              { author: "St. Mark of Ephesus", links: [{ label: "Encyclical Letter", href: "https://www.orthodoxethos.com/post/the-encyclical-letter-of-saint-mark-of-ephesus" }] },
+              { author: "St. Athanasius", links: [{ label: "Four Discourses Against the Arians", href: "https://www.newadvent.org/fathers/2816.htm" }] },
+              { author: "Pseudo-Dionysius the Areopagite", links: [{ label: "The Divine Names", href: "https://www.tertullian.org/fathers/areopagite_03_divine_names.htm" }, { label: "The Mystical Theology", href: "https://www.tertullian.org/fathers/areopagite_06_mystic_theology.htm" }, { label: "The Ecclesiastical Hierarchy", href: "https://www.tertullian.org/fathers/areopagite_14_ecclesiastical_hierarchy.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+          {
+            title: "Creation, the Fall, and Evil",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "On the Making of Man", href: "https://www.newadvent.org/fathers/2914.htm" }, { label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { author: "St. Basil the Great", links: [{ label: "Hexaemeron", href: "https://www.newadvent.org/fathers/3201.htm" }] },
+              { author: "St. Irenaeus", links: [{ label: "The Proof of the Apostolic Preaching", href: "https://www.tertullian.org/fathers/irenaeus_02_proof.htm" }] },
+              { author: "St. Augustine", links: [{ label: "On the Predestination of the Saints", href: "https://www.newadvent.org/fathers/15121.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+            ],
+          },
+          {
+            title: "The Incarnation and Christology",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Gregory of Nazianzus", links: [{ label: "Theological Orations", href: "https://www.newadvent.org/fathers/3102.htm" }] },
+              { author: "St. Cyril of Alexandria", links: [{ label: "Commentary on John", href: "https://www.tertullian.org/fathers/cyril_on_john_00_praefatio.htm" }, { label: "Five Tomes Against Nestorius", href: "https://www.tertullian.org/fathers/cyril_against_nestorius_01_book1.htm" }, { label: "That Christ is One", href: "https://www.tertullian.org/fathers/cyril_christ_is_one_01_text.htm" }] },
+              { author: "St. Athanasius", links: [{ label: "Four Discourses Against the Arians", href: "https://www.newadvent.org/fathers/2816.htm" }] },
+              { author: "St. Gregory Palamas", links: [{ label: "The One Hundred and Fifty Chapters", href: "https://azbyka.ru/otechnik/Grigorij_Palama/the-one-hundred-and-fifty-chapters/" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+          {
+            title: "Salvation Exclusively in Christ",
+            items: [
+              { author: "St. Justin Martyr", links: [{ label: "First Apology", href: "https://www.newadvent.org/fathers/0126.htm" }, { label: "Dialogue with Trypho", href: "https://www.newadvent.org/fathers/0128.htm" }] },
+              { author: "St. Cyril of Alexandria", links: [{ label: "That Christ is One", href: "https://www.tertullian.org/fathers/cyril_christ_is_one_01_text.htm" }] },
+              { author: "St. Irenaeus", links: [{ label: "The Proof of the Apostolic Preaching", href: "https://www.tertullian.org/fathers/irenaeus_02_proof.htm" }] },
+              { author: "St. Ignatius of Antioch", links: [{ label: "Epistle to St. Polycarp", href: "https://www.newadvent.org/fathers/0104.htm" }, { label: "Epistle to the Ephesians", href: "https://www.newadvent.org/fathers/0110.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+        ],
       },
       {
-        title: "The Faith We Hold; Archbishop Paul of Finland",
-        href: "https://a.co/d/cR29ViY",
-        description: "A short synoptic introduction to the faith.",
+        title: "3. The Holy Mysteries (Sacraments)",
+        subsections: [
+          {
+            title: "Baptism and Chrismation",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. John Chrysostom", links: [{ label: "Instructions to Catechumens", href: "https://www.newadvent.org/fathers/1908.htm" }] },
+              { author: "St. Cyril of Alexandria", links: [{ label: "Commentary on John", href: "https://www.tertullian.org/fathers/cyril_on_john_00_praefatio.htm" }] },
+              { author: "St. Ignatius of Antioch", links: [{ label: "Epistle to the Ephesians", href: "https://www.newadvent.org/fathers/0110.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+          {
+            title: "The Holy Eucharist",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Cyril of Alexandria", links: [{ label: "Commentary on John", href: "https://www.tertullian.org/fathers/cyril_on_john_00_praefatio.htm" }] },
+              { author: "St. John Chrysostom", links: [{ label: "On the Priesthood", href: "https://www.newadvent.org/fathers/1922.htm" }] },
+              { author: "St. Ignatius of Antioch", links: [{ label: "Epistle to the Ephesians", href: "https://www.newadvent.org/fathers/0110.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+        ],
       },
       {
-        title: "The Orthodox Faith; Fr. Thomas Hopko",
-        href: "https://www.oca.org/orthodoxy/the-orthodox-faith",
-        description: "A deeper dive into Orthodox belief, worship, and sacramental life.",
+        title: "4. Hope and Charity (Christian Living)",
+        subsections: [
+          {
+            title: "Hope, Prayer, and Synergy",
+            items: [
+              { author: "St. John Chrysostom", links: [{ label: "Instructions to Catechumens", href: "https://www.newadvent.org/fathers/1908.htm" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { author: "St. Augustine", links: [{ label: "On the Predestination of the Saints", href: "https://www.newadvent.org/fathers/15121.htm" }] },
+            ],
+          },
+          {
+            title: "Charity and the Commandments",
+            items: [
+              { author: "St. John Chrysostom", links: [{ label: "Against the Jews (Homilies 1\u20138)", href: "https://www.tertullian.org/fathers/chrysostom_adversus_judaeos_01_homily1.htm" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+              { author: "Tertullian", links: [{ label: "The Prescription Against Heretics", href: "https://www.newadvent.org/fathers/0311.htm" }] },
+            ],
+          },
+          {
+            title: "Veneration of Saints and Icons",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }, { label: "Apologia Against Those who Decry Holy Images", href: "https://www.documentacatholicaomnia.eu/03d/0675-0749,_Ioannes_Damascenus,_Apologia_Against_Those_Who_Decry_Holy_Images,_EN.pdf" }] },
+              { author: "Pseudo-Dionysius the Areopagite", links: [{ label: "The Ecclesiastical Hierarchy", href: "https://www.tertullian.org/fathers/areopagite_14_ecclesiastical_hierarchy.htm" }] },
+              { author: "St. Gregory of Nazianzus", links: [{ label: "Theological Orations", href: "https://www.newadvent.org/fathers/3102.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+            ],
+          },
+        ],
+      },
+      {
+        title: "5. The Unseen World and the Afterlife",
+        subsections: [
+          {
+            title: "Angels and Demons",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "Pseudo-Dionysius the Areopagite", links: [{ label: "The Divine Names", href: "https://www.tertullian.org/fathers/areopagite_03_divine_names.htm" }, { label: "The Mystical Theology", href: "https://www.tertullian.org/fathers/areopagite_06_mystic_theology.htm" }, { label: "The Ecclesiastical Hierarchy", href: "https://www.tertullian.org/fathers/areopagite_14_ecclesiastical_hierarchy.htm" }] },
+              { author: "St. Irenaeus", links: [{ label: "The Proof of the Apostolic Preaching", href: "https://www.tertullian.org/fathers/irenaeus_02_proof.htm" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+            ],
+          },
+          {
+            title: "The Toll-Houses and Particular Judgment",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+            ],
+          },
+          {
+            title: "The Intermediate State",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { links: [{ label: "The Orthodox Confession of St. Peter Mogila", href: "https://maksimologija.org/mogila-orthodox-confession/" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+          {
+            title: "The Last Judgment",
+            items: [
+              { author: "St. John of Damascus", links: [{ label: "Exposition of the Orthodox Faith (Books I\u2013IV)", href: "http://orthodoxinfo.com/general/stjohn_exp1.aspx" }] },
+              { author: "St. Jerome", links: [{ label: "Commentary on Daniel", href: "https://www.tertullian.org/fathers/jerome_daniel_02_text.htm" }] },
+              { author: "St. Gregory of Nyssa", links: [{ label: "On the Soul and the Resurrection", href: "https://www.newadvent.org/fathers/2915.htm" }] },
+              { author: "St. Justin Martyr", links: [{ label: "First Apology", href: "https://www.newadvent.org/fathers/0126.htm" }] },
+              { author: "St. Athanasius", links: [{ label: "Four Discourses Against the Arians", href: "https://www.newadvent.org/fathers/2816.htm" }] },
+              { links: [{ label: "The Longer Catechism by St. Philaret of Moscow", href: "https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm" }] },
+              { links: [{ label: "Confession of Dositheus", href: "https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/" }] },
+            ],
+          },
+        ],
       },
     ],
   },
