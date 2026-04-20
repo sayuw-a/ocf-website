@@ -1,39 +1,22 @@
 import Image from 'next/image';
-
-const recurringEvents = [
-  {
-    image: '/images/events/weekly-meeting.jpg',
-    alt: 'Students gathered for weekly Bible study and fellowship',
-    title: 'Bible Study & Fellowship',
-    time: 'Every Thursday at 8:00 PM',
-    description: 'Join us for discussion, prayer, and fellowship. All are welcome.',
-  },
-  {
-    image: '/images/events/divine-liturgy.jpg',
-    alt: 'Students and parishioners at divine liturgy',
-    title: 'Great Vespers & Divine Liturgy',
-    time: 'Vespers: Saturdays at 5:00 PM\nLiturgy: Sundays at 9:30 AM',
-    description: 'Join us for worship at St. Nicholas Orthodox Church about 20 minutes from Grounds.',
-  },
-];
+import { site } from '@/content/site';
 
 export default function Events() {
   return (
     <div className="content-shell max-w-5xl py-10 sm:py-16">
       <section className="page-intro">
-        <h1 className="page-title">Events</h1>
+        <h1 className="page-title">{site.events.intro.title}</h1>
         <p className="page-copy">
-          Most weeks include some mix of prayer, church services, Bible study, food, and time to just
-          be together. 
+          {site.events.intro.description}
         </p>
       </section>
 
       <section className="page-section">
         <div className="page-intro mb-8">
-          <h2 className="section-heading">Recurring Events</h2>
+          <h2 className="section-heading">{site.events.recurring.heading}</h2>
         </div>
         <div className="page-grid-wide">
-          {recurringEvents.map((event) => (
+          {site.events.recurring.list.map((event) => (
             <article key={event.title} className="page-panel">
               <Image
                 src={event.image}
@@ -54,9 +37,9 @@ export default function Events() {
 
       <section className="page-section">
         <div className="page-panel text-center">
-          <h2 className="section-heading mb-4">Special & Upcoming Events</h2>
+          <h2 className="section-heading mb-4">{site.events.special.heading}</h2>
           <p className="page-copy mx-auto mb-8 max-w-2xl">
-            Check the calendar for feast days, service opportunities, meals, trips, and other events throughout the semester.
+            {site.events.special.description}
           </p>
           <iframe
             src="https://calendar.google.com/calendar/embed?src=fc12eba4c5f22cf289e5751d898b3d1caf248f74a1a351eaae11f1b6bc4f579d%40group.calendar.google.com&ctz=America%2FNew_York"
@@ -65,7 +48,7 @@ export default function Events() {
             height="600"
             frameBorder="0"
             scrolling="no"
-            title="OCF Events Calendar"
+            title={site.events.special.calendarTitle}
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
             className="mx-auto w-full max-w-full rounded-2xl"

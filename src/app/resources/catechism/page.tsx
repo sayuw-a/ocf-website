@@ -1,42 +1,19 @@
 import Image from 'next/image';
-
-const resources = [
-  {
-    title: 'How Can I Know God?; Fr. Thomas Hopko',
-    href: '/pdfs/How-Can-I-Know-God.pdf',
-    description: 'What does it take to know God?',
-  },
-  {
-    title: 'The Orthodox Church; Fr. Kallistos Ware',
-    href: 'https://a.co/d/hhMSyzH',
-    description: 'A primer on the Orthodox Church that has been beneficial to many converts.',
-  },
-  {
-    title: 'The Faith We Hold; Archbishop Paul of Finland',
-    href: 'https://a.co/d/cR29ViY',
-    description: 'A short synoptic introduction to the faith.',
-  },
-  {
-    title: 'The Orthodox Faith; Fr. Thomas Hopko',
-    href: 'https://www.oca.org/orthodoxy/the-orthodox-faith',
-    description: 'A deeper dive into Orthodox belief, worship, and sacramental life.',
-  },
-];
+import { site } from '@/content/site';
 
 export default function CatechismResources() {
   return (
     <div className="content-shell max-w-3xl py-10 sm:py-16">
       <section className="page-panel">
-        <h1 className="page-title text-center">Catechism Resources</h1>
+        <h1 className="page-title text-center">{site.catechism.intro.title}</h1>
         <p className="page-copy text-center">
-          Explore foundational texts and guides for inquirers and for anyone looking to deepen their
-          understanding of the Orthodox faith.
+          {site.catechism.intro.description}
         </p>
         <div className="my-6 flex justify-center">
           <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
         </div>
         <ul className="resource-list">
-          {resources.map((resource) => (
+          {site.catechism.items.map((resource) => (
             <li key={resource.title}>
               <a
                 href={resource.href}

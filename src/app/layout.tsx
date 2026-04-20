@@ -1,18 +1,19 @@
 import type { Metadata } from 'next';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
+import { site } from '@/content/site';
 import './globals.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'OCF at UVA',
-    template: '%s | OCF at UVA',
+    default: site.meta.defaultTitle,
+    template: site.meta.titleTemplate,
   },
-  description: 'Orthodox Christian Fellowship at the University of Virginia',
+  description: site.meta.description,
   openGraph: {
-    title: 'OCF at UVA',
-    description: 'Orthodox Christian Fellowship at the University of Virginia',
-    siteName: 'OCF at UVA',
+    title: site.meta.siteName,
+    description: site.meta.description,
+    siteName: site.meta.siteName,
     type: 'website',
   },
   icons: {
