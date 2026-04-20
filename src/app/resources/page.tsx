@@ -10,6 +10,96 @@ type ResourceLink = {
   category: string;
 };
 
+// Descriptions for catechism texts, keyed by href.
+// The same text appears in multiple sections; a single map avoids duplication.
+const CATECHISM_DESCRIPTIONS: Record<string, string> = {
+  // — Confessional documents —
+  'https://maksimologija.org/mogila-orthodox-confession/':
+    '17th-century confessional document affirming Orthodox doctrine in question-and-answer form.',
+  'https://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm':
+    'The standard Russian Orthodox catechism; covers the Creed, Commandments, and prayers.',
+  'https://orthodoxchristiantheology.com/2022/12/17/confession-of-dositheus-saint-filaret-of-moscow/':
+    'The 1672 Jerusalem Synod\'s Orthodox response to Calvinist influence.',
+
+  // — Patristic systematic theology —
+  'http://orthodoxinfo.com/general/stjohn_exp1.aspx':
+    'The definitive patristic systematic theology; covers the Trinity, creation, Christology, and the sacraments.',
+
+  // — Divine Revelation & Tradition —
+  'https://www.newadvent.org/fathers/1010.htm':
+    'The origin of the Vincentian Canon: believed everywhere, always, and by all.',
+  'https://www.newadvent.org/fathers/3201.htm':
+    'Nine homilies on the six days of creation; foundational for the Orthodox understanding of Scripture.',
+  'https://www.newadvent.org/fathers/0104.htm':
+    'Written en route to martyrdom; on episcopal unity and steadfastness in the apostolic Faith.',
+  'https://www.newadvent.org/fathers/0110.htm':
+    'On unity with the bishop, the Eucharist, and life in Christ.',
+  'https://www.newadvent.org/fathers/0311.htm':
+    'Scripture belongs to the Church; heretics have no standing to interpret it.',
+  'https://www.tertullian.org/fathers/irenaeus_02_proof.htm':
+    'An early summary of apostolic doctrine written for catechesis.',
+  'https://www.tertullian.org/fathers/photius_03bibliotheca.htm':
+    'An annotated catalogue of 279 works read by Patriarch Photius; invaluable for patristic bibliography.',
+
+  // — Trinitarian theology —
+  'https://www.newadvent.org/fathers/290112.htm':
+    'A detailed refutation of Arian subordinationism; foundational for Nicene Trinitarian theology.',
+  'https://www.newadvent.org/fathers/2914.htm':
+    'On human nature, the soul, and what it means to bear the image of God.',
+  'https://www.newadvent.org/fathers/2915.htm':
+    'A dialogue on the soul\'s immortality and the resurrection, written after Macrina\'s death.',
+  'https://www.newadvent.org/fathers/3102.htm':
+    'Five orations defending Nicene theology; among the most precise Trinitarian formulations in all of Patristics.',
+  'https://azbyka.ru/otechnik/Grigorij_Palama/the-one-hundred-and-fifty-chapters/':
+    'A synthesis of Orthodox theology defending the essence-energies distinction.',
+  'https://www.orthodoxethos.com/post/the-encyclical-letter-of-saint-mark-of-ephesus':
+    'Refuses reunion with Rome at Florence; a defining text of post-schism Orthodox identity.',
+  'https://www.newadvent.org/fathers/2816.htm':
+    'The primary patristic refutation of Arianism; essential for understanding the Nicene Creed.',
+
+  // — Apophatic theology (Pseudo-Dionysius) —
+  'https://www.tertullian.org/fathers/areopagite_03_divine_names.htm':
+    'An apophatic treatment of how divine names may be applied to God; foundational for Orthodox mystical theology.',
+  'https://www.tertullian.org/fathers/areopagite_06_mystic_theology.htm':
+    'A brief text on apophatic theology and the soul\'s ascent beyond all concepts.',
+  'https://www.tertullian.org/fathers/areopagite_14_ecclesiastical_hierarchy.htm':
+    'On the hierarchical order of the Church\'s liturgy and its participation in the divine life.',
+
+  // — Grace, salvation, and the Fall —
+  'https://www.newadvent.org/fathers/15121.htm':
+    'Augustine on grace and election; a reference point for the Orthodox understanding of Pelagianism.',
+
+  // — Christology (St. Cyril of Alexandria) —
+  'https://www.tertullian.org/fathers/cyril_on_john_00_praefatio.htm':
+    'A major Christological commentary demonstrating the unity of Christ\'s person through the Gospel of John.',
+  'https://www.tertullian.org/fathers/cyril_against_nestorius_01_book1.htm':
+    'The refutation of Nestorian Christology; the primary documents leading to the Council of Ephesus (431).',
+  'https://www.tertullian.org/fathers/cyril_christ_is_one_01_text.htm':
+    'A dialogue affirming the single hypostasis of Christ against those who divided His person.',
+
+  // — Apologetics (St. Justin Martyr) —
+  'https://www.newadvent.org/fathers/0126.htm':
+    'The earliest major Christian apologetic; explains Christian beliefs and practices to the Roman emperors.',
+  'https://www.newadvent.org/fathers/0128.htm':
+    'An extended dialogue arguing that Christ fulfills the promises of Jewish Scripture.',
+
+  // — St. John Chrysostom —
+  'https://www.newadvent.org/fathers/1908.htm':
+    'Pre-baptismal homilies delivered to those preparing to receive Holy Baptism.',
+  'https://www.newadvent.org/fathers/1922.htm':
+    'Six books on the dignity and weight of priestly ministry; the most influential Orthodox text on priesthood.',
+  'https://www.tertullian.org/fathers/chrysostom_adversus_judaeos_01_homily1.htm':
+    'Homilies addressed to Antiochene Christians attending synagogue services; on the boundaries of the Church.',
+
+  // — Icons —
+  'https://www.documentacatholicaomnia.eu/03d/0675-0749,_Ioannes_Damascenus,_Apologia_Against_Those_Who_Decry_Holy_Images,_EN.pdf':
+    'The classical Orthodox defense of icon veneration, written during the 8th-century iconoclast controversy.',
+
+  // — Eschatology —
+  'https://www.tertullian.org/fathers/jerome_daniel_02_text.htm':
+    'Jerome\'s commentary on Daniel with attention to prophetic passages on judgment and resurrection.',
+};
+
 // Category display order
 const CATEGORIES = [
   'All',
@@ -23,7 +113,7 @@ const CATEGORIES = [
   'Books',
 ] as const;
 
-// Category badge colors — literal strings so Tailwind picks them up
+// Category badge colors — full literal strings so Tailwind picks them up at build time
 const CATEGORY_STYLE: Record<string, string> = {
   'Theology & Doctrine': 'bg-blue-50 text-blue-800',
   'Liturgy & Worship':   'bg-violet-50 text-violet-800',
@@ -42,7 +132,13 @@ function catechismCategory(sectionTitle: string): string {
 }
 
 function prayerCategory(sectionTitle: string): string {
-  if (sectionTitle.includes('Books') || sectionTitle.includes('Rules') || sectionTitle.includes('Home') || sectionTitle.includes('Community')) return 'Prayer Books';
+  if (
+    sectionTitle.includes('Books') ||
+    sectionTitle.includes('Rules') ||
+    sectionTitle.includes('Home') ||
+    sectionTitle.includes('Community')
+  )
+    return 'Prayer Books';
   if (sectionTitle.includes('Recommended')) return 'Books';
   return 'Prayer';
 }
@@ -55,7 +151,7 @@ function resourcesCategory(sectionTitle: string): string {
 function buildLinks(): ResourceLink[] {
   const links: ResourceLink[] = [];
 
-  // Catechism texts
+  // Catechism texts — descriptions come from the CATECHISM_DESCRIPTIONS lookup
   for (const section of site.catechism.sections) {
     const category = catechismCategory(section.title);
     for (const sub of section.subsections) {
@@ -64,7 +160,7 @@ function buildLinks(): ResourceLink[] {
           links.push({
             label: 'author' in item ? `${item.author}: ${link.label}` : link.label,
             href: link.href,
-            description: '',
+            description: CATECHISM_DESCRIPTIONS[link.href] ?? '',
             category,
           });
         }
@@ -72,7 +168,7 @@ function buildLinks(): ResourceLink[] {
     }
   }
 
-  // Prayer resources
+  // Prayer resources — descriptions come from site.prayer.sections
   for (const section of site.prayer.sections) {
     const category = prayerCategory(section.title);
     for (const item of section.items) {
@@ -85,7 +181,7 @@ function buildLinks(): ResourceLink[] {
     }
   }
 
-  // General resources (parishes, getting started links)
+  // General resources (parishes, getting-started links)
   for (const section of site.resources.sections) {
     const category = resourcesCategory(section.title);
     for (const item of section.items) {
@@ -183,7 +279,10 @@ export default function Resources() {
       ) : (
         <ul className="divide-y divide-stone-100 overflow-hidden rounded-2xl border border-stone-200 bg-white/80">
           {filtered.map((link, i) => (
-            <li key={`${link.href}-${i}`} className="px-5 py-4 transition-colors hover:bg-amber-50/30 sm:px-6">
+            <li
+              key={`${link.href}-${i}`}
+              className="px-5 py-4 transition-colors hover:bg-amber-50/30 sm:px-6"
+            >
               <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
                 <a
                   href={link.href}
