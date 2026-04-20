@@ -7,7 +7,7 @@ type ResourceLink = {
   label: string;
   href: string;
   description: string;
-  category: string;
+  categories: string[];
 };
 
 // Descriptions for catechism texts, keyed by href.
@@ -149,7 +149,20 @@ function resourcesCategory(sectionTitle: string): string {
 }
 
 function buildLinks(): ResourceLink[] {
-  const links: ResourceLink[] = [];
+  // Deduplicate by href — same text may appear across multiple sections.
+  // Accumulate all categories for each unique href.
+  const map = new Map<string, ResourceLink>();
+
+  function add(label: string, href: string, description: string, category: string) {
+    const existing = map.get(href);
+    if (existing) {
+      if (!existing.categories.includes(category)) {
+        existing.categories.push(category);
+      }
+    } else {
+      map.set(href, { label, href, description, categories: [category] });
+    }
+  }
 
   // Catechism texts — descriptions come from the CATECHISM_DESCRIPTIONS lookup
   for (const section of site.catechism.sections) {
@@ -157,12 +170,12 @@ function buildLinks(): ResourceLink[] {
     for (const sub of section.subsections) {
       for (const item of sub.items) {
         for (const link of item.links) {
-          links.push({
-            label: 'author' in item ? `${item.author}: ${link.label}` : link.label,
-            href: link.href,
-            description: CATECHISM_DESCRIPTIONS[link.href] ?? '',
+          add(
+            'author' in item ? `${item.author}: ${link.label}` : link.label,
+            link.href,
+            CATECHISM_DESCRIPTIONS[link.href] ?? '',
             category,
-          });
+          );
         }
       }
     }
@@ -172,12 +185,7 @@ function buildLinks(): ResourceLink[] {
   for (const section of site.prayer.sections) {
     const category = prayerCategory(section.title);
     for (const item of section.items) {
-      links.push({
-        label: item.label,
-        href: item.href,
-        description: item.description,
-        category,
-      });
+      add(item.label, item.href, item.description, category);
     }
   }
 
@@ -185,16 +193,11 @@ function buildLinks(): ResourceLink[] {
   for (const section of site.resources.sections) {
     const category = resourcesCategory(section.title);
     for (const item of section.items) {
-      links.push({
-        label: item.title,
-        href: item.href,
-        description: item.description,
-        category,
-      });
+      add(item.title, item.href, item.description, category);
     }
   }
 
-  return links;
+  return Array.from(map.values());
 }
 
 const ALL_LINKS = buildLinks();
@@ -206,7 +209,7 @@ export default function Resources() {
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim();
     return ALL_LINKS.filter((link) => {
-      const matchesCategory = activeCategory === 'All' || link.category === activeCategory;
+      const matchesCategory = activeCategory === 'All' || link.categories.includes(activeCategory);
       const matchesSearch =
         !q ||
         link.label.toLowerCase().includes(q) ||
@@ -292,13 +295,16 @@ export default function Resources() {
                 >
                   {link.label}
                 </a>
-                <span
-                  className={`inline-block rounded-full px-2.5 py-0.5 text-[0.72rem] font-medium tracking-wide ${
-                    CATEGORY_STYLE[link.category] ?? 'bg-stone-100 text-stone-500'
-                  }`}
-                >
-                  {link.category}
-                </span>
+                {link.categories.map((cat) => (
+                  <span
+                    key={cat}
+                    className={`inline-block rounded-full px-2.5 py-0.5 text-[0.72rem] font-medium tracking-wide ${
+                      CATEGORY_STYLE[cat] ?? 'bg-stone-100 text-stone-500'
+                    }`}
+                  >
+                    {cat}
+                  </span>
+                ))}
               </div>
               {link.description && (
                 <p className="mt-0.5 text-[0.91rem] leading-relaxed text-stone-500">
