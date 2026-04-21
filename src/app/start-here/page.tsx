@@ -109,17 +109,6 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      {/* Cinematic photo moment before FAQ */}
-      <div className="relative my-10 h-[200px] overflow-hidden rounded-[24px] border border-stone-200/60 shadow-[0_10px_28px_rgba(90,68,38,0.09)] sm:h-[260px]">
-        <Image
-          src="/images/bonfire-guys.jpg"
-          alt="OCF students gathered around a fire pit at night"
-          fill
-          className="object-cover object-bottom"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-      </div>
-
       <section className="page-section">
         <div className="start-faq">
           <div className="home-section-intro">
