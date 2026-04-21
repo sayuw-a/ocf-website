@@ -113,11 +113,11 @@ export const site = {
           "Each semester includes time away — hikes, overnight retreats, and visits to other OCF chapters.",
       },
       {
-        image: "community-7.png",
-        alt: "Students gathered in someone's home for an OCF fellowship evening",
-        title: "Ordinary evenings that matter",
+        image: "retreat-2025.jpg",
+        alt: "The OCF community gathered in the Blue Ridge Mountains at a fall retreat",
+        title: "Retreats that go somewhere",
         description:
-          "Much of OCF happens in living rooms — shared meals, late conversations, and the company of the same people week after week.",
+          "Each semester we go away together — overnight retreats in the Blue Ridge, hikes, and time outside the ordinary rhythm of the week.",
       },
     ],
     firstStep: {

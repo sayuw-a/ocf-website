@@ -70,7 +70,15 @@ export default function About() {
           <p className="home-eyebrow">Life together</p>
           <h2 className="home-section-title">What OCF actually looks like</h2>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
+        <div className="grid grid-cols-2 gap-4 sm:gap-5 xl:grid-cols-4">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
+              src="/images/liturgy-standing.jpg"
+              alt="OCF students standing in prayer during Divine Liturgy"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
             <Image
               src="/images/community-2.png"
@@ -81,16 +89,16 @@ export default function About() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
             <Image
-              src="/images/community-6.png"
-              alt="OCF students gathered around a table outdoors"
+              src="/images/choir-chanting.jpg"
+              alt="OCF students chanting together during a Liturgy"
               fill
-              className="object-cover"
+              className="object-cover object-[center_30%]"
             />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
             <Image
-              src="/images/community-3.png"
-              alt="OCF students at a fall retreat in the mountains"
+              src="/images/community-6.png"
+              alt="OCF students gathered around a table outdoors"
               fill
               className="object-cover"
             />
