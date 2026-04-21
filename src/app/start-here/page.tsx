@@ -27,19 +27,6 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      {/* Photo strip */}
-      <div className="mb-16 grid grid-cols-3 gap-3 sm:gap-4">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
-          <Image src="/images/community-3.png" alt="OCF students gathered at a fall retreat" fill className="object-cover" />
-        </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
-          <Image src="/images/liturgy-2025.jpg" alt="OCF students after Divine Liturgy" fill className="object-cover object-top" />
-        </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
-          <Image src="/images/community-4.png" alt="Students relaxing together on a rock" fill className="object-cover" />
-        </div>
-      </div>
-
       <section className="page-section">
         <div className="start-grid">
           {site.startHere.quickAnswers.map((item) => (
@@ -60,20 +47,33 @@ export default function StartHerePage() {
         </div>
       </section>
 
+      {/* Newcomer steps — steps list beside a photo on wider screens */}
       <section className="page-section">
-        <div className="start-section">
-          <div className="home-section-intro home-section-intro-left">
-            <p className="home-eyebrow">{site.startHere.newcomerSteps.eyebrow}</p>
-            <h2 className="home-section-title">{site.startHere.newcomerSteps.title}</h2>
+        <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start lg:gap-14">
+          <div>
+            <div className="home-section-intro home-section-intro-left mb-8">
+              <p className="home-eyebrow">{site.startHere.newcomerSteps.eyebrow}</p>
+              <h2 className="home-section-title">{site.startHere.newcomerSteps.title}</h2>
+            </div>
+            <ol className="start-step-list">
+              {site.startHere.newcomerSteps.steps.map((step) => (
+                <li key={step.title} className="start-step-item">
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </li>
+              ))}
+            </ol>
           </div>
-          <ol className="start-step-list">
-            {site.startHere.newcomerSteps.steps.map((step) => (
-              <li key={step.title} className="start-step-item">
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </li>
-            ))}
-          </ol>
+
+          {/* Photo — hidden on small screens, visible at lg */}
+          <div className="relative hidden aspect-[3/4] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_10px_28px_rgba(90,68,38,0.09)] lg:block">
+            <Image
+              src="/images/community-4.png"
+              alt="OCF students relaxing together outdoors"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -108,6 +108,17 @@ export default function StartHerePage() {
           </article>
         </div>
       </section>
+
+      {/* Cinematic photo moment before FAQ */}
+      <div className="relative mb-0 h-[180px] overflow-hidden rounded-[24px] border border-stone-200/60 shadow-[0_10px_28px_rgba(90,68,38,0.09)] sm:h-[220px]">
+        <Image
+          src="/images/community-8.png"
+          alt="OCF students on a hike together"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+      </div>
 
       <section className="page-section">
         <div className="start-faq">

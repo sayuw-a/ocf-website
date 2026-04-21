@@ -12,7 +12,7 @@ export default function About() {
         </p>
       </section>
 
-      {/* Group photo banner */}
+      {/* Full-width group banner */}
       <div className="relative mb-14 h-[260px] overflow-hidden rounded-[28px] border border-stone-200/60 shadow-[0_12px_32px_rgba(90,68,38,0.10)] sm:h-[360px] lg:h-[420px]">
         <Image
           src="/images/group-2023.jpg"
@@ -64,22 +64,13 @@ export default function About() {
         </div>
       </section>
 
-      {/* Photo mosaic — life together */}
+      {/* Photo row — life together, unique to this page */}
       <section className="page-section">
         <div className="mb-8">
           <p className="home-eyebrow">Life together</p>
           <h2 className="home-section-title">What OCF actually looks like</h2>
         </div>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-          {/* Tall left photo spanning 2 rows */}
-          <div className="relative col-span-1 row-span-2 min-h-[320px] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)] sm:min-h-0">
-            <Image
-              src="/images/volleyball.jpg"
-              alt="OCF students playing night volleyball at UVA"
-              fill
-              className="object-cover"
-            />
-          </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-5">
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
             <Image
               src="/images/community-2.png"
@@ -90,34 +81,18 @@ export default function About() {
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
             <Image
+              src="/images/community-6.png"
+              alt="OCF students gathered around a table outdoors"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
               src="/images/community-3.png"
               alt="OCF students at a fall retreat in the mountains"
               fill
               className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/community-8.png"
-              alt="Group of OCF students on a mountain summit"
-              fill
-              className="object-cover object-center"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/community-5.png"
-              alt="Students hiking together on a mountain summit"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/pascha-2025.jpg"
-              alt="Pascha celebration with OCF students"
-              fill
-              className="object-cover object-top"
             />
           </div>
         </div>
