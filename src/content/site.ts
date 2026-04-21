@@ -98,6 +98,27 @@ export const site = {
         description:
           "Some of the best parts of OCF are the ordinary ones: rides, hangouts, and seeing people again next week.",
       },
+      {
+        image: "volleyball.jpg",
+        alt: "OCF students playing volleyball at night on UVA grounds",
+        title: "Campus life, together",
+        description:
+          "Volleyball nights, pickup games, and campus hangouts are a regular part of the semester.",
+      },
+      {
+        image: "community-5.png",
+        alt: "OCF students on a rocky mountain summit during a retreat hike",
+        title: "Retreats beyond campus",
+        description:
+          "Each semester includes time away — hikes, overnight retreats, and visits to other OCF chapters.",
+      },
+      {
+        image: "community-7.png",
+        alt: "Students gathered in someone's home for an OCF fellowship evening",
+        title: "Ordinary evenings that matter",
+        description:
+          "Much of OCF happens in living rooms — shared meals, late conversations, and the company of the same people week after week.",
+      },
     ],
     firstStep: {
       eyebrow: "Your first step",

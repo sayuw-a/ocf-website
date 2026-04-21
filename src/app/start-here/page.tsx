@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/content/site';
 
@@ -25,6 +26,19 @@ export default function StartHerePage() {
           </Link>
         </div>
       </section>
+
+      {/* Photo strip */}
+      <div className="mb-16 grid grid-cols-3 gap-3 sm:gap-4">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
+          <Image src="/images/community-3.png" alt="OCF students gathered at a fall retreat" fill className="object-cover" />
+        </div>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
+          <Image src="/images/liturgy-2025.jpg" alt="OCF students after Divine Liturgy" fill className="object-cover object-top" />
+        </div>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[20px] border border-white/80 shadow-[0_8px_20px_rgba(90,68,38,0.07)]">
+          <Image src="/images/community-4.png" alt="Students relaxing together on a rock" fill className="object-cover" />
+        </div>
+      </div>
 
       <section className="page-section">
         <div className="start-grid">
