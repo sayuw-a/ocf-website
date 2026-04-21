@@ -6,24 +6,40 @@ export default function StartHerePage() {
   return (
     <div className="content-shell start-here-shell py-10 sm:py-16">
       <section className="start-hero">
-        <p className="home-eyebrow">{site.startHere.hero.eyebrow}</p>
-        <h1 className="home-title">{site.startHere.hero.title}</h1>
-        <p className="home-lede">{site.startHere.hero.lede}</p>
-        <div className="home-actions">
-          <a href={`mailto:${site.contact.email}`} className="btn-primary">
-            {site.startHere.hero.ctaEmail}
-          </a>
-          <a
-            href={site.contact.groupMeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            {site.startHere.hero.ctaGroupMe}
-          </a>
-          <Link href="/events" className="home-inline-link">
-            {site.startHere.hero.ctaInline}
-          </Link>
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_300px] lg:gap-16">
+          <div>
+            <p className="home-eyebrow">{site.startHere.hero.eyebrow}</p>
+            <h1 className="home-title">{site.startHere.hero.title}</h1>
+            <p className="home-lede">{site.startHere.hero.lede}</p>
+            <div className="home-actions">
+              <a href={`mailto:${site.contact.email}`} className="btn-primary">
+                {site.startHere.hero.ctaEmail}
+              </a>
+              <a
+                href={site.contact.groupMeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                {site.startHere.hero.ctaGroupMe}
+              </a>
+              <Link href="/events" className="home-inline-link">
+                {site.startHere.hero.ctaInline}
+              </Link>
+            </div>
+          </div>
+
+          {/* Icon of Christ the Bridegroom */}
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/images/christ-bridegroom.jpg"
+              alt="Icon of Christ the Bridegroom — 'Behold, the Bridegroom comes in the middle of the night'"
+              width={300}
+              height={375}
+              className="rounded-[16px] shadow-[0_12px_40px_rgba(90,68,38,0.18)]"
+              priority
+            />
+          </div>
         </div>
       </section>
 
