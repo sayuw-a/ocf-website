@@ -194,7 +194,7 @@ export const site = {
     intro: {
       title: "About OCF at UVA",
       description:
-        "OCF at UVA is the fellowship organization for Orthodox Christians on Grounds. We try to make an environment where all are welcome to explore and grow in faith. The goal is to grow deeper as a Christian and through fellowship, become one that is \u201calways being prepared to make a defense to anyone who asks you for a reason for the hope that is in you\u201d 1st Peter 3:15",
+        "OCF at UVA is an Orthodox Christian student chapter at the University of Virginia, founded in 2005. We gather for worship at St. Nicholas Orthodox Church, weekly Scripture study, and the ordinary fellowship of students who share the same Faith. We are part of the wider Orthodox Christian Fellowship network across North America.",
     },
     mission: {
       heading: "Our Mission",
@@ -565,7 +565,7 @@ export const site = {
           {
             title: "",
             items: [
-              { author: "St. Vincent of Lerins", links: [{ label: "Commonitory", href: "https://www.newadvent.org/fathers/1010.htm" }] },
+              { author: "St. Vincent of Lerins", links: [{ label: "Commonitory", href: "https://www.newadvent.org/fathers/3506.htm" }] },
               { author: "St. Basil the Great", links: [{ label: "Hexaemeron", href: "https://www.newadvent.org/fathers/3201.htm" }] },
               { author: "St. Ignatius of Antioch", links: [{ label: "Epistle to St. Polycarp", href: "https://www.newadvent.org/fathers/0104.htm" }, { label: "Epistle to the Ephesians", href: "https://www.newadvent.org/fathers/0110.htm" }] },
               { author: "Tertullian", links: [{ label: "The Prescription Against Heretics", href: "https://www.newadvent.org/fathers/0311.htm" }] },
