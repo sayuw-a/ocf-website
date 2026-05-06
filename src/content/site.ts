@@ -207,7 +207,7 @@ export const site = {
       text: "OCF at UVA was founded in 2005 and has been a home for Orthodox students for many years. We are also part of the wider OCF network across North America, which means students here are connected to a much larger fellowship beyond Charlottesville.",
     },
     officers: {
-      heading: "Officers — 2025–2026",
+      heading: "Officers — 2026–2027",
       description:
         "These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!",
       list: [
