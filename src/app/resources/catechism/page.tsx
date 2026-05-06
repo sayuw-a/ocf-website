@@ -1,56 +1,55 @@
-import Image from 'next/image';
-
-const resources = [
-  {
-    title: 'How Can I Know God?; Fr. Thomas Hopko',
-    href: '/pdfs/How-Can-I-Know-God.pdf',
-    description: 'What does it take to know God?',
-  },
-  {
-    title: 'The Orthodox Church; Fr. Kallistos Ware',
-    href: 'https://a.co/d/hhMSyzH',
-    description: 'A primer on the Orthodox Church that has been beneficial to many converts.',
-  },
-  {
-    title: 'The Faith We Hold; Archbishop Paul of Finland',
-    href: 'https://a.co/d/cR29ViY',
-    description: 'A short synoptic introduction to the faith.',
-  },
-  {
-    title: 'The Orthodox Faith; Fr. Thomas Hopko',
-    href: 'https://www.oca.org/orthodoxy/the-orthodox-faith',
-    description: 'A deeper dive into Orthodox belief, worship, and sacramental life.',
-  },
-];
+import { site } from '@/content/site';
 
 export default function CatechismResources() {
   return (
-    <div className="content-shell max-w-3xl py-10 sm:py-16">
-      <section className="page-panel">
-        <h1 className="page-title text-center">Catechism Resources</h1>
-        <p className="page-copy text-center">
-          Explore foundational texts and guides for inquirers and for anyone looking to deepen their
-          understanding of the Orthodox faith.
-        </p>
-        <div className="my-6 flex justify-center">
-          <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
-        </div>
-        <ul className="resource-list">
-          {resources.map((resource) => (
-            <li key={resource.title}>
-              <a
-                href={resource.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="site-link font-semibold"
-              >
-                {resource.title}
-              </a>
-              <p className="mt-1 text-sm text-cozy-dark">{resource.description}</p>
-            </li>
-          ))}
-        </ul>
+    <div className="content-shell max-w-5xl py-10 sm:py-16">
+      <section className="page-intro mb-12">
+        <h1 className="page-title text-center">{site.catechism.intro.title}</h1>
+        <p className="page-copy mx-auto text-center">{site.catechism.intro.description}</p>
       </section>
+
+      <div className="space-y-10">
+        {site.catechism.sections.map((section) => (
+          <section key={section.title} className="page-panel">
+            <h2 className="section-heading mb-6 text-[1.6rem]">{section.title}</h2>
+            <div className="space-y-8">
+              {section.subsections.map((sub, subIdx) => (
+                <div key={subIdx}>
+                  {sub.title ? (
+                    <h3 className="mb-3 text-[1.05rem] font-semibold uppercase tracking-[0.08em] text-stone-500">
+                      {sub.title}
+                    </h3>
+                  ) : null}
+                  <ul className="space-y-2">
+                    {sub.items.map((item, itemIdx) => (
+                      <li key={itemIdx} className="flex flex-wrap items-baseline gap-x-2 text-[0.98rem] leading-relaxed">
+                        {'author' in item && (
+                          <span className="font-medium text-stone-800">{item.author}:</span>
+                        )}
+                        {item.links.map((link, linkIdx) => (
+                          <span key={link.href} className="inline-flex items-baseline gap-x-2">
+                            <a
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="site-link"
+                            >
+                              {link.label}
+                            </a>
+                            {linkIdx < item.links.length - 1 && (
+                              <span className="text-stone-400" aria-hidden="true">|</span>
+                            )}
+                          </span>
+                        ))}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }

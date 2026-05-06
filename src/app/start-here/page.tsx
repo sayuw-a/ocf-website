@@ -1,180 +1,125 @@
+import Image from 'next/image';
 import Link from 'next/link';
-
-const quickAnswers = [
-  {
-    question: 'Who is welcome?',
-    answer:
-      'Orthodox students, students from other Christian backgrounds, and students who are simply curious are all welcome. We aim to provide an environment open to anyone curious about the Christian faith.',
-  },
-  {
-    question: 'What is Orthodoxy',
-    answer:
-      '"Right faith and good works; for whoever holds these two, the same is a good Christian, and has certain hope of eternal salvation, as the Scripture says (James 2.24): “You see then how that by good works a man is justified, and not by faith only”; and a little after (v. 6), “For as the body without the Spirit is dead; so faith without works is dead also.” Saint Paul affirms the same (1 Tim. 1.19): “Holding faith and a good conscience, which some having put away concerning faith, have made shipwreck.” And again (1 Tim. 3.9): “Holding the mystery of the faith in a pure conscience.”" The Orthodox Confession of St Peter Mogila',
-  },
-  {
-    question: 'What should I do first?',
-    answer:
-      'The easiest first step is to join the GroupMe, send an email, or come to the next gathering. If you want, someone can help you know where to go and who to look for.',
-  },
-];
-
-const newcomerSteps = [
-  {
-    title: '1. Reach out',
-    body:
-      'Email us or join the GroupMe if you want a name to look for, a quick answer about the week&apos;s plans',
-  },
-  {
-    title: '2. Start with something simple',
-    body:
-      'A lot of students join us for Bible study or the evening Vesperal service on Saturday.',
-  },
-  {
-    title: '3. Ask what you are actually wondering',
-    body:
-      'Questions about Orthodoxy, church background, or what happens at services are welcome.',
-  },
-];
-
-const faqItems = [
-  {
-    question: 'Do I need to be Orthodox to come?',
-    answer:
-      'No. OCF is rooted in Orthodox Christianity, but students who are learning, visiting, or exploring are welcome to come and see.',
-  },
-  {
-    question: 'What are events usually like?',
-    answer:
-      'It depends on the event. Some are prayerful and liturgical, like Vespers or Divine Liturgy. Others are more conversational, like Bible study, dinners, or fellowship nights.',
-  },
-  {
-    question: 'Where do events happen?',
-    answer:
-      'Weekly fellowship events are usually on or near Grounds like at the Center for Christian Study on the Corner. Church services happen at St. Nicholas Orthodox Church in Charlottesville. Check the events page or GroupMe for the exact location each week.',
-  },
-  {
-    question: 'What should I wear?',
-    answer:
-      'For fellowship events, casual clothing is fine. For church services, people usually dress a little more neatly (like a button-up and pants), but you do not need to own anything special to come.',
-  },
-  {
-    question: 'Will I be the only new person there?',
-    answer:
-      'Usually no. Even when most people already know each other, new students come throughout the year, and OCF expects first-time visitors.',
-  },
-  {
-    question: 'What if I know almost nothing about Orthodoxy?',
-    answer:
-      'That is okay. You do not need background knowledge to come. If you want a gentle place to start, the catechism resources page is a good next stop. As John 1:39 says: "“Come,” he replied, “and you will see.”"',
-  },
-];
-
-const helpfulLinks = [
-  {
-    title: 'Events',
-    description: 'Weekly gatherings, service times, and other events.',
-    href: '/events',
-  },
-  {
-    title: 'Catechism Resources',
-    description: 'Both introductory materials and deeper theological answers.',
-    href: '/resources/catechism',
-  },
-  {
-    title: 'About OCF',
-    description: 'Meet the chapter, its purpose, and the students leading it this year.',
-    href: '/about',
-  },
-];
+import { site } from '@/content/site';
 
 export default function StartHerePage() {
   return (
     <div className="content-shell start-here-shell py-10 sm:py-16">
       <section className="start-hero">
-        <p className="home-eyebrow">Start Here</p>
-        <h1 className="home-title">What most people want to know before they come for the first time.</h1>
-        <p className="home-lede">
-          This page is for first visits, practical questions, and the things people usually want to
-          ask before showing up. If you are trying to figure out whether OCF is for you, what
-          Orthodoxy is, where people meet, or how to get connected, start here.
-        </p>
-        <div className="home-actions">
-          <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
-            Email a student leader
-          </a>
-          <a
-            href="https://groupme.com/join_group/52539301/WUDGNm6m"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-          >
-            Join the GroupMe
-          </a>
-          <Link href="/events" className="home-inline-link">
-            See what&apos;s happening this week
-          </Link>
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_300px] lg:gap-16">
+          <div>
+            <p className="home-eyebrow">{site.startHere.hero.eyebrow}</p>
+            <h1 className="home-title">{site.startHere.hero.title}</h1>
+            <p className="home-lede">{site.startHere.hero.lede}</p>
+            <div className="home-actions">
+              <a href={`mailto:${site.contact.email}`} className="btn-primary">
+                {site.startHere.hero.ctaEmail}
+              </a>
+              <a
+                href={site.contact.groupMeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                {site.startHere.hero.ctaGroupMe}
+              </a>
+              <Link href="/events" className="home-inline-link">
+                {site.startHere.hero.ctaInline}
+              </Link>
+            </div>
+          </div>
+
+          {/* Icon of Christ the Bridegroom */}
+          <div className="flex justify-center lg:justify-end">
+            <Image
+              src="/images/christ-bridegroom.jpg"
+              alt="Icon of Christ the Bridegroom — 'Behold, the Bridegroom comes in the middle of the night'"
+              width={300}
+              height={375}
+              className="rounded-[16px] shadow-[0_12px_40px_rgba(90,68,38,0.18)]"
+              priority
+            />
+          </div>
         </div>
       </section>
 
       <section className="page-section">
         <div className="start-grid">
-          {quickAnswers.map((item) => (
+          {site.startHere.quickAnswers.map((item) => (
             <article key={item.question} className="start-card">
               <h2>{item.question}</h2>
-              <p>{item.answer}</p>
+              {'attribution' in item ? (
+                <blockquote className="mt-3 border-l-2 border-amber-700/40 pl-4">
+                  <p className="text-[1.02rem] leading-[1.75] text-stone-700 italic">{item.answer}</p>
+                  <cite className="mt-3 block text-[0.82rem] font-medium not-italic uppercase tracking-[0.1em] text-stone-500">
+                    {item.attribution}
+                  </cite>
+                </blockquote>
+              ) : (
+                <p>{item.answer}</p>
+              )}
             </article>
           ))}
         </div>
       </section>
 
+      {/* Newcomer steps — steps list beside a photo on wider screens */}
       <section className="page-section">
-        <div className="start-section">
-          <div className="home-section-intro home-section-intro-left">
-            <p className="home-eyebrow">What to do next</p>
-            <h2 className="home-section-title">A simple path if you are new.</h2>
+        <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start lg:gap-14">
+          <div>
+            <div className="home-section-intro home-section-intro-left mb-8">
+              <p className="home-eyebrow">{site.startHere.newcomerSteps.eyebrow}</p>
+              <h2 className="home-section-title">{site.startHere.newcomerSteps.title}</h2>
+            </div>
+            <ol className="start-step-list">
+              {site.startHere.newcomerSteps.steps.map((step) => (
+                <li key={step.title} className="start-step-item">
+                  <h3>{step.title}</h3>
+                  <p>{step.body}</p>
+                </li>
+              ))}
+            </ol>
           </div>
-          <ol className="start-step-list">
-            {newcomerSteps.map((step) => (
-              <li key={step.title} className="start-step-item">
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </li>
-            ))}
-          </ol>
+
+          {/* Photo — hidden on small screens, visible at lg */}
+          <div className="relative hidden aspect-[3/4] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_10px_28px_rgba(90,68,38,0.09)] lg:block">
+            <Image
+              src="/images/community-4.png"
+              alt="OCF students relaxing together outdoors"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
       <section className="page-section">
         <div className="start-two-column">
           <article className="start-panel">
-            <p className="home-eyebrow">Where things happen</p>
-            <h2 className="home-section-title">Most weeks include both campus life and church life.</h2>
+            <p className="home-eyebrow">{site.startHere.whereThingsHappen.eyebrow}</p>
+            <h2 className="home-section-title">{site.startHere.whereThingsHappen.title}</h2>
             <p className="page-copy">
-              Fellowship gatherings usually happen on or near Grounds. Services like Great Vespers and
-              Divine Liturgy happen at St. Nicholas Orthodox Church in Charlottesville.
+              {site.startHere.whereThingsHappen.description1}
             </p>
             <p className="page-copy mt-4">
-              If you are not sure where to go, check the events page or send a message first. We would
-              much rather help you arrive than have you guess.
+              {site.startHere.whereThingsHappen.description2}
             </p>
             <Link href="/events" className="home-inline-link">
-              Open the events page
+              {site.startHere.whereThingsHappen.ctaInline}
             </Link>
           </article>
 
           <article className="start-panel">
-            <p className="home-eyebrow">Plain-language Orthodoxy</p>
-            <h2 className="home-section-title">Orthodoxy is a way of Christian life, not only something to read about.</h2>
+            <p className="home-eyebrow">{site.startHere.plainLanguage.eyebrow}</p>
+            <h2 className="home-section-title">{site.startHere.plainLanguage.title}</h2>
             <p className="page-copy">
-              In OCF, that usually means prayer, worship, Scripture, friendship, repentance, and
-              learning to stay close to Christ in the life of the Church.
+              {site.startHere.plainLanguage.description1}
             </p>
             <p className="page-copy mt-4">
-              If that sounds unfamiliar, you do not need to master the vocabulary before coming. You
-              can begin by showing up, listening, and asking questions as they come.
+              {site.startHere.plainLanguage.description2}
             </p>
             <Link href="/resources/catechism" className="home-inline-link">
-              Start with catechism resources
+              {site.startHere.plainLanguage.ctaInline}
             </Link>
           </article>
         </div>
@@ -183,11 +128,11 @@ export default function StartHerePage() {
       <section className="page-section">
         <div className="start-faq">
           <div className="home-section-intro">
-            <p className="home-eyebrow">FAQ</p>
-            <h2 className="home-section-title">Common questions from first-time visitors.</h2>
+            <p className="home-eyebrow">{site.startHere.faq.eyebrow}</p>
+            <h2 className="home-section-title">{site.startHere.faq.title}</h2>
           </div>
           <div className="start-faq-list">
-            {faqItems.map((item) => (
+            {site.startHere.faq.items.map((item) => (
               <details key={item.question} className="start-faq-item">
                 <summary>{item.question}</summary>
                 <p>{item.answer}</p>
@@ -200,15 +145,15 @@ export default function StartHerePage() {
       <section className="page-section">
         <div className="start-section">
           <div className="home-section-intro home-section-intro-left">
-            <p className="home-eyebrow">Helpful links</p>
-            <h2 className="home-section-title">A few pages worth opening next.</h2>
+            <p className="home-eyebrow">{site.startHere.helpfulLinks.eyebrow}</p>
+            <h2 className="home-section-title">{site.startHere.helpfulLinks.title}</h2>
           </div>
           <div className="start-link-grid">
-            {helpfulLinks.map((item) => (
+            {site.startHere.helpfulLinks.links.map((item) => (
               <Link key={item.href} href={item.href} className="start-link-card">
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <span className="home-inline-link">Open page</span>
+                <span className="home-inline-link">{site.startHere.helpfulLinks.openPage}</span>
               </Link>
             ))}
           </div>
@@ -218,24 +163,21 @@ export default function StartHerePage() {
       <section className="page-section">
         <div className="home-contact">
           <div>
-            <p className="home-eyebrow">Still not sure?</p>
-            <h2 className="home-section-title">You can ask a real person before you come.</h2>
-            <p className="page-copy">
-              If you want help with location, rides, what kind of event to start with, or whether OCF
-              feels like the right fit, reach out. A lot of people begin that way.
-            </p>
+            <p className="home-eyebrow">{site.startHere.cta.eyebrow}</p>
+            <h2 className="home-section-title">{site.startHere.cta.title}</h2>
+            <p className="page-copy">{site.startHere.cta.description}</p>
           </div>
           <div className="home-contact-actions">
-            <a href="mailto:ann4mb@virginia.edu" className="btn-primary">
-              Email a student leader
+            <a href={`mailto:${site.contact.email}`} className="btn-primary">
+              {site.startHere.cta.ctaEmail}
             </a>
             <a
-              href="https://groupme.com/join_group/52539301/WUDGNm6m"
+              href={site.contact.groupMeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
             >
-              Join Our GroupMe
+              {site.startHere.cta.ctaGroupMe}
             </a>
           </div>
         </div>

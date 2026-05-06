@@ -30,41 +30,51 @@ const officers = [
     photo: '/images/officers/maria-koutsourais.jpg'
   },
 ];
+import { site } from '@/content/site';
 
 export default function About() {
   return (
     <div className="content-shell py-10 sm:py-16">
-      <section className="page-intro">
-        <h1 className="page-title">About OCF at UVA</h1>
-        <p className="page-copy">
-          OCF at UVA is the fellowship organization for Orthodox Christians on Grounds. We try to make an environment where all are welcome to explore and grow in faith. The goal is
-          to grow deeper as a Christian and through fellowship, become one that is "always being prepared to make a defense to anyone who asks you for a reason for the hope that is in you" 1st Peter 3:15
+
+      <section className="page-intro mb-10">
+        <h1 className="page-title">{site.about.intro.title}</h1>
+        <p className="page-copy mx-auto text-center">
+          {site.about.intro.description}
         </p>
       </section>
 
+      {/* Full-width group banner */}
+      <div className="relative mb-14 h-[260px] overflow-hidden rounded-[28px] border border-stone-200/60 shadow-[0_12px_32px_rgba(90,68,38,0.10)] sm:h-[360px] lg:h-[420px]">
+        <Image
+          src="/images/retreat-mountains.jpg"
+          alt="OCF students gathered at a retreat in the Blue Ridge Mountains"
+          fill
+          className="object-cover object-[center_40%]"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+      </div>
+
       <section className="page-section page-duo">
         <div className="page-panel">
-          <h2 className="section-heading mb-4 text-2xl">Our Mission</h2>
+          <h2 className="section-heading mb-4 text-2xl">{site.about.mission.heading}</h2>
           <p className="page-copy text-base">
-            Our hope is simple: "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching."
-            Hebrews 10:24-25
+            {site.about.mission.quote}
           </p>
         </div>
         <div className="page-panel">
-          <h2 className="section-heading mb-4 text-2xl">Our History</h2>
+          <h2 className="section-heading mb-4 text-2xl">{site.about.history.heading}</h2>
           <p className="page-copy text-base">
-            OCF at UVA was founded in 2005 and has been a home for Orthodox students for many years.
-            We are also part of the wider OCF network across North America, which means students here
-            are connected to a much larger fellowship beyond Charlottesville.
+            {site.about.history.text}
           </p>
         </div>
       </section>
 
       <section className="page-section">
         <div className="page-intro mb-8">
-          <h2 className="section-heading">Officers</h2>
+          <h2 className="section-heading">{site.about.officers.heading}</h2>
           <p className="page-copy">
-            These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!
+            {site.about.officers.description}
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2">
@@ -80,6 +90,13 @@ export default function About() {
                 />
               </div>
               <h3 className="font-display mb-2 text-[1.5rem] font-semibold leading-tight text-cozy-dark">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {site.about.officers.list.map((officer) => (
+            <article key={officer.role} className="page-panel-soft text-center">
+              <h3 className="font-display mb-3 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
+                {officer.role}
+              </h3>
+              <p className="text-cozy-dark">
                 {officer.name}
               </h3>
               <p className="text-sm font-semibold text-amber-700 mb-3">{officer.role}</p>
@@ -93,6 +110,49 @@ export default function About() {
           ))}
         </div>
       </section>
+
+      {/* Photo row — life together, unique to this page */}
+      <section className="page-section">
+        <div className="mb-8">
+          <p className="home-eyebrow">Life together</p>
+          <h2 className="home-section-title">What OCF actually looks like</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:gap-5 xl:grid-cols-4">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
+              src="/images/liturgy-standing.jpg"
+              alt="OCF students standing in prayer during Divine Liturgy"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
+              src="/images/community-2.png"
+              alt="Students planting trees together during a service day"
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
+              src="/images/choir-chanting.jpg"
+              alt="OCF students chanting together during a Liturgy"
+              fill
+              className="object-cover object-[center_30%]"
+            />
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
+            <Image
+              src="/images/community-6.png"
+              alt="OCF students gathered around a table outdoors"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
