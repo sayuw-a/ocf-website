@@ -20,6 +20,7 @@ export const site = {
       { href: "/about", label: "About" },
       { href: "/events", label: "Events" },
       { href: "/resources", label: "Resources" },
+      { href: "/blog", label: "Blog" },
     ],
   },
 
@@ -206,14 +207,38 @@ export const site = {
       text: "OCF at UVA was founded in 2005 and has been a home for Orthodox students for many years. We are also part of the wider OCF network across North America, which means students here are connected to a much larger fellowship beyond Charlottesville.",
     },
     officers: {
-      heading: "Officers",
+      heading: "Officers — 2025–2026",
       description:
         "These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!",
       list: [
-        { role: "President", name: "John Dujmovic", email: "ann4mb@virginia.edu" },
-        { role: "Vice President", name: "Doria Aractingi", email: "pcz3vw@virginia.edu" },
-        { role: "Treasurer", name: "Benjamin Tang", email: "qak6ty@virginia.edu" },
-        { role: "Social Chair", name: "Abby Elias", email: "ryp9cj@virginia.edu" },
+        {
+          role: "President",
+          name: "Benjamin Tang",
+          email: "qak6ty@virginia.edu",
+          photo: "/images/officers/ben-tang.jpg",
+          bio: "Hi, I'm Ben, a rising 4th year studying Political Philosophy, Policy, and Law. Outside of OCF, I am also a cadet in the Army ROTC program here planning on commissioning as a JAG officer. I also like to sing and you can find me both serving in the choir ministry and in the Virginia Glee Club! Feel free to reach out if you ever want to grab a meal or need a ride anywhere.",
+        },
+        {
+          role: "Vice President",
+          name: "Abigail Elias",
+          email: "ryp9cj@virginia.edu",
+          photo: "/images/officers/abby-elias.jpg",
+          bio: "Hi, I'm Abby! I'm a rising third-year student at UVA studying biology & psychology. I'm planning on going into the medical field. Outside of OCF, I love volunteering with kids, hanging out with friends, working out, and traveling. A fun fact is that I studied abroad in Spain this past Spring semester so let me know if you have any questions! Feel free to reach out if you want school or pre-med advice, or just want to grab a meal!",
+        },
+        {
+          role: "Treasurer",
+          name: "Alexander Bills",
+          email: "zsx6bx@virginia.edu",
+          photo: "/images/officers/alex-bills.jpg",
+          bio: "I'm Alex, a 4th-year biomedical engineering major. For fun, I like to play basketball, video games, read, play violin, and work on my podcast Mindful Gaming. Reach out to me on GroupMe with questions about anything and everything, no judgment. All glory to God.",
+        },
+        {
+          role: "Secretary & Social Chair",
+          name: "Maria Koutsourais",
+          email: "bu2ur@virginia.edu",
+          photo: "/images/officers/maria-koutsourais.jpg",
+          bio: "Hi! I'm Maria, a rising 3rd year studying Neuroscience and preparing for nursing school next year. When I'm not doing all the epic OCF things we do, you might catch me running/walking around grounds, hooping at AFC, or studying at O-hill. I also love playing the guitar, reading, baking, photography, drawing/painting, and pretty much anything creative I can put my hands on! Feel free to reach out if you ever wanna hang out!",
+        },
       ],
     },
   },

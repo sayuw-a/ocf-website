@@ -46,19 +46,25 @@ export default function About() {
             {site.about.officers.description}
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2">
           {site.about.officers.list.map((officer) => (
-            <article key={officer.role} className="page-panel-soft text-center">
-              <h3 className="font-display mb-3 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
-                {officer.role}
-              </h3>
-              <p className="text-cozy-dark">
-                {officer.name}
-                <br />
-                <a href={`mailto:${officer.email}`} className="site-link">
+            <article key={officer.role} className="overflow-hidden rounded-[22px] border border-stone-200/60 bg-white/70 shadow-[0_8px_24px_rgba(90,68,38,0.07)]">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src={officer.photo}
+                  alt={officer.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <p className="mb-1 text-sm font-semibold uppercase tracking-wide text-amber-700">{officer.role}</p>
+                <h3 className="font-display mb-3 text-[1.4rem] font-semibold leading-tight text-cozy-dark">{officer.name}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-cozy-dark">{officer.bio}</p>
+                <a href={`mailto:${officer.email}`} className="site-link text-sm">
                   {officer.email}
                 </a>
-              </p>
+              </div>
             </article>
           ))}
         </div>
