@@ -49,12 +49,12 @@ export default function About() {
         <div className="grid gap-8 sm:grid-cols-2">
           {site.about.officers.list.map((officer) => (
             <article key={officer.role} className="overflow-hidden rounded-[22px] border border-stone-200/60 bg-white/70 shadow-[0_8px_24px_rgba(90,68,38,0.07)]">
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[3/4] overflow-hidden">
                 <Image
                   src={officer.photo}
                   alt={officer.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-center"
                 />
               </div>
               <div className="p-6">
