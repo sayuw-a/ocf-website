@@ -215,7 +215,7 @@ export const site = {
           role: "President",
           name: "Benjamin Tang",
           email: "qak6ty@virginia.edu",
-          photo: "/images/officers/ben-tang.jpg",
+          photo: "/images/officers/ben-tang.png",
           bio: "Hi, I'm Ben, a rising 4th year studying Political Philosophy, Policy, and Law. Outside of OCF, I am also a cadet in the Army ROTC program here planning on commissioning as a JAG officer. I also like to sing and you can find me both serving in the choir ministry and in the Virginia Glee Club! Feel free to reach out if you ever want to grab a meal or need a ride anywhere.",
         },
         {
