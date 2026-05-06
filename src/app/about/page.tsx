@@ -98,8 +98,7 @@ export default function About() {
               </h3>
               <p className="text-cozy-dark">
                 {officer.name}
-              </h3>
-              <p className="text-sm font-semibold text-amber-700 mb-3">{officer.role}</p>
+              </p>
               <p className="text-cozy-dark text-sm mb-3 leading-relaxed">
                 {officer.bio}
               </p>
