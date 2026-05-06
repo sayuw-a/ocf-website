@@ -1,8 +1,34 @@
+import Image from 'next/image';
+
 const officers = [
-  { role: 'President', name: 'John Dujmovic', email: 'ann4mb@virginia.edu' },
-  { role: 'Vice President', name: 'Doria Aractingi', email: 'pcz3vw@virginia.edu' },
-  { role: 'Treasurer', name: 'Benjamin Tang', email: 'qak6ty@virginia.edu' },
-  { role: 'Social Chair', name: 'Abby Elias', email: 'ryp9cj@virginia.edu' },
+  {
+    role: 'President',
+    name: 'Benjamin Tang',
+    email: 'qak6ty@virginia.edu',
+    bio: "Hi, I'm Ben, a rising 4th year studying Political Philosophy, Policy, and Law. Outside of OCF, I am also a cadet in the Army ROTC program here planning on commissioning as a JAG officer. I also like to sing and you can find me both serving in the choir ministry and in the Virginia Glee Club! Feel free to reach out if you ever want to grab a meal or need a ride anywhere.",
+    photo: '/images/officers/ben-tang.jpg'
+  },
+  {
+    role: 'Vice President',
+    name: 'Abigail Elias',
+    email: 'ryp9cj@virginia.edu',
+    bio: "Hi, I'm Abby! I'm a rising third-year student at UVA studying biology & psychology. I'm planning on going into the medical field. Outside of OCF, I love volunteering with kids, hanging out with friends, working out, and traveling. A fun fact is that I studied abroad in Spain this past Spring semester so let me know if you have any questions! Feel free to reach out if you want school or pre-med advice, or just want to grab a meal!",
+    photo: '/images/officers/abby-elias.jpg'
+  },
+  {
+    role: 'Treasurer',
+    name: 'Alexander Bills',
+    email: 'zsx6bx@virginia.edu',
+    bio: "I'm Alex, a 4th-year biomedical engineering major. For fun, I like to play basketball, video games, read, play violin, and work on my podcast Mindful Gaming. Reach out to me on GroupMe with questions about anything and everything, no judgment. All glory to God.",
+    photo: '/images/officers/alex-bills.jpg'
+  },
+  {
+    role: 'Secretary & Social Chair',
+    name: 'Maria Koutsourais',
+    email: 'bu2ur@virginia.edu',
+    bio: "Hi! I'm Maria, a rising 3rd year studying Neuroscience and preparing for nursing school next year. When I'm not doing all the epic OCF things we do, you might catch me running/walking around grounds, hooping at AFC, or studying at O-hill. I also love playing the guitar, reading, baking, photography, drawing/painting, and pretty much anything creative I can put my hands on! Feel free to reach out if you ever wanna hang out!",
+    photo: '/images/officers/maria-koutsourais.jpg'
+  },
 ];
 
 export default function About() {
@@ -41,19 +67,28 @@ export default function About() {
             These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2">
           {officers.map((officer) => (
-            <article key={officer.role} className="page-panel-soft text-center">
-              <h3 className="font-display mb-3 text-[1.7rem] font-semibold leading-tight text-cozy-dark">
-                {officer.role}
-              </h3>
-              <p className="text-cozy-dark">
+            <article key={officer.role} className="page-panel-soft">
+              <div className="mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src={officer.photo}
+                  alt={officer.name}
+                  width={400}
+                  height={400}
+                  className="w-full h-80 object-cover"
+                />
+              </div>
+              <h3 className="font-display mb-2 text-[1.5rem] font-semibold leading-tight text-cozy-dark">
                 {officer.name}
-                <br />
-                <a href={`mailto:${officer.email}`} className="site-link">
-                  {officer.email}
-                </a>
+              </h3>
+              <p className="text-sm font-semibold text-amber-700 mb-3">{officer.role}</p>
+              <p className="text-cozy-dark text-sm mb-3 leading-relaxed">
+                {officer.bio}
               </p>
+              <a href={`mailto:${officer.email}`} className="site-link text-sm">
+                {officer.email}
+              </a>
             </article>
           ))}
         </div>
