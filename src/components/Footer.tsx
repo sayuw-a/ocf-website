@@ -9,14 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="mb-4 font-display text-[1.35rem] font-semibold">{site.footer.orgName}</h3>
             <p className="text-[0.98rem] leading-7 text-stone-200">
-              Although this organization has members who are University of Virginia
-              students and may have University employees associated or engaged in
-              its activities and affairs, the organization is not a part of or an
-              agency of the University. It is a separate and independent
-              organization, which is responsible for and manages its own
-              activities and affairs. The University does not direct, supervise or
-              control the organization and is not responsible for the organization's
-              contracts, acts or omissions.
+              {site.footer.disclaimer}
             </p>
           </div>
           <div>
