@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-30T00:20:21Z",
+  "title": "Design System: OCF at UVA",
+  "extensions": {
+    "colorMeta": {
+      "beeswax-amber": { "role": "primary", "displayName": "Beeswax Amber", "canonical": "#b45309", "tonalRamp": ["#451a03", "#78350f", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a"] },
+      "beeswax-amber-deep": { "role": "primary", "displayName": "Beeswax Amber, Deep", "canonical": "#92400e", "tonalRamp": ["#3a1503", "#6b2f0a", "#92400e", "#b45309", "#d97706", "#f59e0b", "#fbbf24", "#fde68a"] },
+      "paper-cream": { "role": "neutral", "displayName": "Paper Cream", "canonical": "#f5efe4", "tonalRamp": ["#3d3524", "#665a3d", "#8f7d54", "#c2ae87", "#ddd0b5", "#eee6d5", "#f5efe4", "#faf7ef"] },
+      "surface-white": { "role": "neutral", "displayName": "Surface White", "canonical": "#ffffff", "tonalRamp": ["#1c1917", "#57534e", "#78716c", "#a8a29e", "#d6d3d1", "#e7e5e4", "#f5f5f4", "#ffffff"] },
+      "ink-stone": { "role": "neutral", "displayName": "Ink Stone", "canonical": "#1c1917", "tonalRamp": ["#0c0a09", "#1c1917", "#292524", "#44403c", "#57534e", "#78716c", "#a8a29e", "#d6d3d1"] },
+      "body-stone": { "role": "neutral", "displayName": "Body Stone", "canonical": "#44403c", "tonalRamp": ["#1c1917", "#292524", "#44403c", "#57534e", "#78716c", "#a8a29e", "#d6d3d1", "#e7e5e4"] },
+      "border-stone-light": { "role": "neutral", "displayName": "Border Stone, Light", "canonical": "#e7e5e4", "tonalRamp": ["#78716c", "#a8a29e", "#d6d3d1", "#e7e5e4", "#efedec", "#f5f5f4", "#fafaf9", "#ffffff"] },
+      "border-stone": { "role": "neutral", "displayName": "Border Stone", "canonical": "#d6d3d1", "tonalRamp": ["#57534e", "#78716c", "#a8a29e", "#d6d3d1", "#e7e5e4", "#efedec", "#f5f5f4", "#fafaf9"] },
+      "deep-navy": { "role": "neutral", "displayName": "Deep Navy (Nav)", "canonical": "#183b67", "tonalRamp": ["#0a1729", "#0f2440", "#183b67", "#1f4a80", "#2c5fa0", "#4a7cc2", "#7ba3d9", "#b8cdec"] },
+      "deep-navy-footer": { "role": "neutral", "displayName": "Deep Navy (Footer)", "canonical": "#152f52", "tonalRamp": ["#080f1c", "#0d1c33", "#152f52", "#1c3d6b", "#284f88", "#3f6bab", "#6c92c9", "#a8c1e2"] },
+      "moss-kicker": { "role": "neutral", "displayName": "Moss Kicker", "canonical": "#064e3b", "tonalRamp": ["#022c22", "#04352a", "#064e3b", "#065f46", "#047857", "#059669", "#34d399", "#a7f3d0"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page titles and the homepage hero headline. Serif, largest scale step." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings within a page." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, capped at 62ch, generous line-height for unhurried reading." },
+      "label": { "displayName": "Label", "purpose": "Uppercase kicker text only (hero eyebrow, quick-answer terms)." }
+    },
+    "shadows": [
+      { "name": "photo-lift", "value": "0 10px 22px rgba(90, 68, 38, 0.08)", "purpose": "Lifts framed photography off the page." },
+      { "name": "note-lift", "value": "0 10px 20px rgba(90, 68, 38, 0.08)", "purpose": "Lifts small floating callouts layered over a hero photo." }
+    ],
+    "motion": [],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single filled action per section — Beeswax Amber background, cream text, full pill shape.",
+      "html": "<button class=\"ds-btn-primary\">Start Here if You're New</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: #b45309; color: #fffbeb; font-weight: 500; font-size: 1rem; padding: 12px 24px; border: none; transition: background-color 0.2s; } .ds-btn-primary:hover { background: #92400e; } .ds-btn-primary:focus-visible { outline: 2px solid #92400e; outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Low-emphasis pill button — translucent white fill, hairline stone border, warms toward amber on hover.",
+      "html": "<button class=\"ds-btn-secondary\">See This Week's Events</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; border-radius: 9999px; background: rgba(250, 250, 249, 0.95); color: #292524; font-weight: 500; font-size: 0.98rem; padding: 12px 24px; border: 1px solid #d6d3d1; transition: border-color 0.2s, background-color 0.2s; } .ds-btn-secondary:hover { border-color: #fcd34d; background: #fffbeb; } .ds-btn-secondary:focus-visible { outline: 2px solid #b45309; outline-offset: 2px; }"
+    },
+    {
+      "name": "Panel Card",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Standard content card — translucent white over the cream page, hairline border, no shadow, large soft radius.",
+      "html": "<div class=\"ds-panel\"><h3 class=\"ds-panel-title\">A first visit</h3><p class=\"ds-panel-body\">You will encounter the Faith as it is lived — through worship, study, and the ordinary company of other Orthodox Christians.</p></div>",
+      "css": ".ds-panel { border-radius: 28px; border: 1px solid rgba(214, 211, 209, 0.9); background: rgba(255, 255, 255, 0.8); padding: 24px 32px; } .ds-panel-title { font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.4rem; line-height: 1.1; color: #1c1917; letter-spacing: -0.012em; } .ds-panel-body { margin-top: 12px; font-size: 1.02rem; line-height: 1.75; color: #44403c; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Nav bar link on the Deep Navy band — pill hover fill, faint amber-tinted fill when active.",
+      "html": "<a class=\"ds-nav-link ds-nav-link--active\" href=\"#\">About</a>",
+      "css": ".ds-nav-link { border-radius: 9999px; padding: 8px 16px; font-size: 0.98rem; font-weight: 500; letter-spacing: 0.01em; color: #e7e5e4; transition: background-color 0.2s, color 0.2s; } .ds-nav-link:hover { background: rgba(255, 255, 255, 0.07); color: #fffbeb; } .ds-nav-link--active { background: rgba(255, 251, 235, 0.12); color: #fffbeb; }"
+    },
+    {
+      "name": "FAQ Disclosure",
+      "kind": "custom",
+      "refersTo": "start-faq-item",
+      "description": "Native <details>/<summary> panel with a plain + glyph that rotates to an × on open — no chevron icon.",
+      "html": "<details class=\"ds-faq-item\"><summary class=\"ds-faq-summary\">Who can come?</summary><p class=\"ds-faq-body\">Orthodox students, inquirers from other backgrounds, and anyone with a sincere interest in the Faith are welcome.</p></details>",
+      "css": ".ds-faq-item { border-radius: 24px; border: 1px solid rgba(214, 211, 209, 0.9); background: rgba(255, 255, 255, 0.8); padding: 20px 24px; } .ds-faq-summary { display: flex; cursor: pointer; list-style: none; align-items: flex-start; justify-content: space-between; gap: 16px; font-family: Newsreader, Georgia, serif; font-weight: 600; font-size: 1.2rem; color: #1c1917; } .ds-faq-summary::-webkit-details-marker { display: none; } .ds-faq-summary::after { content: '+'; font-size: 1.35rem; line-height: 1; color: rgba(146, 64, 14, 0.85); transition: transform 180ms ease; } .ds-faq-item[open] .ds-faq-summary::after { transform: rotate(45deg); } .ds-faq-body { margin-top: 12px; font-size: 1.02rem; line-height: 1.75; color: #44403c; }"
+    },
+    {
+      "name": "Photo Frame",
+      "kind": "custom",
+      "refersTo": "home-hero-photo",
+      "description": "Rounded, bordered photo frame with the warm Photo Lift shadow — used in asymmetric overlapping pairs, not a grid.",
+      "html": "<div class=\"ds-photo-frame\"><img src=\"/images/group-2023.jpg\" alt=\"Group photo of OCF students together\" /></div>",
+      "css": ".ds-photo-frame { position: relative; overflow: hidden; border-radius: 22px; border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 10px 22px rgba(90, 68, 38, 0.08); } .ds-photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Door",
+    "overview": "The site is a threshold, not a pitch. Someone arriving here should feel the same thing they'd feel stepping into the narthex before a service: warm light, unhurried pacing, nothing demanding a decision before they've had a chance to look around. The palette stays close to candlelight and cream paper rather than screen-bright color; typography pairs a quiet serif for headings with a plain, legible sans for everything the reader actually has to read. Decoration is rare and always has a reason — a soft shadow under a photograph, a warm border around a panel — never a gradient or an icon added because a section \"needed something.\"\n\nThe system explicitly rejects two failure modes: the generic SaaS landing page (gradient hero banners, bold sans-only headlines stacked over feature-grid cards, urgency-driven CTA copy) and the corporate megachurch site (stock worship-band photography, stage lighting, salesy calls to action). Both read as performance; this site should read as an honest description of a place that already exists, told plainly enough that showing up feels like the obvious next step.",
+    "keyCharacteristics": [
+      "Warm cream paper background, never stark white or dark-mode black",
+      "One confident accent (amber) used sparingly — buttons and links, not backgrounds",
+      "Serif display type for headings, humanist sans for body copy — a quiet, literary pairing",
+      "Generous rounded corners (18–30px) throughout; no sharp rectangles, no pills-everywhere either",
+      "Shadows are soft and warm-toned, reserved for photography and floating panels",
+      "Deep navy appears only as a structural band (nav, footer) — it frames the page, it doesn't accent it"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Beeswax Amber is the only color used to signal \"you can act on this.\" If a new element needs to draw the eye toward an action, it earns amber; if it's just informative, it stays in the neutral stone/navy range. Do not introduce a second \"bright\" color for emphasis.", "section": "colors" },
+      { "name": "The Navy Bookend Rule", "body": "Deep Navy is structural, not decorative. It appears exactly twice per page — the top nav band and the footer band — and nowhere else. A navy button, navy card, or navy text color is always wrong.", "section": "colors" },
+      { "name": "The Serif-Leads Rule", "body": "Every heading-level element uses the display serif; body copy never does. A sans-serif heading or a serif paragraph both break the pairing's logic.", "section": "typography" },
+      { "name": "The Photography-Only Rule", "body": "Shadows exist to lift images and the rare floating note off the page. Cards, panels, and buttons stay flat with a border instead — never add a shadow to a card just to give it \"depth.\"", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Beeswax Amber (#b45309) as the only \"actionable\" color — buttons and links, nothing else.",
+      "Do use the display serif (Newsreader) for every heading level and the humanist sans (Alegreya Sans) for every paragraph; never swap them.",
+      "Do cap body copy at 62ch and use generous line-height (1.75–1.82) — the site is meant to be read unhurried.",
+      "Do keep Deep Navy confined to the nav and footer bands only.",
+      "Do use soft, warm-toned shadows (rgba(90, 68, 38, ...)) only under photography and floating notes; leave cards and panels flat with a hairline border.",
+      "Do let photography sit asymmetrically and slightly informally (overlapping frames, uneven sizes) rather than in a uniform grid."
+    ],
+    "donts": [
+      "Don't build a generic SaaS landing page: no gradient hero banners, no bold sans-only headline stacks, no feature-grid card walls, no urgency-driven CTA copy.",
+      "Don't reach for corporate-megachurch signals: no stock worship-band photography, no stage lighting, no salesy CTA language.",
+      "Don't add a second bright accent color alongside amber; Moss Kicker stays a quiet neutral utility, not a brand color.",
+      "Don't use border-left/border-right as a colored accent stripe (the current .home-moment-item left-border is a legacy exception, not a pattern to repeat elsewhere).",
+      "Don't add drop shadows to cards, panels, or buttons — flat-plus-border is the system, shadows are reserved for photography.",
+      "Don't use sharp/unrounded corners anywhere; the softest radius in the system is 18px."
+    ]
+  }
+}

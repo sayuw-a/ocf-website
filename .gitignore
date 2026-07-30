@@ -9,3 +9,8 @@ out
 build-sample.txt
 build-worker-sample.txt
 lint-sample.txt
+.claude/settings.local.json
+.claude/worktrees
+.impeccable/live/server.json
+.impeccable/live/sessions
+.impeccable/live/accept-receipts
