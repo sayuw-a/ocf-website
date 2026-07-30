@@ -64,85 +64,6 @@ export default function StartHerePage() {
         </div>
       </section>
 
-      {/* Newcomer steps — steps list beside a photo on wider screens */}
-      <section className="page-section">
-        <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start lg:gap-14">
-          <div>
-            <div className="home-section-intro home-section-intro-left mb-8">
-              <p className="home-eyebrow">{site.startHere.newcomerSteps.eyebrow}</p>
-              <h2 className="home-section-title">{site.startHere.newcomerSteps.title}</h2>
-            </div>
-            <ol className="start-step-list">
-              {site.startHere.newcomerSteps.steps.map((step) => (
-                <li key={step.title} className="start-step-item">
-                  <h3>{step.title}</h3>
-                  <p>{step.body}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-
-          {/* Photo — hidden on small screens, visible at lg */}
-          <div className="relative hidden aspect-[3/4] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_10px_28px_rgba(90,68,38,0.09)] lg:block">
-            <Image
-              src="/images/community-4.png"
-              alt="OCF students relaxing together outdoors"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="start-two-column">
-          <article className="start-panel">
-            <p className="home-eyebrow">{site.startHere.whereThingsHappen.eyebrow}</p>
-            <h2 className="home-section-title">{site.startHere.whereThingsHappen.title}</h2>
-            <p className="page-copy">
-              {site.startHere.whereThingsHappen.description1}
-            </p>
-            <p className="page-copy mt-4">
-              {site.startHere.whereThingsHappen.description2}
-            </p>
-            <Link href="/events" className="home-inline-link">
-              {site.startHere.whereThingsHappen.ctaInline}
-            </Link>
-          </article>
-
-          <article className="start-panel">
-            <p className="home-eyebrow">{site.startHere.plainLanguage.eyebrow}</p>
-            <h2 className="home-section-title">{site.startHere.plainLanguage.title}</h2>
-            <p className="page-copy">
-              {site.startHere.plainLanguage.description1}
-            </p>
-            <p className="page-copy mt-4">
-              {site.startHere.plainLanguage.description2}
-            </p>
-            <Link href="/resources/catechism" className="home-inline-link">
-              {site.startHere.plainLanguage.ctaInline}
-            </Link>
-          </article>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="start-faq">
-          <div className="home-section-intro">
-            <p className="home-eyebrow">{site.startHere.faq.eyebrow}</p>
-            <h2 className="home-section-title">{site.startHere.faq.title}</h2>
-          </div>
-          <div className="start-faq-list">
-            {site.startHere.faq.items.map((item) => (
-              <details key={item.question} className="start-faq-item">
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="page-section">
         <div className="start-section">
           <div className="home-section-intro home-section-intro-left">
@@ -157,29 +78,6 @@ export default function StartHerePage() {
                 <span className="home-inline-link">{site.startHere.helpfulLinks.openPage}</span>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="page-section">
-        <div className="home-contact">
-          <div>
-            <p className="home-eyebrow">{site.startHere.cta.eyebrow}</p>
-            <h2 className="home-section-title">{site.startHere.cta.title}</h2>
-            <p className="page-copy">{site.startHere.cta.description}</p>
-          </div>
-          <div className="home-contact-actions">
-            <a href={`mailto:${site.contact.email}`} className="btn-primary">
-              {site.startHere.cta.ctaEmail}
-            </a>
-            <a
-              href={site.contact.groupMeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              {site.startHere.cta.ctaGroupMe}
-            </a>
           </div>
         </div>
       </section>

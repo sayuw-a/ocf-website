@@ -7,8 +7,8 @@ export const site = {
   },
 
   contact: {
-    email: "ann4mb@virginia.edu",
-    groupMeUrl: "https://groupme.com/join_group/52539301/WUDGNm6m",
+    email: "qak6ty@virginia.edu",
+    groupMeUrl: "https://groupme.com/join_group/114673914/m7anva7z",
   },
 
   nav: {
@@ -43,8 +43,8 @@ export const site = {
   home: {
     hero: {
       eyebrow: "Orthodox Christian Fellowship at UVA",
-      title: "The righteous shall live by faith.",
-      lede: "OCF is the Orthodox Christian student ministry at the University of Virginia. We gather for worship, Scripture, and fellowship in the life of the Church. Some of us grew up Orthodox. Others came as inquirers. We strive to live out our faith in love, service, and humility.",
+      title: "The just shall live by faith.",
+      lede: "OCF is the Orthodox Christian student ministry at the University of Virginia. We gather for worship and fellowship and strive to live out our faith in love, service, and humility.",
       ctaPrimary: "Start Here if You\u2019re New",
       ctaSecondary: "See This Week\u2019s Events",
       ctaEmail: "Email a student leader",
@@ -59,15 +59,15 @@ export const site = {
     quickAnswers: [
       {
         question: "Who can come?",
-        answer: "Orthodox students, inquirers from other backgrounds, and anyone with a sincere interest in the Faith are welcome.",
+        answer: "Orthodox students, inquirers, and anyone otherwise interested are welcome.",
       },
       {
         question: "Where do events happen?",
         answer: "Fellowship gatherings are held on or near Grounds. Services take place at St. Nicholas Orthodox Church in Charlottesville.",
       },
       {
-        question: "What should I do first?",
-        answer: "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect.",
+        question: "Do I need to be Orthodox?",
+        answer: "No, many students who come to Bible Study or a service are simply curious",
       },
     ],
     lifeTogether: {
@@ -117,7 +117,7 @@ export const site = {
       ],
     },
     readyToCome: {
-      eyebrow: "Ready to come?",
+      eyebrow: "Ready to join?",
       title: "Reach out before your first visit if you have questions.",
       description:
         "If you want to know where to go, what to expect, or who to look for, contact us beforehand. You are also welcome to simply come.",
@@ -131,12 +131,12 @@ export const site = {
     intro: {
       title: "About OCF at UVA",
       description:
-        "OCF at UVA is an Orthodox Christian student chapter at the University of Virginia, founded in 2005. We gather for worship at St. Nicholas Orthodox Church, weekly Scripture study, and the ordinary fellowship of students who share the same Faith. We are part of the wider Orthodox Christian Fellowship network across North America.",
+        "OCF at UVA is an Orthodox Christian Fellowship chapter at the University of Virginia, founded in 2005. We gather for worship at St. Nicholas Orthodox Church, weekly Bible studies, and fellowship for students who share the same Faith. We are part of the wider Orthodox Christian Fellowship network across North America.",
     },
     mission: {
       heading: "Our Mission",
       quote:
-        "Our hope is simple: \u201cAnd let us consider how we may spur one another on toward love and good deeds, not giving up meeting together, as some are in the habit of doing, but encouraging one another\u2014and all the more as you see the Day approaching.\u201d Hebrews 10:24-25",
+        "To pursue the Orthodox Christian life together through fasting, prayer, and almsgiving—forming a community set apart, growing toward Christ.",
     },
     history: {
       heading: "Our History",
@@ -145,21 +145,21 @@ export const site = {
     officers: {
       heading: "Officers — 2026–2027",
       description:
-        "These are some of the students ensuring OCF runs smoothly. Please reach out if you have any questions!",
+        "",
       list: [
         {
           role: "President",
           name: "Benjamin Tang",
           email: "qak6ty@virginia.edu",
           photo: "/images/officers/ben-tang.png",
-          bio: "Hi, I'm Ben, a rising 4th year studying Political Philosophy, Policy, and Law. Outside of OCF, I am also a cadet in the Army ROTC program here planning on commissioning as a JAG officer. I also like to sing and you can find me both serving in the choir ministry and in the Virginia Glee Club! Feel free to reach out if you ever want to grab a meal or need a ride anywhere.",
+          bio: "Hi, I'm Ben, a 4th year in the Political Philosophy, Policy, and Law program. Outside of OCF, I am also a cadet in the Army ROTC program here planning on commissioning as a JAG officer. I also like to sing and you can find me both serving in the choir ministry and in the Virginia Glee Club! Feel free to reach out if you ever want to grab a meal or need a ride anywhere.",
         },
         {
           role: "Vice President",
           name: "Abigail Elias",
           email: "ryp9cj@virginia.edu",
           photo: "/images/officers/abby-elias.jpg",
-          bio: "Hi, I'm Abby! I'm a rising third-year student at UVA studying biology & psychology. I'm planning on going into the medical field. Outside of OCF, I love volunteering with kids, hanging out with friends, working out, and traveling. A fun fact is that I studied abroad in Spain this past Spring semester so let me know if you have any questions! Feel free to reach out if you want school or pre-med advice, or just want to grab a meal!",
+          bio: "Hi, I'm Abby! I'm a third-year student at UVA studying biology & psychology. I'm planning on going into the medical field. Outside of OCF, I love volunteering with kids, hanging out with friends, working out, and traveling. A fun fact is that I studied abroad in Spain this past Spring semester so let me know if you have any questions! Feel free to reach out if you want school or pre-med advice, or just want to grab a meal!",
         },
         {
           role: "Treasurer",
@@ -173,7 +173,7 @@ export const site = {
           name: "Maria Koutsourais",
           email: "bu2ur@virginia.edu",
           photo: "/images/officers/maria-koutsourais.jpg",
-          bio: "Hi! I'm Maria, a rising 3rd year studying Neuroscience and preparing for nursing school next year. When I'm not doing all the epic OCF things we do, you might catch me running/walking around grounds, hooping at AFC, or studying at O-hill. I also love playing the guitar, reading, baking, photography, drawing/painting, and pretty much anything creative I can put my hands on! Feel free to reach out if you ever wanna hang out!",
+          bio: "Hi! I'm Maria, a 3rd year studying Neuroscience and preparing for nursing school next year. When I'm not doing all the epic OCF things we do, you might catch me running/walking around grounds, hooping at AFC, or studying at O-hill. I also love playing the guitar, reading, baking, photography, drawing/painting, and pretty much anything creative I can put my hands on! Feel free to reach out if you ever wanna hang out!",
         },
       ],
     },
@@ -183,7 +183,7 @@ export const site = {
     intro: {
       title: "Events",
       description:
-        "Most weeks include some mix of prayer, church services, Bible study, food, and time to just be together.",
+        "Most weeks include Divine Liturgy, Vespers and Bible Study.",
     },
     recurring: {
       heading: "Recurring Events",
@@ -191,7 +191,7 @@ export const site = {
         {
           image: "/images/events/weekly-meeting.jpg",
           alt: "Students gathered for weekly Bible study and fellowship",
-          title: "Bible Study & Fellowship",
+          title: "Bible Study",
           time: "Every Thursday at 8:00 PM",
           description: "Join us for discussion, prayer, and fellowship. All are welcome.",
         },
@@ -201,7 +201,7 @@ export const site = {
           title: "Great Vespers & Divine Liturgy",
           time: "Vespers: Saturdays at 5:00 PM\nLiturgy: Sundays at 9:30 AM",
           description:
-            "Join us for worship at St. Nicholas Orthodox Church about 20 minutes from Grounds.",
+            "Worship at St. Nicholas Orthodox Church about 20 minutes from Grounds.",
         },
       ],
     },
@@ -719,87 +719,15 @@ export const site = {
       {
         question: "What is Orthodoxy",
         answer:
-          "\u201cRight faith and good works; for whoever holds these two, the same is a good Christian, and has certain hope of eternal salvation, as the Scripture says (James 2.24): \u201cYou see then how that by good works a man is justified, and not by faith only\u201d; and a little after (v. 6), \u201cFor as the body without the Spirit is dead; so faith without works is dead also.\u201d Saint Paul affirms the same (1 Tim. 1.19): \u201cHolding faith and a good conscience, which some having put away concerning faith, have made shipwreck.\u201d And again (1 Tim. 3.9): \u201cHolding the mystery of the faith in a pure conscience.\u201d\u201d",
-        attribution: "The Orthodox Confession of St. Peter Mogila",
+          "The Orthodox Church is a divinely instituted community united by the Orthodox faith, the law of God, the ecclesiastical hierarchy, and the holy sacraments. ",
+        attribution: "The Catechism of St. Philaret of Moscow",
       },
       {
         question: "What should I do first?",
         answer:
-          "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect or where to go.",
+          "Join our GroupMe. We regularly share opportunities to engage and offer rides to events",
       },
     ],
-    newcomerSteps: {
-      eyebrow: "What to do next",
-      title: "A simple path if you are new.",
-      steps: [
-        {
-          title: "1. Reach out",
-          body: "Contact us beforehand if you want to know where to go, who to look for, or what the week holds.",
-        },
-        {
-          title: "2. Start with something simple",
-          body: "Most students begin with Bible study or Saturday Vespers. Either is a reasonable entry point.",
-        },
-        {
-          title: "3. Ask what you are actually wondering",
-          body: "Questions about the Faith, the services, or Orthodox practice are welcome and expected.",
-        },
-      ],
-    },
-    whereThingsHappen: {
-      eyebrow: "Where things happen",
-      title: "Gatherings take place both on Grounds and at the parish.",
-      description1:
-        "Weekly fellowship events are held on or near Grounds. Services — Vespers and Divine Liturgy — take place at St. Nicholas Orthodox Church in Charlottesville, approximately 20 minutes from the University.",
-      description2:
-        "If you are unsure where to go, check the events page or contact us. We would rather you arrive than guess.",
-      ctaInline: "Open the events page",
-    },
-    plainLanguage: {
-      eyebrow: "What Orthodoxy is",
-      title: "Orthodoxy is the fullness of the Christian Faith, not merely a tradition or ethnic identity.",
-      description1:
-        "The Orthodox Church holds the Apostolic Faith as received from Christ and His Apostles, transmitted through Holy Scripture, Holy Tradition, the Ecumenical Councils, and the lives of the saints.",
-      description2:
-        "Prior knowledge is not expected of visitors. Come, observe, and ask questions. The resources page has introductory texts if you wish to read before coming.",
-      ctaInline: "Start with catechism resources",
-    },
-    faq: {
-      eyebrow: "FAQ",
-      title: "Common questions from first-time visitors.",
-      items: [
-        {
-          question: "Do I need to be Orthodox to come?",
-          answer:
-            "No. OCF is rooted in Orthodox Christianity. Visitors who are inquiring or from other Christian backgrounds are welcome to attend.",
-        },
-        {
-          question: "What are events usually like?",
-          answer:
-            "Most gatherings include worship, Scripture study, or fellowship \u2014 often more than one. Vespers and Divine Liturgy are the center of OCF\u2019s worship life; Bible study and shared meals fill the rest of the week.",
-        },
-        {
-          question: "Where do events happen?",
-          answer:
-            "Fellowship events are held on or near Grounds, including at the Center for Christian Study. Services take place at St. Nicholas Orthodox Church in Charlottesville. Check the events page for the exact location each week.",
-        },
-        {
-          question: "What should I wear?",
-          answer:
-            "For fellowship events, ordinary dress is appropriate. For church services, neat and modest clothing is customary \u2014 comparable to what you would wear to any formal occasion. Women traditionally cover their heads during Orthodox services; visitors are not required to do so.",
-        },
-        {
-          question: "Will I be the only new person there?",
-          answer:
-            "Likely not. New students come throughout the year, and OCF regularly receives visitors.",
-        },
-        {
-          question: "What if I know almost nothing about Orthodoxy?",
-          answer:
-            "That is the normal condition of an inquirer. No preparation is required. The resources page has a short list of introductory texts if you wish to read before coming. As Christ said: \u201cCome and see.\u201d (John 1:39)",
-        },
-      ],
-    },
     helpfulLinks: {
       eyebrow: "Helpful links",
       title: "A few pages worth opening next.",
@@ -821,14 +749,6 @@ export const site = {
           href: "/about",
         },
       ],
-    },
-    cta: {
-      eyebrow: "Still not sure?",
-      title: "You are welcome to reach out before coming.",
-      description:
-        "If you have questions about location, what to expect, or Orthodox practice, contact us. Many people begin by asking.",
-      ctaEmail: "Email a student leader",
-      ctaGroupMe: "Join Our GroupMe",
     },
   },
 } as const;
