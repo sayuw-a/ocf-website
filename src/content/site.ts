@@ -41,7 +41,7 @@ export const site = {
 
   home: {
     hero: {
-      eyebrow: "Orthodox Christian Fellowship at UVA",
+      eyebrow: "The Orthodox Christian Fellowship at UVA",
       title: "The just shall live by faith.",
       lede: "OCF is the Orthodox Christian student ministry at the University of Virginia. We gather for worship and fellowship and strive to live out our faith in love, service, and humility.",
       ctaEvents: "See This Week\u2019s Events",
@@ -50,9 +50,9 @@ export const site = {
       qaAriaLabel: "Quick answers for first-time visitors",
       photoLargeAlt: "Group photo of OCF students together",
       photoSmallAlt: "Students sharing a meal at an OCF cookout",
-      cardKicker: "A first visit",
+      cardKicker: "New to OCF?",
       cardDescription:
-        "You will encounter the Faith as it is lived — through worship, study, and the ordinary company of other Orthodox Christians.",
+        "Join our GroupMe. We regularly share opportunities to engage and offer rides to events",
     },
     quickAnswers: [
       {
@@ -70,7 +70,7 @@ export const site = {
     ],
     lifeTogether: {
       eyebrow: "Life together",
-      title: "What OCF actually looks like",
+      title: "What OCF looks like",
       photos: [
         {
           image: "liturgy-standing.jpg",
@@ -118,7 +118,7 @@ export const site = {
       eyebrow: "Ready to join?",
       title: "Reach out before your first visit if you have questions.",
       description:
-        "If you want to know where to go, what to expect, or who to look for, contact us beforehand. You are also welcome to simply come.",
+        "If you want to know where to go, what to expect, or who to look for, join our GroupMe or contact us beforehand.",
       ctaEmail: "Email a student leader",
       ctaGroupMe: "Join the GroupMe",
       ctaInline: "Meet the group",
