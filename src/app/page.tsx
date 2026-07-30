@@ -13,11 +13,8 @@ export default function Home() {
           <p className="home-lede">{site.home.hero.lede}</p>
 
           <div className="home-actions">
-            <Link href="/start-here" className="btn-primary">
-              {site.home.hero.ctaPrimary}
-            </Link>
-            <Link href="/events" className="btn-secondary">
-              {site.home.hero.ctaSecondary}
+            <Link href="/events" className="btn-primary">
+              {site.home.hero.ctaEvents}
             </Link>
             <a href={`mailto:${site.contact.email}`} className="home-inline-link">
               {site.home.hero.ctaEmail}

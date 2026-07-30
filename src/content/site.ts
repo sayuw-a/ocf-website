@@ -16,7 +16,6 @@ export const site = {
     menuButton: "Menu",
     primaryLinks: [
       { href: "/", label: "Home" },
-      { href: "/start-here", label: "Start Here" },
       { href: "/about", label: "About" },
       { href: "/events", label: "Events" },
       { href: "/resources", label: "Resources" },
@@ -45,8 +44,7 @@ export const site = {
       eyebrow: "Orthodox Christian Fellowship at UVA",
       title: "The just shall live by faith.",
       lede: "OCF is the Orthodox Christian student ministry at the University of Virginia. We gather for worship and fellowship and strive to live out our faith in love, service, and humility.",
-      ctaPrimary: "Start Here if You\u2019re New",
-      ctaSecondary: "See This Week\u2019s Events",
+      ctaEvents: "See This Week\u2019s Events",
       ctaEmail: "Email a student leader",
       visualAriaLabel: "Recent OCF life",
       qaAriaLabel: "Quick answers for first-time visitors",
@@ -699,57 +697,6 @@ export const site = {
         ],
       },
     ],
-  },
-
-  startHere: {
-    hero: {
-      eyebrow: "Start Here",
-      title: "What most people want to know before they come for the first time.",
-      lede: "This page answers the questions visitors most commonly ask: what Orthodoxy is, what OCF does, where gatherings take place, and how to get in contact. If you are considering coming for the first time, begin here.",
-      ctaEmail: "Email a student leader",
-      ctaGroupMe: "Join the GroupMe",
-      ctaInline: "See what\u2019s happening this week",
-    },
-    quickAnswers: [
-      {
-        question: "Who is welcome?",
-        answer:
-          "Orthodox Christians, inquirers from other backgrounds, and those with a genuine interest in the Faith are welcome. No prior knowledge of Orthodoxy is required.",
-      },
-      {
-        question: "What is Orthodoxy",
-        answer:
-          "The Orthodox Church is a divinely instituted community united by the Orthodox faith, the law of God, the ecclesiastical hierarchy, and the holy sacraments. ",
-        attribution: "The Catechism of St. Philaret of Moscow",
-      },
-      {
-        question: "What should I do first?",
-        answer:
-          "Join our GroupMe. We regularly share opportunities to engage and offer rides to events",
-      },
-    ],
-    helpfulLinks: {
-      eyebrow: "Helpful links",
-      title: "A few pages worth opening next.",
-      openPage: "Open page",
-      links: [
-        {
-          title: "Events",
-          description: "Weekly gatherings, service times, and other events.",
-          href: "/events",
-        },
-        {
-          title: "Catechism Resources",
-          description: "Both introductory materials and deeper theological answers.",
-          href: "/resources/catechism",
-        },
-        {
-          title: "About OCF",
-          description: "Meet the chapter, its purpose, and the students leading it this year.",
-          href: "/about",
-        },
-      ],
-    },
   },
 } as const;
 
