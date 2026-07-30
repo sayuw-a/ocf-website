@@ -70,48 +70,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Photo row — life together, unique to this page */}
-      <section className="page-section">
-        <div className="mb-8">
-          <p className="home-eyebrow">Life together</p>
-          <h2 className="home-section-title">What OCF actually looks like</h2>
-        </div>
-        <div className="grid grid-cols-2 gap-4 sm:gap-5 xl:grid-cols-4">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/liturgy-standing.jpg"
-              alt="OCF students standing in prayer during Divine Liturgy"
-              fill
-              className="object-cover object-top"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/community-2.png"
-              alt="Students planting trees together during a service day"
-              fill
-              className="object-cover object-top"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/choir-chanting.jpg"
-              alt="OCF students chanting together during a Liturgy"
-              fill
-              className="object-cover object-[center_30%]"
-            />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[22px] border border-white/80 shadow-[0_8px_22px_rgba(90,68,38,0.08)]">
-            <Image
-              src="/images/community-6.png"
-              alt="OCF students gathered around a table outdoors"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

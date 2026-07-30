@@ -54,6 +54,15 @@
     @apply bg-gradient-to-br from-amber-50 via-orange-50 to-stone-100;
   }
 
+  .gallery-track {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .gallery-track::-webkit-scrollbar {
+    display: none;
+  }
+
   .text-cozy-dark {
     @apply text-stone-800;
   }
@@ -162,7 +171,7 @@
   }
 
   .home-hero {
-    @apply grid gap-8 rounded-[30px] border border-amber-200/70 bg-[linear-gradient(145deg,rgba(253,248,241,0.98),rgba(245,238,225,0.92))] p-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:p-10;
+    @apply mb-8 grid gap-8 rounded-[30px] border border-amber-200/70 bg-[linear-gradient(145deg,rgba(253,248,241,0.98),rgba(245,238,225,0.92))] p-6 sm:mb-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,0.9fr)] lg:items-center lg:p-10;
   }
 
   .home-hero-copy {
@@ -264,7 +273,7 @@
   }
 
   .home-contact {
-    @apply grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-end;
+    @apply grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-center;
   }
 
   .home-contact-actions {

@@ -70,6 +70,52 @@ export const site = {
         answer: "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect.",
       },
     ],
+    lifeTogether: {
+      eyebrow: "Life together",
+      title: "What OCF actually looks like",
+      photos: [
+        {
+          image: "liturgy-standing.jpg",
+          alt: "OCF students standing in prayer during Divine Liturgy",
+        },
+        {
+          image: "community-2.png",
+          alt: "Students planting trees together during a service day",
+        },
+        {
+          image: "choir-chanting.jpg",
+          alt: "OCF students chanting together during a Liturgy",
+        },
+        {
+          image: "community-6.png",
+          alt: "OCF students gathered around a table outdoors",
+        },
+        {
+          image: "bonfire-group.jpg",
+          alt: "OCF students gathered around a bonfire in the evening",
+        },
+        {
+          image: "dinner-together.jpg",
+          alt: "Students sharing a home-cooked dinner together",
+        },
+        {
+          image: "st-nicholas-sunset.jpg",
+          alt: "The sign for St. Nicholas Orthodox Church at sunset",
+        },
+        {
+          image: "gingerbread-2025.jpg",
+          alt: "Students building a gingerbread church together",
+        },
+        {
+          image: "retreat-small-group.jpg",
+          alt: "OCF students posing together during a retreat",
+        },
+        {
+          image: "hangout-living-room.jpg",
+          alt: "Students hanging out together in a living room",
+        },
+      ],
+    },
     readyToCome: {
       eyebrow: "Ready to come?",
       title: "Reach out before your first visit if you have questions.",

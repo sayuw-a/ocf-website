@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/content/site';
+import HomeGallery from '@/components/HomeGallery';
 
 export default function Home() {
   return (
@@ -56,6 +57,14 @@ export default function Home() {
             <p>{site.home.hero.cardDescription}</p>
           </div>
         </div>
+      </section>
+
+      <section className="page-section">
+        <HomeGallery
+          eyebrow={site.home.lifeTogether.eyebrow}
+          title={site.home.lifeTogether.title}
+          photos={site.home.lifeTogether.photos}
+        />
       </section>
 
       <section className="page-section">
