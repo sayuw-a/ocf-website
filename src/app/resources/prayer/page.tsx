@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { site } from '@/content/site';
 
 export default function PrayerResources() {
@@ -7,9 +6,6 @@ export default function PrayerResources() {
       <section className="page-intro mb-10">
         <h1 className="page-title text-center">{site.prayer.intro.title}</h1>
         <p className="page-copy mx-auto text-center">{site.prayer.intro.description}</p>
-        <div className="my-6 flex justify-center">
-          <Image src="/images/angeldivider.png" alt="" width={240} height={32} className="h-8 w-auto" />
-        </div>
       </section>
 
       <div className="space-y-10">
