@@ -15,7 +15,7 @@ export default function HomeGallery({
 }: {
   eyebrow: string;
   title: string;
-  photos: GalleryPhoto[];
+  photos: readonly GalleryPhoto[];
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
 

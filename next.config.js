@@ -36,11 +36,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
     dirs: ['src/app', 'src/components'],
   },
-  experimental: {
-    // Run webpack in-process. This avoids a separate build worker that appears
-    // to linger indefinitely in this project environment.
-    webpackBuildWorker: false,
-  },
   async headers() {
     return [
       {
