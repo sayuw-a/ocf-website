@@ -15,7 +15,7 @@ export default function About() {
       {/* Full-width group banner */}
       <div className="relative mb-14 h-[260px] overflow-hidden rounded-[28px] border border-stone-200/60 shadow-[0_12px_32px_rgba(90,68,38,0.10)] sm:h-[360px] lg:h-[420px]">
         <Image
-          src="/images/retreat-mountains.jpg"
+          src="/images/mountainretreatedited.jpg"
           alt="OCF students gathered at a retreat in the Blue Ridge Mountains"
           fill
           className="object-cover object-[center_40%]"
