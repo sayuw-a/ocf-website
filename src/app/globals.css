@@ -234,16 +234,10 @@
     @apply mb-2 text-[0.72rem] font-medium uppercase tracking-[0.18em] text-emerald-800;
   }
 
-  .home-invite-band {
-    @apply grid gap-8 border-b border-stone-300 pb-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end;
-  }
-
   .home-inline-link {
     @apply mt-4 inline-flex w-fit items-center text-[0.98rem] font-medium text-amber-700 underline decoration-2 underline-offset-4 transition-colors hover:text-amber-800;
   }
 
-  .home-guidance,
-  .home-story-layout,
   .home-contact,
   .start-here-callout,
   .start-hero,
@@ -269,111 +263,12 @@
     text-wrap: balance;
   }
 
-  .home-band-actions {
-    @apply flex flex-col gap-4 pt-2 lg:items-start lg:pt-0;
-  }
-
-  .home-guidance {
-    @apply grid gap-12 border-b border-stone-300 pb-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:items-start;
-  }
-
-  .home-guidance-intro {
-    @apply max-w-xl;
-  }
-
-  .home-step-list {
-    @apply grid gap-6;
-  }
-
-  .home-step-row {
-    @apply grid gap-4 border-t border-stone-200 pt-6 sm:grid-cols-[auto_1fr] sm:items-start;
-  }
-
-  .home-step-badge {
-    @apply inline-flex h-9 w-9 items-center justify-center rounded-full bg-stone-200 text-sm font-semibold text-stone-700;
-  }
-
-  .home-step-row h3,
-  .home-moment-item h3 {
-    @apply text-[1.42rem] font-semibold leading-[1.08] text-stone-900;
-    letter-spacing: -0.01em;
-  }
-
-  .home-step-row p,
-  .home-moment-item p {
-    @apply mt-3 text-[1.02rem] leading-[1.75] text-stone-700;
-  }
-
-  .home-story-layout {
-    @apply grid gap-12 border-b border-stone-300 pb-12 lg:grid-cols-[minmax(0,0.94fr)_minmax(0,1.06fr)] lg:items-center;
-  }
-
-  .home-story-copy {
-    @apply max-w-2xl;
-  }
-
-  .home-moment-list {
-    @apply mt-9 grid gap-6;
-  }
-
-  .home-moment-item {
-    @apply border-l border-amber-400/50 pl-4;
-  }
-
-  .home-story-photos {
-    @apply grid gap-5 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)];
-  }
-
-  .home-story-photo-tall,
-  .home-story-photo-wide {
-    @apply relative overflow-hidden rounded-[20px] border border-white/80 shadow-[0_10px_20px_rgba(90,68,38,0.07)];
-  }
-
-  .home-story-photo-tall {
-    @apply min-h-[20rem] sm:min-h-[28rem];
-  }
-
-  .home-story-photo-wide {
-    @apply min-h-[16rem] sm:mt-14 sm:min-h-[20rem];
-  }
-
   .home-contact {
     @apply grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_auto] lg:items-end;
   }
 
   .home-contact-actions {
     @apply flex flex-col gap-4 pt-2 lg:items-start lg:pt-0;
-  }
-
-  .home-proof-shell {
-    @apply grid gap-10 border-b border-stone-300 pb-12;
-  }
-
-  .home-proof-grid {
-    @apply grid gap-6 lg:grid-cols-3;
-  }
-
-  .home-proof-card {
-    @apply rounded-[24px] border border-stone-200/90 bg-white/80 p-4 sm:p-5;
-  }
-
-  .home-proof-photo {
-    @apply relative mb-5 min-h-[15rem] overflow-hidden rounded-[20px];
-  }
-
-  .home-proof-copy {
-    @apply px-1 pb-1;
-  }
-
-  .home-proof-copy h3 {
-    @apply text-[1.5rem] font-semibold leading-[1.08] text-stone-900;
-    font-family: var(--font-display);
-    letter-spacing: -0.012em;
-    text-wrap: balance;
-  }
-
-  .home-proof-copy p {
-    @apply mt-3 text-[1.02rem] leading-[1.75] text-stone-700;
   }
 
   .start-here-shell {

@@ -20,7 +20,6 @@ export const site = {
       { href: "/about", label: "About" },
       { href: "/events", label: "Events" },
       { href: "/resources", label: "Resources" },
-      { href: "/blog", label: "Blog" },
     ],
   },
 
@@ -71,115 +70,6 @@ export const site = {
         answer: "Come to a gathering. You are also welcome to reach out beforehand if you would like to know what to expect.",
       },
     ],
-    whatWeDo: {
-      eyebrow: "Here\u2019s what we actually do",
-      title:
-        "A typical OCF week includes worship, Scripture study, and the fellowship of the Church.",
-      description:
-        "OCF is a student chapter, not a campus club. The rhythm of the week follows the life of the Church: Vespers on Saturday, Divine Liturgy on Sunday, Bible study during the week, and the meals and conversation that accompany them.",
-    },
-    galleryMoments: [
-      {
-        image: "cookout-2025.jpg",
-        alt: "Students gathered around food at the spring cookout",
-        title: "Meals that turn into long conversations",
-        description: "We often host cookouts, dinners, and after-church meals.",
-      },
-      {
-        image: "liturgy-2025.jpg",
-        alt: "OCF students gathered with Fr. Robert after Divine Liturgy",
-        title: "Church life that does not stay abstract",
-        description:
-          "Students pray together, learn the services, and stay connected to parish life while at UVA.",
-      },
-      {
-        image: "jmu-hangout.jpg",
-        alt: "Students from different campuses hanging out together",
-        title: "Friendship beyond one event",
-        description:
-          "Some of the best parts of OCF are the ordinary ones: rides, hangouts, and seeing people again next week.",
-      },
-      {
-        image: "volleyball.jpg",
-        alt: "OCF students playing volleyball at night on UVA grounds",
-        title: "Campus life, together",
-        description:
-          "Volleyball nights, pickup games, and campus hangouts are a regular part of the semester.",
-      },
-      {
-        image: "community-5.png",
-        alt: "OCF students on a rocky mountain summit during a retreat hike",
-        title: "Retreats beyond campus",
-        description:
-          "Each semester includes time away — hikes, overnight retreats, and visits to other OCF chapters.",
-      },
-      {
-        image: "retreat-2025.jpg",
-        alt: "The OCF community gathered in the Blue Ridge Mountains at a fall retreat",
-        title: "Retreats that go somewhere",
-        description:
-          "Each semester we go away together — overnight retreats in the Blue Ridge, hikes, and time outside the ordinary rhythm of the week.",
-      },
-    ],
-    firstStep: {
-      eyebrow: "Your first step",
-      title: "Coming for the first time requires no preparation.",
-      description:
-        "The Church has always received inquirers. You do not need familiarity with the services, background in Orthodox theology, or any particular preparation. Come and see.",
-    },
-    firstVisitSteps: [
-      {
-        label: "Reach out beforehand if you have questions",
-        description:
-          "If you want to know where to go, who to look for, or what the week holds, contact us first. Many people begin that way.",
-      },
-      {
-        label: "Start with whichever gathering suits you",
-        description:
-          "Most students begin with Bible study or Saturday Vespers. Either is a reasonable entry point into the life of OCF.",
-      },
-      {
-        label: "No prior knowledge is expected",
-        description:
-          "You do not need to know the prayers or understand every part of the service. Come, observe, and ask questions as they arise.",
-      },
-    ],
-    newHere: {
-      eyebrow: "New here?",
-      title: "Answers to the questions most visitors ask before coming.",
-      description:
-        "The Start Here page addresses what Orthodoxy is, what to expect at a gathering or service, where events take place, and how to get in contact before you arrive.",
-      ctaPrimary: "Open the newcomer guide",
-      ctaInline: "Meet the people behind OCF",
-    },
-    whatItFeelsLike: {
-      eyebrow: "What to expect",
-      title:
-        "A community oriented toward prayer, worship, and the common life of the Church.",
-      description:
-        "The character of OCF is shaped by the liturgical calendar and the ordinary life of a Christian community. Some weeks center on feast days or particular services. Others are simpler: study, conversation, shared meals. The continuity is the same people and the same Faith, week after week.",
-    },
-    visitMoments: [
-      {
-        title: "Worship at St. Nicholas",
-        description:
-          "Great Vespers on Saturday and Divine Liturgy on Sunday at St. Nicholas Orthodox Church are the center of OCF\u2019s worship life.",
-      },
-      {
-        title: "Scripture study and fellowship",
-        description:
-          "Weekly Bible study and shared meals fill the rest of the week. These are not peripheral activities but part of the same common life.",
-      },
-      {
-        title: "A community open to inquirers",
-        description:
-          "Orthodoxy has a long tradition of welcoming those who seek. Questions about the Faith, the services, or church history are a normal part of OCF life.",
-      },
-    ],
-    storyPhotos: {
-      tallAlt: "OCF students gathered for Divine Liturgy",
-      wideAlt: "Pascha celebration with OCF students",
-    },
     readyToCome: {
       eyebrow: "Ready to come?",
       title: "Reach out before your first visit if you have questions.",
