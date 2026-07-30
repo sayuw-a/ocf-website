@@ -6,7 +6,7 @@ export default function StartHerePage() {
   return (
     <div className="content-shell start-here-shell py-10 sm:py-16">
       <section className="start-hero">
-        <div className="grid items-center gap-10 lg:grid-cols-[1fr_300px] lg:gap-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_420px] lg:gap-16">
           <div>
             <p className="home-eyebrow">{site.startHere.hero.eyebrow}</p>
             <h1 className="home-title">{site.startHere.hero.title}</h1>
@@ -30,13 +30,14 @@ export default function StartHerePage() {
           </div>
 
           {/* Icon of Christ the Bridegroom */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="mx-auto flex w-full max-w-[220px] justify-center lg:mx-0 lg:max-w-[420px] lg:justify-end">
             <Image
               src="/images/christ-bridegroom.jpg"
               alt="Icon of Christ the Bridegroom — 'Behold, the Bridegroom comes in the middle of the night'"
               width={300}
               height={375}
-              className="rounded-[16px] shadow-[0_12px_40px_rgba(90,68,38,0.18)]"
+              sizes="(min-width: 1024px) 420px, 220px"
+              className="h-auto w-full rounded-[16px] shadow-[0_12px_40px_rgba(90,68,38,0.18)]"
               priority
             />
           </div>
