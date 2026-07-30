@@ -36,7 +36,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap"
         />
       </head>
-      <body className="font-sans antialiased">
+      <body className="antialiased">
         <div className="site-shell">
           <Navigation />
           <div className="site-main">{children}</div>
